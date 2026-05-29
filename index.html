@@ -1,0 +1,895 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Legacy Health Pharmacy — Premium Experience V3</title>
+  <meta name="description" content="A premium task-first redesign concept for Legacy Health Pharmacy services." />
+  <style>
+    :root {
+      --legacy-blue: #003f87;
+      --legacy-blue-2: #0b73df;
+      --legacy-red: #ed1c24;
+      --ink: #08172f;
+      --text: #2b3850;
+      --muted: #65738a;
+      --cloud: #f5f9ff;
+      --line: rgba(0, 63, 135, .14);
+      --glass: rgba(255, 255, 255, .74);
+      --glass-strong: rgba(255, 255, 255, .9);
+      --shadow: 0 28px 90px rgba(0, 39, 85, .18);
+      --shadow-soft: 0 16px 48px rgba(0, 39, 85, .11);
+      --radius: 28px;
+      --radius-xl: 44px;
+      --max: 1180px;
+      --logo: url("data:image/webp;base64,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");
+      color-scheme: light;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      min-width: 320px;
+      color: var(--ink);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background:
+        radial-gradient(circle at 12% 10%, rgba(237, 28, 36, .16), transparent 26rem),
+        radial-gradient(circle at 83% 0%, rgba(0, 63, 135, .22), transparent 34rem),
+        linear-gradient(135deg, #f9fcff 0%, #edf6ff 45%, #fbfdff 100%);
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      z-index: -4;
+      pointer-events: none;
+      background-image:
+        linear-gradient(rgba(0, 63, 135, .035) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 63, 135, .035) 1px, transparent 1px);
+      background-size: 42px 42px;
+      mask-image: linear-gradient(to bottom, black 0%, transparent 80%);
+    }
+
+    a { color: inherit; text-decoration: none; }
+    img { display: block; max-width: 100%; }
+    button, input { font: inherit; }
+    ::selection { background: rgba(237, 28, 36, .16); }
+    :focus-visible { outline: 3px solid rgba(237, 28, 36, .54); outline-offset: 4px; }
+
+    .skip-link {
+      position: fixed;
+      top: 14px;
+      left: 14px;
+      z-index: 3000;
+      transform: translateY(-150%);
+      padding: 12px 16px;
+      border-radius: 999px;
+      color: white;
+      background: var(--ink);
+      font-weight: 900;
+      transition: transform .2s ease;
+    }
+    .skip-link:focus { transform: translateY(0); }
+
+    .scroll-progress {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 4px;
+      width: 0%;
+      z-index: 2200;
+      background: linear-gradient(90deg, var(--legacy-red), var(--legacy-blue));
+      box-shadow: 0 0 18px rgba(237, 28, 36, .38);
+    }
+
+    .cursor-dot, .cursor-ring {
+      position: fixed;
+      top: 0;
+      left: 0;
+      pointer-events: none;
+      z-index: 2600;
+      transform: translate(-50%, -50%);
+      opacity: 0;
+    }
+    .cursor-dot { width: 7px; height: 7px; border-radius: 999px; background: var(--legacy-red); }
+    .cursor-ring { width: 38px; height: 38px; border: 1px solid rgba(0,63,135,.38); border-radius: 999px; transition: width .2s ease, height .2s ease, border-color .2s ease; }
+    body.cursor-ready .cursor-dot, body.cursor-ready .cursor-ring { opacity: 1; }
+    body.cursor-hover .cursor-ring { width: 58px; height: 58px; border-color: rgba(237,28,36,.48); }
+
+    .shell { width: min(calc(100% - 40px), var(--max)); margin-inline: auto; }
+    .section { padding: 92px 0; scroll-margin-top: 110px; }
+
+    .logo-mark {
+      width: 46px;
+      height: 46px;
+      flex: 0 0 auto;
+      border-radius: 14px;
+      background: white var(--logo) center/76% no-repeat;
+      box-shadow: inset 0 0 0 1px rgba(0, 63, 135, .08), 0 12px 28px rgba(0, 39, 85, .12);
+    }
+
+    .nav-wrap {
+      position: fixed;
+      top: 16px;
+      left: 50%;
+      z-index: 2100;
+      width: min(calc(100% - 32px), 1160px);
+      transform: translateX(-50%);
+      border: 1px solid rgba(255,255,255,.76);
+      border-radius: 999px;
+      background: rgba(255,255,255,.74);
+      box-shadow: 0 20px 60px rgba(0, 39, 85, .12);
+      backdrop-filter: blur(18px) saturate(160%);
+      -webkit-backdrop-filter: blur(18px) saturate(160%);
+    }
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 10px 12px 10px 16px;
+    }
+    .brand { display: flex; align-items: center; gap: 12px; min-width: fit-content; }
+    .brand-text { line-height: 1.02; letter-spacing: .06em; text-transform: uppercase; font-size: .78rem; font-weight: 950; }
+    .brand-text span { display: block; margin-top: 3px; color: var(--muted); letter-spacing: .30em; font-size: .61rem; font-weight: 750; }
+    .nav-links { display: flex; align-items: center; gap: 4px; color: #2f3d58; font-size: .88rem; font-weight: 850; }
+    .nav-links a { padding: 10px 12px; border-radius: 999px; transition: color .22s ease, background .22s ease, transform .22s ease; }
+    .nav-links a:hover, .nav-links a.active { color: var(--legacy-blue); background: rgba(0,63,135,.08); transform: translateY(-1px); }
+    .nav-actions { display: flex; align-items: center; gap: 8px; }
+
+    .btn {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      min-height: 44px;
+      padding: 12px 18px;
+      border: 1px solid transparent;
+      border-radius: 999px;
+      overflow: hidden;
+      cursor: pointer;
+      white-space: nowrap;
+      font-weight: 950;
+      line-height: 1;
+      isolation: isolate;
+      transition: transform .24s ease, box-shadow .24s ease, border-color .24s ease, background .24s ease;
+    }
+    .btn::after {
+      content: "";
+      position: absolute;
+      inset: -60% auto -60% -32%;
+      z-index: -1;
+      width: 35%;
+      transform: skewX(-20deg);
+      background: rgba(255,255,255,.38);
+      opacity: 0;
+      transition: transform .55s ease, opacity .55s ease;
+    }
+    .btn:hover::after { opacity: 1; transform: translateX(360%) skewX(-20deg); }
+    .btn:hover { transform: translateY(-2px); }
+    .btn.primary { color: white; background: linear-gradient(135deg, var(--legacy-blue), #117be7); box-shadow: 0 16px 34px rgba(0,63,135,.23); }
+    .btn.red { color: white; background: linear-gradient(135deg, var(--legacy-red), #ff6f75); box-shadow: 0 16px 34px rgba(237,28,36,.18); }
+    .btn.ghost { color: var(--legacy-blue); background: rgba(255,255,255,.76); border-color: rgba(0,63,135,.16); }
+    .menu-toggle { display: none; width: 44px; height: 44px; border: 0; border-radius: 999px; background: rgba(0,63,135,.08); color: var(--legacy-blue); font-weight: 950; cursor: pointer; }
+
+    .mobile-panel {
+      position: fixed;
+      top: 86px;
+      left: 50%;
+      z-index: 2050;
+      width: min(calc(100% - 28px), 560px);
+      transform: translate(-50%, -18px) scale(.98);
+      pointer-events: none;
+      opacity: 0;
+      border: 1px solid rgba(255,255,255,.8);
+      border-radius: 28px;
+      background: rgba(255,255,255,.9);
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(18px) saturate(155%);
+      padding: 12px;
+      transition: opacity .24s ease, transform .24s ease;
+    }
+    .mobile-panel.open { transform: translate(-50%, 0) scale(1); opacity: 1; pointer-events: auto; }
+    .mobile-panel a { display: block; padding: 14px 16px; border-radius: 17px; color: var(--text); font-weight: 900; }
+    .mobile-panel a:hover { color: var(--legacy-blue); background: rgba(0,63,135,.08); }
+
+    .hero {
+      position: relative;
+      display: grid;
+      align-items: center;
+      min-height: 100svh;
+      padding: 120px 0 68px;
+    }
+    .hero-grid { display: grid; grid-template-columns: minmax(0,.98fr) minmax(360px,1.02fr); gap: 52px; align-items: center; }
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      width: fit-content;
+      padding: 9px 14px;
+      border: 1px solid rgba(0,63,135,.14);
+      border-radius: 999px;
+      color: var(--legacy-blue);
+      background: rgba(255,255,255,.74);
+      box-shadow: 0 10px 30px rgba(0,63,135,.07);
+      backdrop-filter: blur(12px);
+      font-size: .85rem;
+      font-weight: 950;
+    }
+    .pulse-dot { width: 9px; height: 9px; border-radius: 999px; background: var(--legacy-red); box-shadow: 0 0 0 0 rgba(237,28,36,.5); animation: pulse 2.1s infinite; }
+    @keyframes pulse { 70% { box-shadow: 0 0 0 12px rgba(237,28,36,0); } 100% { box-shadow: 0 0 0 0 rgba(237,28,36,0); } }
+    h1 { max-width: 760px; margin: 24px 0 22px; font-size: clamp(3.1rem, 7vw, 6.5rem); line-height: .9; letter-spacing: -.076em; }
+    .gradient-text { color: transparent; background: linear-gradient(105deg, #061631 0%, var(--legacy-blue) 39%, var(--legacy-red) 76%, #061631 100%); background-size: 220% auto; background-clip: text; -webkit-background-clip: text; animation: shimmer 8s linear infinite; }
+    @keyframes shimmer { to { background-position: 220% center; } }
+    .hero-copy { max-width: 660px; margin: 0 0 24px; color: #3f4f6b; font-size: clamp(1.06rem, 2vw, 1.23rem); line-height: 1.72; }
+    .typed-row { min-height: 34px; margin: 0 0 28px; color: var(--legacy-blue); font-size: clamp(1.04rem, 2vw, 1.3rem); font-weight: 950; letter-spacing: -.02em; }
+    .cursor-text { color: var(--legacy-red); animation: blink 1s infinite; }
+    @keyframes blink { 50% { opacity: 0; } }
+    .hero-ctas { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
+
+    .hero-stage { position: relative; min-height: 650px; perspective: 1200px; }
+    .clinical-orb {
+      position: absolute;
+      inset: 12px 0 auto auto;
+      width: min(84%, 520px);
+      height: 380px;
+      border: 1px solid rgba(255,255,255,.75);
+      border-radius: 44px;
+      overflow: hidden;
+      box-shadow: 0 34px 110px rgba(0,39,85,.22);
+      background:
+        radial-gradient(circle at 75% 28%, rgba(255,255,255,.88), transparent 0 10%, transparent 22%),
+        radial-gradient(circle at 35% 42%, rgba(255,255,255,.72), transparent 0 13%, transparent 24%),
+        linear-gradient(145deg, rgba(0,63,135,.92), rgba(12,103,205,.78)),
+        linear-gradient(45deg, rgba(237,28,36,.38), transparent 45%);
+      transform: rotateY(-10deg) rotateX(5deg) rotateZ(2deg);
+    }
+    .clinical-orb::before {
+      content: "";
+      position: absolute;
+      inset: 15%;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,.34);
+      box-shadow: 0 0 0 28px rgba(255,255,255,.06), 0 0 0 62px rgba(255,255,255,.05), inset 0 0 80px rgba(255,255,255,.18);
+      animation: rotateGlow 14s linear infinite;
+    }
+    .clinical-orb::after {
+      content: "Rx";
+      position: absolute;
+      left: 44px;
+      bottom: 36px;
+      color: rgba(255,255,255,.88);
+      font-size: 5.8rem;
+      font-weight: 950;
+      letter-spacing: -.09em;
+      text-shadow: 0 18px 48px rgba(0,0,0,.22);
+    }
+    @keyframes rotateGlow { to { transform: rotate(360deg); } }
+    .command-panel {
+      position: absolute;
+      top: 240px;
+      left: 0;
+      right: 24px;
+      padding: 26px;
+      border: 1px solid rgba(255,255,255,.80);
+      border-radius: 40px;
+      background: linear-gradient(145deg, rgba(255,255,255,.86), rgba(255,255,255,.56));
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(22px) saturate(150%);
+      -webkit-backdrop-filter: blur(22px) saturate(150%);
+      transform: rotateY(8deg) rotateX(4deg);
+      animation: panelBob 7s ease-in-out infinite;
+    }
+    @keyframes panelBob { 0%,100% { transform: rotateY(8deg) rotateX(4deg) translateY(0); } 50% { transform: rotateY(5deg) rotateX(6deg) translateY(-14px); } }
+    .panel-head { display: flex; justify-content: space-between; gap: 18px; align-items: flex-start; margin-bottom: 18px; }
+    .panel-head h2 { margin: 0; font-size: clamp(1.55rem, 2.7vw, 2.24rem); line-height: 1.02; letter-spacing: -.055em; }
+    .panel-head p { margin: 10px 0 0; color: #53617a; line-height: 1.58; }
+    .panel-logo { width: 82px; height: 82px; flex: 0 0 auto; border-radius: 24px; background: white var(--logo) center/78% no-repeat; box-shadow: inset 0 0 0 1px rgba(0,63,135,.08), 0 18px 45px rgba(0,63,135,.13); transform: translateZ(48px); }
+    .command-grid { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 12px; }
+    .command-card {
+      position: relative;
+      min-height: 126px;
+      padding: 17px;
+      overflow: hidden;
+      border: 1px solid rgba(0,63,135,.11);
+      border-radius: 24px;
+      background: rgba(255,255,255,.70);
+      box-shadow: 0 14px 35px rgba(0,39,85,.09);
+      transition: transform .24s ease, box-shadow .24s ease, border-color .24s ease;
+    }
+    .command-card:hover { transform: translateY(-5px); box-shadow: 0 22px 52px rgba(0,39,85,.14); border-color: rgba(0,63,135,.20); }
+    .command-card::after { content:""; position:absolute; width:96px; height:96px; right:-36px; top:-38px; border-radius:999px; background: rgba(0,63,135,.08); }
+    .command-card b { display: block; margin-bottom: 8px; font-size: 1rem; }
+    .command-card span { display: block; color: var(--muted); font-size: .9rem; line-height: 1.45; }
+
+    .stats-row {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 52px;
+      position: relative;
+      z-index: 1;
+    }
+    .stat-card { padding: 20px; border: 1px solid rgba(255,255,255,.78); border-radius: 28px; background: var(--glass); box-shadow: var(--shadow-soft); backdrop-filter: blur(15px); }
+    .stat-card strong { display: block; color: var(--legacy-blue); font-size: clamp(1.3rem, 2.4vw, 2.08rem); letter-spacing: -.045em; line-height: 1; }
+    .stat-card span { display: block; margin-top: 8px; color: var(--muted); font-size: .92rem; line-height: 1.42; }
+
+    .section-head { display: flex; align-items: end; justify-content: space-between; gap: 30px; margin-bottom: 34px; }
+    .kicker { margin: 0 0 10px; color: var(--legacy-red); font-size: .78rem; font-weight: 950; letter-spacing: .15em; text-transform: uppercase; }
+    .section-title { max-width: 790px; margin: 0; font-size: clamp(2rem, 4vw, 4.2rem); line-height: .99; letter-spacing: -.065em; }
+    .section-desc { max-width: 520px; margin: 0; color: #50617c; font-size: 1.04rem; line-height: 1.66; }
+
+    .grid { display: grid; gap: 18px; }
+    .service-grid { grid-template-columns: repeat(4, minmax(0,1fr)); }
+    .service-card {
+      position: relative;
+      min-height: 236px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      overflow: hidden;
+      padding: 24px;
+      border: 1px solid rgba(255,255,255,.78);
+      border-radius: 30px;
+      background: rgba(255,255,255,.74);
+      box-shadow: var(--shadow-soft);
+      transition: transform .28s ease, box-shadow .28s ease, border-color .28s ease;
+    }
+    .service-card:hover { transform: translateY(-8px); box-shadow: var(--shadow); border-color: rgba(0,63,135,.22); }
+    .service-card.featured { grid-column: span 2; color: white; background: radial-gradient(circle at 84% 18%, rgba(255,255,255,.22), transparent 30%), linear-gradient(135deg, rgba(0,63,135,.96), rgba(15,111,213,.88)); }
+    .service-card.featured p, .service-card.featured .service-index { color: rgba(255,255,255,.82); }
+    .service-card.featured .service-index { background: rgba(255,255,255,.14); }
+    .service-index { display: inline-grid; place-items: center; width: 38px; height: 38px; margin-bottom: 18px; border-radius: 14px; background: rgba(0,63,135,.09); color: var(--legacy-blue); font-weight: 950; }
+    .service-card h3 { margin: 0 0 10px; font-size: 1.18rem; letter-spacing: -.035em; }
+    .service-card p { margin: 0; color: #596981; line-height: 1.62; font-size: .96rem; }
+    .service-card.featured p { color: rgba(255,255,255,.83); }
+    .card-link { position: relative; z-index: 1; margin-top: 20px; color: currentColor; font-weight: 950; }
+
+    .pathway { display: grid; grid-template-columns: .92fr 1.08fr; gap: 24px; align-items: start; }
+    .journey-visual {
+      position: sticky;
+      top: 112px;
+      min-height: 590px;
+      overflow: hidden;
+      border: 1px solid rgba(255,255,255,.76);
+      border-radius: var(--radius-xl);
+      background: radial-gradient(circle at 50% 38%, rgba(255,255,255,.8), transparent 0 13%, transparent 24%), linear-gradient(135deg, rgba(0,63,135,.96), rgba(9,94,185,.88));
+      box-shadow: var(--shadow);
+      color: white;
+    }
+    .journey-orbit { position: absolute; inset: 68px 52px 145px; border: 1px solid rgba(255,255,255,.24); border-radius: 50%; box-shadow: inset 0 0 70px rgba(255,255,255,.08); }
+    .journey-orbit::before, .journey-orbit::after { content:""; position:absolute; inset: 14%; border: 1px solid rgba(255,255,255,.15); border-radius:50%; }
+    .journey-orbit::after { inset: 28%; }
+    .journey-node { position: absolute; width: 52px; height: 52px; display:grid; place-items:center; border-radius: 18px; color: var(--legacy-blue); background: rgba(255,255,255,.9); font-weight: 950; box-shadow: 0 18px 48px rgba(0,0,0,.2); transition: transform .35s ease, background .35s ease, color .35s ease; }
+    .journey-node.active { transform: scale(1.15); color: white; background: var(--legacy-red); }
+    .node-1 { left: 14%; top: 25%; } .node-2 { right: 16%; top: 18%; } .node-3 { right: 12%; bottom: 32%; } .node-4 { left: 22%; bottom: 23%; } .node-5 { left: 43%; top: 45%; }
+    .journey-caption { position: absolute; left: 30px; right: 30px; bottom: 30px; }
+    .journey-caption h3 { margin: 0 0 10px; font-size: clamp(1.6rem, 3vw, 2.4rem); line-height: 1.02; letter-spacing: -.06em; }
+    .journey-caption p { margin: 0; color: rgba(255,255,255,.80); line-height: 1.65; }
+    .timeline { display: grid; gap: 14px; }
+    .step {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 16px;
+      padding: 22px;
+      border: 1px solid rgba(255,255,255,.78);
+      border-radius: 30px;
+      background: rgba(255,255,255,.74);
+      box-shadow: var(--shadow-soft);
+      transition: transform .28s ease, border-color .28s ease, background .28s ease;
+    }
+    .step.active { border-color: rgba(237,28,36,.28); background: rgba(255,255,255,.9); transform: translateX(4px); }
+    .step-num { width: 46px; height: 46px; display: grid; place-items: center; border-radius: 17px; color: white; background: linear-gradient(135deg, var(--legacy-blue), #1681ee); font-weight: 950; box-shadow: 0 14px 28px rgba(0,63,135,.18); }
+    .step.active .step-num { background: linear-gradient(135deg, var(--legacy-red), #ff7075); }
+    .step h3 { margin: 0 0 7px; font-size: 1.13rem; letter-spacing: -.03em; }
+    .step p { margin: 0; color: #52627d; line-height: 1.58; }
+
+    .program-tool {
+      display: grid;
+      grid-template-columns: .9fr 1.1fr;
+      gap: 22px;
+      align-items: start;
+      margin-bottom: 24px;
+    }
+    .decision-card, .program-card, .compare-wrap, .resource-card, details, .contact-card {
+      border: 1px solid rgba(255,255,255,.78);
+      background: rgba(255,255,255,.76);
+      box-shadow: var(--shadow-soft);
+      backdrop-filter: blur(14px);
+    }
+    .decision-card { padding: 28px; border-radius: 36px; position: sticky; top: 112px; }
+    .decision-card h3 { margin: 0 0 10px; font-size: clamp(1.45rem, 2.4vw, 2.2rem); line-height:1.04; letter-spacing:-.055em; }
+    .decision-card p { margin: 0 0 20px; color: #566782; line-height: 1.62; }
+    .choice-list { display: grid; gap: 12px; margin: 0 0 18px; }
+    .choice { display: grid; grid-template-columns: auto 1fr; gap: 12px; align-items: start; padding: 14px; border: 1px solid rgba(0,63,135,.11); border-radius: 20px; background: rgba(0,63,135,.045); cursor: pointer; }
+    .choice input { width: 18px; height: 18px; margin-top: 2px; accent-color: var(--legacy-blue); }
+    .choice b { display:block; margin-bottom: 4px; }
+    .choice span { color: #65738a; font-size: .9rem; line-height: 1.42; }
+    .routing-result { padding: 18px; border-radius: 24px; color: white; background: linear-gradient(135deg, var(--legacy-blue), #0f78df); box-shadow: 0 18px 44px rgba(0,63,135,.20); }
+    .routing-result b { display: block; margin-bottom: 6px; font-size: 1.08rem; }
+    .routing-result span { display: block; color: rgba(255,255,255,.82); line-height: 1.45; }
+
+    .program-layout { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 18px; }
+    .program-card { position: relative; overflow: hidden; padding: 28px; border-radius: 36px; }
+    .program-card::before { content:""; position:absolute; inset:0; pointer-events:none; background: radial-gradient(circle at top right, rgba(0,63,135,.12), transparent 36%), radial-gradient(circle at bottom left, rgba(237,28,36,.10), transparent 36%); }
+    .program-card > * { position: relative; z-index: 1; }
+    .program-label { display: inline-flex; align-items: center; gap: 9px; margin-bottom: 16px; color: var(--legacy-blue); font-size: .82rem; font-weight: 950; letter-spacing: .13em; text-transform: uppercase; }
+    .program-card h3 { margin: 0 0 14px; font-size: clamp(1.45rem, 2.4vw, 2.15rem); line-height: 1.03; letter-spacing: -.055em; }
+    .program-card p { color: #50617c; line-height: 1.68; margin: 0 0 20px; }
+    .program-meta { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 0 0 22px; }
+    .meta-pill { padding: 13px 14px; border-radius: 18px; background: rgba(0,63,135,.07); color: #394865; font-size: .92rem; line-height: 1.4; }
+    .meta-pill b { display: block; color: var(--legacy-blue); margin-bottom: 3px; }
+    .checklist { list-style: none; padding: 0; margin: 0; display: grid; gap: 12px; }
+    .checklist li { display: grid; grid-template-columns: 24px 1fr; gap: 10px; color: #394865; line-height: 1.48; }
+    .check { width: 24px; height: 24px; display: grid; place-items: center; border-radius: 999px; background: rgba(0,63,135,.10); color: var(--legacy-blue); font-size: .82rem; font-weight: 950; }
+    .compare-wrap { margin-top: 24px; overflow: hidden; border-radius: 36px; }
+    table { width: 100%; border-collapse: collapse; font-size: .96rem; }
+    th, td { padding: 18px 20px; text-align: left; vertical-align: top; border-bottom: 1px solid rgba(0,63,135,.10); line-height: 1.55; }
+    th { background: rgba(0,63,135,.06); color: var(--legacy-blue); font-size: .8rem; letter-spacing: .12em; text-transform: uppercase; }
+    tr:last-child td { border-bottom: 0; }
+
+    .myhealth-panel {
+      position: relative;
+      display: grid;
+      grid-template-columns: 1fr .9fr;
+      gap: 34px;
+      overflow: hidden;
+      padding: 38px;
+      border-radius: var(--radius-xl);
+      color: white;
+      background: radial-gradient(circle at 88% 18%, rgba(237,28,36,.16), transparent 34%), linear-gradient(135deg, rgba(0,63,135,.98), rgba(8,77,156,.90));
+      box-shadow: 0 34px 96px rgba(0,39,85,.30);
+    }
+    .myhealth-panel p { color: rgba(255,255,255,.82); line-height: 1.68; font-size: 1.06rem; }
+    .phone { justify-self: center; width: min(100%, 335px); min-height: 540px; padding: 18px; border: 1px solid rgba(255,255,255,.30); border-radius: 48px; background: linear-gradient(145deg, rgba(255,255,255,.38), rgba(255,255,255,.12)); box-shadow: inset 0 0 0 8px rgba(255,255,255,.10), 0 34px 86px rgba(0,0,0,.22); transform: rotate(3deg); }
+    .phone-screen { height: 100%; display: flex; flex-direction: column; gap: 15px; padding: 22px; border-radius: 34px; background: rgba(255,255,255,.94); color: var(--ink); }
+    .screen-pill { width: 88px; height: 12px; margin: 0 auto 6px; border-radius: 999px; background: rgba(0,63,135,.10); }
+    .med-row { display: grid; grid-template-columns: 44px 1fr; gap: 12px; align-items: center; padding: 14px; border-radius: 20px; background: #f2f7ff; }
+    .med-icon { width: 44px; height: 44px; border-radius: 16px; background: linear-gradient(135deg, var(--legacy-blue), #1280ef); position: relative; }
+    .med-icon::after { content:""; position:absolute; width: 16px; height: 16px; border-radius:999px; right:7px; bottom:7px; background: rgba(255,255,255,.42); }
+    .med-row strong { display:block; font-size:.95rem; } .med-row span { display:block; margin-top:4px; color: var(--muted); font-size:.82rem; }
+    .screen-cta { margin-top:auto; padding:15px; border-radius:20px; color:white; text-align:center; background: linear-gradient(135deg, var(--legacy-red), #ff7176); font-weight: 950; }
+
+    .resource-grid { grid-template-columns: repeat(3, minmax(0,1fr)); }
+    .resource-card { position: relative; min-height: 230px; display:flex; flex-direction:column; justify-content:space-between; overflow:hidden; padding: 26px; border-radius: 32px; }
+    .resource-card::after { content:""; position:absolute; width: 138px; height: 138px; right:-54px; bottom:-54px; border-radius:999px; background: rgba(0,63,135,.08); }
+    .resource-card h3 { margin:0 0 10px; letter-spacing:-.035em; }
+    .resource-card p { margin:0; color:#566783; line-height:1.6; }
+    .text-link { position:relative; z-index:1; display:inline-flex; gap:8px; align-items:center; margin-top:22px; color: var(--legacy-blue); font-weight:950; }
+
+    .faq-contact { display: grid; grid-template-columns: 1.05fr .95fr; gap: 24px; align-items: start; }
+    .faq-list { display: grid; gap: 12px; }
+    details { border-radius: 24px; overflow: hidden; }
+    summary { cursor: pointer; padding: 20px 22px; color: var(--ink); font-weight: 950; letter-spacing: -.02em; }
+    details p { margin: 0; padding: 0 22px 20px; color: #52627d; line-height: 1.62; }
+    .contact-card { padding: 30px; border-radius: 38px; }
+    .contact-card h3 { margin: 0 0 12px; font-size: clamp(1.6rem, 3vw, 2.6rem); letter-spacing: -.06em; line-height: 1.02; }
+    .contact-card p { margin: 0 0 22px; color: #52627d; line-height: 1.64; }
+    .contact-list { display: grid; gap: 12px; }
+    .contact-item { padding: 18px; border-radius: 22px; background: rgba(0,63,135,.06); border: 1px solid rgba(0,63,135,.10); }
+    .contact-item span { display:block; margin-bottom: 8px; color: var(--muted); font-size: .76rem; font-weight: 950; letter-spacing:.12em; text-transform: uppercase; }
+    .contact-item strong { color: var(--legacy-blue); font-size: clamp(1.35rem, 3vw, 2.2rem); letter-spacing: -.04em; }
+
+    .quick-dock {
+      position: fixed;
+      left: 50%;
+      bottom: 18px;
+      z-index: 1900;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      max-width: min(calc(100% - 22px), 620px);
+      padding: 8px;
+      transform: translateX(-50%);
+      border: 1px solid rgba(255,255,255,.78);
+      border-radius: 999px;
+      background: rgba(255,255,255,.80);
+      box-shadow: 0 18px 55px rgba(0,39,85,.16);
+      backdrop-filter: blur(16px) saturate(155%);
+    }
+    .dock-primary { color: white; background: linear-gradient(135deg, var(--legacy-blue), #0f78e4); }
+    .dock-link { display: inline-flex; align-items: center; justify-content:center; gap: 8px; min-height: 42px; padding: 11px 14px; border-radius:999px; color: var(--legacy-blue); font-size: .86rem; font-weight:950; white-space: nowrap; }
+    .dock-link:hover { background: rgba(0,63,135,.08); }
+    .dock-primary:hover { background: linear-gradient(135deg, var(--legacy-blue), #0f78e4); }
+
+    .footer { margin-top: 72px; padding: 62px 0 104px; background: #071934; color: white; }
+    .footer-inner { display: grid; gap: 32px; }
+    .footer-top { display:grid; grid-template-columns: 1.1fr .9fr; gap: 38px; align-items:start; }
+    .footer-brand { display:flex; align-items:center; gap: 14px; margin-bottom:18px; }
+    .footer p { margin:0; color: rgba(255,255,255,.72); line-height:1.7; }
+    .source-note { margin-top:18px; padding: 14px 18px; border-radius:18px; background: rgba(255,255,255,.08); color: rgba(255,255,255,.68); font-size:.86rem; line-height:1.55; }
+    .footer-links { display:grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 22px; }
+    .footer-links h4 { margin: 0 0 14px; color:white; letter-spacing:-.02em; }
+    .footer-links a { display:block; margin: 9px 0; color: rgba(255,255,255,.70); font-size:.94rem; }
+    .legal { display:flex; flex-wrap:wrap; gap: 14px; padding-top:22px; border-top:1px solid rgba(255,255,255,.12); color: rgba(255,255,255,.60); font-size:.86rem; }
+
+    .reveal { opacity: 0; transform: translateY(28px); transition: opacity .8s ease, transform .8s ease; }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+    .mask-reveal { clip-path: inset(0 0 100% 0 round 30px); transition: clip-path .9s cubic-bezier(.2,.9,.2,1); }
+    .mask-reveal.visible { clip-path: inset(0 0 0 0 round 30px); }
+
+    @media (max-width: 1080px) {
+      .nav-links { display: none; }
+      .menu-toggle { display: inline-grid; place-items: center; }
+      .hero-grid, .pathway, .program-tool, .myhealth-panel, .faq-contact, .footer-top { grid-template-columns: 1fr; }
+      .hero-grid { padding-top: 50px; }
+      .hero-stage { min-height: 620px; }
+      .service-grid, .stats-row { grid-template-columns: repeat(2, minmax(0,1fr)); }
+      .program-layout { grid-template-columns: 1fr; }
+      .journey-visual, .decision-card { position: relative; top: auto; }
+    }
+
+    @media (max-width: 720px) {
+      .shell { width: min(calc(100% - 28px), var(--max)); }
+      .section { padding: 66px 0; scroll-margin-top: 92px; }
+      .nav-wrap { top: 10px; width: min(calc(100% - 18px), 1160px); }
+      .brand-text, .nav-actions .ghost { display: none; }
+      .btn { padding: 11px 14px; font-size: .88rem; }
+      .hero { min-height: auto; padding-top: 96px; }
+      h1 { font-size: clamp(3rem, 16vw, 4.8rem); }
+      .hero-stage { min-height: auto; display: flex; flex-direction: column; perspective: none; transform: none !important; }
+      .clinical-orb { position: relative; width: 100%; height: 320px; inset: auto; transform: none; }
+      .command-panel { position: relative; top: auto; left: auto; right: auto; margin-top: -70px; padding: 22px; transform: none; animation: none; z-index: 2; }
+      .panel-head { display:block; }
+      .panel-logo { margin-top:16px; }
+      .command-grid, .service-grid, .stats-row, .resource-grid, .footer-links, .program-meta { grid-template-columns: 1fr; }
+      .stats-row { margin-top: 42px; }
+      .command-card { min-height: auto; }
+      .service-card.featured { grid-column: auto; }
+      .section-head { display:block; }
+      .section-desc { margin-top:16px; }
+      .journey-visual { min-height: 510px; }
+      .myhealth-panel, .contact-card, .decision-card { padding: 24px; }
+      .phone { transform: none; min-height: 500px; }
+      table, thead, tbody, th, td, tr { display:block; }
+      thead { display:none; }
+      tr { border-bottom: 1px solid rgba(0,63,135,.12); }
+      td { border: 0; padding: 14px 18px; }
+      td::before { content: attr(data-label); display:block; margin-bottom:5px; color: var(--legacy-blue); font-size:.72rem; font-weight:950; letter-spacing:.12em; text-transform:uppercase; }
+      .quick-dock { width: min(calc(100% - 20px), 520px); justify-content: space-between; }
+      .dock-link { font-size: .78rem; padding: 10px 11px; }
+      .dock-link span { display:none; }
+      .footer { padding-bottom: 96px; }
+    }
+
+    @media (pointer: coarse) { .cursor-dot, .cursor-ring { display: none; } }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation-duration: .001ms !important; animation-iteration-count: 1 !important; scroll-behavior: auto !important; transition-duration: .001ms !important; }
+      .cursor-dot, .cursor-ring { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="scroll-progress" id="scrollProgress"></div>
+  <div class="cursor-dot" id="cursorDot" aria-hidden="true"></div>
+  <div class="cursor-ring" id="cursorRing" aria-hidden="true"></div>
+
+  <header class="nav-wrap">
+    <nav class="nav" aria-label="Primary navigation">
+      <a class="brand" href="#top" aria-label="Legacy Health Pharmacy home">
+        <span class="logo-mark" aria-hidden="true"></span>
+        <span class="brand-text">Legacy <span>Health</span></span>
+      </a>
+      <div class="nav-links" id="desktopNav">
+        <a href="#services">Services</a>
+        <a href="#prescriptions">Prescriptions</a>
+        <a href="#programs">Programs</a>
+        <a href="#myhealth">MyHealth</a>
+        <a href="#resources">Resources</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <div class="nav-actions">
+        <a class="btn ghost magnetic" href="https://www.legacyhealth.org/Doctors-and-Locations.aspx?ActiveLocationTypeFilter=d6d9b0e9-fb5c-455c-ad31-db43bfc2f3cc&Gender=&IsLHPMember=&Latitude=&Locations=&Longitude=&Open24Hours=undefined&OpenWeekends=undefined&PageNumber=1&PatientAge=&Radius=5&SearchType=LOCATIONS&Specialties=&ZipCode=&keyword=&services=" target="_blank" rel="noopener">Locations</a>
+        <a class="btn primary magnetic" href="https://myhealth.lhs.org/" target="_blank" rel="noopener">MyHealth</a>
+        <button class="menu-toggle" id="menuToggle" type="button" aria-label="Open navigation" aria-controls="mobilePanel" aria-expanded="false">☰</button>
+      </div>
+    </nav>
+  </header>
+
+  <div class="mobile-panel" id="mobilePanel" aria-label="Mobile navigation" hidden>
+    <a href="#services">Services</a>
+    <a href="#prescriptions">Prescriptions</a>
+    <a href="#programs">Programs</a>
+    <a href="#myhealth">MyHealth</a>
+    <a href="#resources">Resources</a>
+    <a href="#contact">Contact</a>
+  </div>
+
+  <main id="main">
+    <section class="hero" id="top" aria-labelledby="heroTitle">
+      <div class="shell hero-grid">
+        <div>
+          <div class="eyebrow reveal"><span class="pulse-dot"></span> Adult Services A-Z · Pharmacy</div>
+          <h1 id="heroTitle" class="reveal">Pharmacy care that feels <span class="gradient-text">clear, fast, and supported.</span></h1>
+          <p class="hero-copy reveal">Legacy Health pharmacy services help patients manage medications with prescription support, refills through MyHealth, delivery options, specialty medication support and knowledgeable pharmacy staff.</p>
+          <div class="typed-row reveal" aria-live="polite"><span id="typedText">Request refills through MyHealth.</span><span class="cursor-text">|</span></div>
+          <div class="hero-ctas reveal">
+            <a class="btn primary magnetic" href="#prescriptions">Transfer or refill prescriptions</a>
+            <a class="btn red magnetic" href="#programs">Compare support programs</a>
+          </div>
+        </div>
+
+        <div class="hero-stage" id="heroStage" aria-hidden="true">
+          <div class="clinical-orb reveal"></div>
+          <div class="command-panel reveal">
+            <div class="panel-head">
+              <div>
+                <h2>What do you need to do today?</h2>
+                <p>Choose the task closest to your need. Each path moves directly to the relevant information.</p>
+              </div>
+              <div class="panel-logo"></div>
+            </div>
+            <div class="command-grid">
+              <a class="command-card" href="#myhealth"><b>Request a refill</b><span>Use MyHealth to request medication refills and review current medications.</span></a>
+              <a class="command-card" href="#prescriptions"><b>Transfer a prescription</b><span>Call a Legacy pharmacy with your current pharmacy information and medication list.</span></a>
+              <a class="command-card" href="#prescriptions"><b>Set up delivery</b><span>Request mail delivery through MyHealth, by phone or by visiting a pharmacy.</span></a>
+              <a class="command-card" href="#programs"><b>Get extra support</b><span>Compare Specialty Pharmacy and Concierge Pharmacy pathways.</span></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="shell stats-row reveal" aria-label="Key pharmacy highlights">
+        <div class="stat-card"><strong>Free</strong><span>Home delivery of prescriptions at no extra cost.</span></div>
+        <div class="stat-card"><strong>Same-day</strong><span>Delivery available for a nominal fee.</span></div>
+        <div class="stat-card"><strong>5–7 days</strong><span>Refill coordination timing for support programs.</span></div>
+        <div class="stat-card"><strong>MyHealth</strong><span>Online refills and medication list access.</span></div>
+      </div>
+    </section>
+
+    <section class="section" id="services">
+      <div class="shell">
+        <div class="section-head reveal">
+          <div><p class="kicker">Services offered</p><h2 class="section-title">Less directory. More decision support.</h2></div>
+        </div>
+        <div class="grid service-grid">
+          <article class="service-card featured reveal"><div><span class="service-index">01</span><h3>Free home delivery of prescriptions</h3><p>Legacy offers mail delivery at no extra cost, saving patients a trip to the pharmacy.</p></div><a class="card-link" href="#prescriptions">See delivery path →</a></article>
+          <article class="service-card reveal"><div><span class="service-index">02</span><h3>Same-day delivery</h3><p>Medications can be delivered the same day for a nominal fee.</p></div><a class="card-link" href="#prescriptions">Learn more →</a></article>
+          <article class="service-card reveal"><div><span class="service-index">03</span><h3>Prescription transfers and refills</h3><p>Patients can transfer prescriptions from a current pharmacy and request refills.</p></div><a class="card-link" href="#prescriptions">Start here →</a></article>
+          <article class="service-card reveal"><div><span class="service-index">04</span><h3>Over-the-counter medications</h3><p>Outpatient pharmacies provide access to over-the-counter medication options.</p></div><a class="card-link" href="#resources">Find locations →</a></article>
+          <article class="service-card reveal"><div><span class="service-index">05</span><h3>Prescription readiness via MyHealth</h3><p>Patients can access prescription readiness and manage medications online through MyHealth.</p></div><a class="card-link" href="#myhealth">Open MyHealth →</a></article>
+          <article class="service-card reveal"><div><span class="service-index">06</span><h3>Specialty medications</h3><p>Support is available for specialty medication needs and complex prescription management.</p></div><a class="card-link" href="#programs">Compare programs →</a></article>
+          <article class="service-card reveal"><div><span class="service-index">07</span><h3>Expert staff</h3><p>Knowledgeable, highly trained pharmacists and staff assist with medication needs.</p></div><a class="card-link" href="#contact">Contact pharmacy →</a></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="prescriptions">
+      <div class="shell">
+        <div class="section-head reveal"><div><p class="kicker">Prescription experience</p><h2 class="section-title">A clearer path from transfer to delivery.</h2></div></div>
+        <div class="pathway">
+          <div class="journey-visual reveal" aria-hidden="true">
+            <div class="journey-orbit"></div>
+            <div class="journey-node node-1 active" data-node="1">1</div>
+            <div class="journey-node node-2" data-node="2">2</div>
+            <div class="journey-node node-3" data-node="3">3</div>
+            <div class="journey-node node-4" data-node="4">4</div>
+            <div class="journey-node node-5" data-node="5">5</div>
+            <div class="journey-caption"><h3 id="journeyTitle">Transfer prescription</h3><p id="journeyText">Provide current pharmacy information and an up-to-date medication list.</p></div>
+          </div>
+          <div class="timeline">
+            <article class="step reveal active" data-step="1" data-title="Transfer prescription" data-text="Provide current pharmacy information and an up-to-date medication list."><div class="step-num">1</div><div><h3>Transfer prescriptions to a Legacy pharmacy</h3><p>Patients provide current pharmacy information and an up-to-date medication list. Legacy says it will take care of the rest after a patient calls one of its pharmacies to request the transfer.</p></div></article>
+            <article class="step reveal" data-step="2" data-title="Use MyHealth" data-text="Request refills and review current medications in one place."><div class="step-num">2</div><div><h3>Manage prescriptions using MyHealth</h3><p>MyHealth users can request prescription refills and see a complete list of current medications in one place.</p></div></article>
+            <article class="step reveal" data-step="3" data-title="Request mail delivery" data-text="Request mail delivery through MyHealth, by phone, or by visiting a pharmacy."><div class="step-num">3</div><div><h3>Request mail delivery</h3><p>Patients with an active Legacy prescription can request mail delivery through MyHealth or by calling or visiting one of the pharmacies.</p></div></article>
+            <article class="step reveal" data-step="4" data-title="Transfer for delivery" data-text="Transfer outside prescriptions and set them up for mail delivery."><div class="step-num">4</div><div><h3>Transfer outside prescriptions for delivery</h3><p>Legacy can transfer prescriptions from other pharmacies and set them up for mail delivery.</p></div></article>
+            <article class="step reveal" data-step="5" data-title="Ask about availability" data-text="Staff work with patients to help make medications stocked and available."><div class="step-num">5</div><div><h3>Ask about hard-to-find medications</h3><p>Legacy says its staff will work with patients to make sure medications, especially difficult-to-find medications, are stocked and available.</p></div></article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="programs">
+      <div class="shell">
+        <div class="section-head reveal"><div><p class="kicker">Personalized support</p><h2 class="section-title">Two programs, easier to compare.</h2></div><p class="section-desc">Use the quick routing tool as a starting point, then confirm eligibility and next steps with a provider.</p></div>
+        <div class="program-tool">
+          <aside class="decision-card reveal">
+            <h3>Program routing tool</h3>
+            <p>Select what applies. This tool clarifies which official program description may be most relevant; it does not determine eligibility.</p>
+            <div class="choice-list" id="choiceList">
+              <label class="choice"><input type="checkbox" value="specialty"><span><b>I take a specialty medication</b><span>Medication may be expensive, hard to source, or need special handling.</span></span></label>
+              <label class="choice"><input type="checkbox" value="complex"><span><b>I have complex medical needs</b><span>I need additional help but may not be on specialty medication.</span></span></label>
+              <label class="choice"><input type="checkbox" value="delivery"><span><b>I need refill and delivery coordination</b><span>I want help coordinating medications, records, delivery date and address.</span></span></label>
+              <label class="choice"><input type="checkbox" value="insurance"><span><b>I need insurance or benefits help</b><span>I want support understanding prescription and medical insurance benefits.</span></span></label>
+            </div>
+            <div class="routing-result" id="routingResult"><b>Start with Specialty Pharmacy</b><span>Based on the official program descriptions, specialty medication needs are most aligned with Specialty Pharmacy.</span></div>
+          </aside>
+          <div>
+            <div class="program-layout">
+              <article class="program-card reveal"><div class="program-label"><span class="pulse-dot"></span> Specialty Pharmacy</div><h3>For chronic, complex or specialty medication needs.</h3><p>Legacy’s specialty pharmacy supports patients with chronic and complex conditions such as cancer, Hepatitis C, HIV, rheumatoid arthritis and multiple sclerosis, as well as patients prescribed expensive medications. Some medications may require special handling such as refrigerated shipping.</p><div class="program-meta"><div class="meta-pill"><b>Application path</b>Discuss the program with a provider. A provider referral is needed.</div><div class="meta-pill"><b>Refill timing</b>Staff contact patients 5 to 7 days before refills are due.</div></div><ul class="checklist"><li><span class="check">✓</span><span>Specially trained staff discuss treatment plans and answer questions.</span></li><li><span class="check">✓</span><span>Patients are automatically enrolled in the Patient Management Program for training, education and counseling.</span></li><li><span class="check">✓</span><span>The team collaborates with doctors and caregivers and coordinates prior authorization with insurance.</span></li><li><span class="check">✓</span><span>Staff provide refill reminders and act as healthcare advocates during treatment.</span></li><li><span class="check">✓</span><span>Delivery can be coordinated to a patient’s home, workplace or preferred location.</span></li></ul></article>
+              <article class="program-card reveal"><div class="program-label"><span class="pulse-dot"></span> Concierge Pharmacy</div><h3>For complex needs without specialty medications.</h3><p>Legacy’s Concierge Pharmacy program offers an additional support level for patients with complex medical needs that require special knowledge, but who are not on specialty medications.</p><div class="program-meta"><div class="meta-pill"><b>Application path</b>Discuss the program with a provider. A provider referral is needed.</div><div class="meta-pill"><b>Refill timing</b>Staff contact patients 5 to 7 days before refills are due.</div></div><ul class="checklist"><li><span class="check">✓</span><span>Staff discuss treatment plans and address questions or concerns.</span></li><li><span class="check">✓</span><span>Patients are automatically enrolled in the Patient Management Program for training, education and counseling.</span></li><li><span class="check">✓</span><span>The team collaborates directly with doctors and caregivers.</span></li><li><span class="check">✓</span><span>Refill reminders and close follow-up help patients receive medications and supplies efficiently.</span></li><li><span class="check">✓</span><span>Benefits support helps patients explore options and understand prescription and medical insurance benefits.</span></li></ul></article>
+            </div>
+          </div>
+        </div>
+        <div class="compare-wrap reveal" aria-label="Program comparison table"><table><thead><tr><th>Program</th><th>Who it is for</th><th>How to apply</th><th>Delivery / follow-up</th></tr></thead><tbody><tr><td data-label="Program"><strong>Specialty Pharmacy</strong></td><td data-label="Who it is for">Patients with chronic or complex conditions, specialty medications, expensive medications, or medications needing special handling.</td><td data-label="How to apply">Patients should discuss the program with their provider. A provider referral is needed.</td><td data-label="Delivery / follow-up">Staff contact patients 5 to 7 days before refills are due to coordinate medications, records, delivery date and address.</td></tr><tr><td data-label="Program"><strong>Concierge Pharmacy</strong></td><td data-label="Who it is for">Patients with complex medical needs who need additional support but are not on specialty medications.</td><td data-label="How to apply">Patients should discuss the program with their provider. A provider referral is needed.</td><td data-label="Delivery / follow-up">Staff contact patients 5 to 7 days before refills are due to coordinate medications, records, delivery date and address.</td></tr></tbody></table></div>
+      </div>
+    </section>
+
+    <section class="section" id="myhealth">
+      <div class="shell"><div class="myhealth-panel reveal"><div><p class="kicker" style="color:#ffb2b6">MyHealth</p><h2 class="section-title" style="color:white">Medication management from one account.</h2><p>MyHealth is positioned as the online path for managing prescriptions at any Legacy pharmacy. Patients can request refills and view current medications in one place. Anyone can sign up for a MyHealth account, and the MyChart/MyHealth app is available for download.</p><div class="hero-ctas"><a class="btn red magnetic" href="https://myhealth.lhs.org/" target="_blank" rel="noopener">Log in to MyHealth</a><a class="btn ghost magnetic" href="https://myhealth.lhs.org/MyChart/Signup" target="_blank" rel="noopener">Create account</a></div></div><div class="phone" aria-hidden="true"><div class="phone-screen"><div class="screen-pill"></div><h3 style="margin:0;letter-spacing:-.04em;font-size:1.45rem;">MyHealth Pharmacy</h3><div class="med-row"><div class="med-icon"></div><div><strong>Current medications</strong><span>Review medication list</span></div></div><div class="med-row"><div class="med-icon"></div><div><strong>Refill request</strong><span>Send request online</span></div></div><div class="med-row"><div class="med-icon"></div><div><strong>Prescription readiness</strong><span>Check pharmacy status</span></div></div><div class="med-row"><div class="med-icon"></div><div><strong>Mail delivery</strong><span>Request home delivery</span></div></div><div class="screen-cta">Manage prescriptions</div></div></div></div></div>
+    </section>
+
+    <section class="section" id="resources">
+      <div class="shell"><div class="section-head reveal"><div><p class="kicker">Resources & access</p></div></div><div class="grid resource-grid"><article class="resource-card reveal"><div><h3>View pharmacy locations</h3><p>Find Legacy pharmacy locations through the official Doctors & Locations search filtered for pharmacy locations.</p></div><a class="text-link" href="https://www.legacyhealth.org/Doctors-and-Locations.aspx?ActiveLocationTypeFilter=d6d9b0e9-fb5c-455c-ad31-db43bfc2f3cc&Gender=&IsLHPMember=&Latitude=&Locations=&Longitude=&Open24Hours=undefined&OpenWeekends=undefined&PageNumber=1&PatientAge=&Radius=5&SearchType=LOCATIONS&Specialties=&ZipCode=&keyword=&services=" target="_blank" rel="noopener">Open locations →</a></article><article class="resource-card reveal"><div><h3>Specialty Pharmacy welcome packet</h3><p>The specialty pharmacy page links to a welcome packet resource for additional program information.</p></div><a class="text-link" href="https://www.legacyhealth.org/-/media/files/pdf/services/adults/pharmacy/specialty-pharmacy-welcome-packet-11-2025.pdf" target="_blank" rel="noopener">View packet →</a></article><article class="resource-card reveal"><div><h3>Patients who need extra help</h3><p>Patients who do not meet Specialty Pharmacy requirements may be directed to Concierge Pharmacy for added support.</p></div><a class="text-link" href="https://www.legacyhealth.org/services-and-resources/services/adult/pharmacy/concierge-pharmacy" target="_blank" rel="noopener">Learn more →</a></article></div></div>
+    </section>
+
+    <section class="section" id="contact">
+      <div class="shell"><div class="section-head reveal"><div><p class="kicker">Contact & questions</p><h2 class="section-title">Give patients answers before they call.</h2></div></div><div class="faq-contact"><div class="faq-list reveal"><details open><summary>How do I transfer a prescription?</summary><p>Call one of Legacy’s pharmacies and provide your current pharmacy information and an up-to-date medication list. Legacy says it will take care of the rest.</p></details><details><summary>How do I request mail delivery?</summary><p>If you have an active Legacy prescription, request mail delivery through MyHealth or by calling or visiting one of the pharmacies.</p></details><details><summary>How do I apply for Specialty Pharmacy or Concierge Pharmacy?</summary><p>Discuss the program with your provider. A provider referral is needed for these support programs.</p></details><details><summary>When do support-program refill reminders happen?</summary><p>Staff contact patients 5 to 7 days before refills are due to coordinate medications, records, delivery date and address.</p></details></div><aside class="contact-card reveal"><h3>Specialty Pharmacy contact information.</h3><p>The Specialty Pharmacy page lists direct contact numbers for local, toll-free and after-hours support.</p><div class="contact-list"><a class="contact-item" href="tel:5034036187"><span>Specialty Pharmacy phone</span><strong>503-403-6187</strong></a><a class="contact-item" href="tel:8882566944"><span>Toll-free and after-hours</span><strong>888-256-6944</strong></a></div></aside></div></div>
+    </section>
+  </main>
+
+  <nav class="quick-dock" aria-label="Quick actions">
+    <a class="dock-link dock-primary" id="dockPrimary" href="https://myhealth.lhs.org/" target="_blank" rel="noopener">↗ <span>MyHealth</span></a>
+    <a class="dock-link" href="#prescriptions">⇄ <span>Transfer</span></a>
+    <a class="dock-link" href="https://www.legacyhealth.org/Doctors-and-Locations.aspx?ActiveLocationTypeFilter=d6d9b0e9-fb5c-455c-ad31-db43bfc2f3cc&Gender=&IsLHPMember=&Latitude=&Locations=&Longitude=&Open24Hours=undefined&OpenWeekends=undefined&PageNumber=1&PatientAge=&Radius=5&SearchType=LOCATIONS&Specialties=&ZipCode=&keyword=&services=" target="_blank" rel="noopener">⌖ <span>Locations</span></a>
+    <a class="dock-link" href="tel:5034036187">☎ <span>Call</span></a>
+  </nav>
+
+  <footer class="footer">
+    <div class="shell footer-inner"><div class="footer-top"><div><div class="footer-brand"><span class="logo-mark" aria-hidden="true"></span><div><strong style="display:block;font-size:1.2rem;letter-spacing:.04em;text-transform:uppercase;">Legacy Health</strong><span style="color:rgba(255,255,255,.62);letter-spacing:.22em;text-transform:uppercase;font-size:.72rem;">Pharmacy redesign concept</span></div></div><p>Legacy Health’s stated mission is good health for its people, patients, communities and world, with a commitment to doing the right thing.</p><div class="source-note">Non-official redesign concept. Content is based on publicly available Legacy Health pharmacy, specialty pharmacy and concierge pharmacy pages. Patients should verify current details through Legacy Health directly.</div></div><div class="footer-links"><div><h4>Our Organization</h4><a href="https://www.legacyhealth.org/careers" target="_blank" rel="noopener">Careers</a><a href="https://www.legacyhealth.org/giving-and-support/get-involved/volunteer-opportunities" target="_blank" rel="noopener">Volunteer Opportunities</a><a href="https://www.legacyhealth.org/about/doing-business-with-us" target="_blank" rel="noopener">Doing Business With Us</a></div><div><h4>For Patients</h4><a href="https://www.legacyhealth.org/services-and-resources/research-and-clinical-trials/clinical-trials" target="_blank" rel="noopener">Clinical Trials</a><a href="https://www.legacyhealth.org/patients-and-visitors/paying-for-your-care/financial-assistance" target="_blank" rel="noopener">Financial Assistance</a><a href="https://www.legacyhealth.org/patients-and-visitors/about-your-care/medical-records" target="_blank" rel="noopener">Medical Records</a><a href="https://www.legacyhealth.org/patients-and-visitors/paying-for-your-care/pay-a-bill" target="_blank" rel="noopener">Pay a Bill</a></div><div><h4>Connect</h4><a href="https://www.legacyhealth.org/contact-us" target="_blank" rel="noopener">Contact Us</a><a href="https://www.legacyhealth.org/services-and-resources/services/adult/pharmacy" target="_blank" rel="noopener">Official Pharmacy Page</a><a href="https://www.legacyhealth.org/services-and-resources/services/adult/pharmacy/specialty-pharmacy" target="_blank" rel="noopener">Specialty Pharmacy</a><a href="https://www.legacyhealth.org/services-and-resources/services/adult/pharmacy/concierge-pharmacy" target="_blank" rel="noopener">Concierge Pharmacy</a></div></div></div><div class="legal"><span>© 2026 Legacy Health</span><a href="https://www.legacyhealth.org/terms-of-use" target="_blank" rel="noopener">Terms of Use</a><a href="https://www.legacyhealth.org/privacy-policy" target="_blank" rel="noopener">Privacy Policy</a><a href="https://www.legacyhealth.org/notice-of-nondiscrimination" target="_blank" rel="noopener">Notice of Nondiscrimination</a><a href="https://www.legacyhealth.org/patients-and-visitors/paying-for-your-care/price-transparency" target="_blank" rel="noopener">Price Transparency</a><a href="https://www.legacyhealth.org/no-surprise-billing" target="_blank" rel="noopener">No Surprise Billing</a></div></div>
+  </footer>
+
+  <script>
+    (() => {
+      const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      const finePointer = window.matchMedia("(pointer: fine)").matches;
+
+      const phrases = ["Request refills through MyHealth.", "Transfer prescriptions with the right information.", "Set up mail delivery when eligible.", "Compare Specialty and Concierge support."];
+      const typed = document.getElementById("typedText");
+      let phraseIndex = 0, charIndex = 0, deleting = false;
+      function typeLoop() {
+        if (!typed || prefersReduced) return;
+        const current = phrases[phraseIndex];
+        typed.textContent = current.slice(0, charIndex);
+        if (!deleting && charIndex < current.length) { charIndex++; setTimeout(typeLoop, 42); }
+        else if (!deleting && charIndex === current.length) { deleting = true; setTimeout(typeLoop, 1450); }
+        else if (deleting && charIndex > 0) { charIndex--; setTimeout(typeLoop, 22); }
+        else { deleting = false; phraseIndex = (phraseIndex + 1) % phrases.length; setTimeout(typeLoop, 260); }
+      }
+      typeLoop();
+
+      const menuToggle = document.getElementById("menuToggle");
+      const mobilePanel = document.getElementById("mobilePanel");
+      let lastFocus = null;
+      function setMenu(open) {
+        if (!menuToggle || !mobilePanel) return;
+        menuToggle.setAttribute("aria-expanded", String(open));
+        mobilePanel.hidden = false;
+        requestAnimationFrame(() => mobilePanel.classList.toggle("open", open));
+        document.body.style.overflow = open ? "hidden" : "";
+        if (open) { lastFocus = document.activeElement; mobilePanel.querySelector("a")?.focus(); }
+        else { setTimeout(() => { mobilePanel.hidden = true; lastFocus?.focus?.(); }, 240); }
+      }
+      menuToggle?.addEventListener("click", () => setMenu(menuToggle.getAttribute("aria-expanded") !== "true"));
+      mobilePanel?.querySelectorAll("a").forEach(link => link.addEventListener("click", () => setMenu(false)));
+      document.addEventListener("keydown", event => { if (event.key === "Escape") setMenu(false); });
+
+      const progress = document.getElementById("scrollProgress");
+      const navLinks = [...document.querySelectorAll(".nav-links a")];
+      const sections = navLinks.map(link => document.querySelector(link.getAttribute("href"))).filter(Boolean);
+      const dockPrimary = document.getElementById("dockPrimary");
+      const dockMap = {
+        services: ["See services", "#services", false],
+        prescriptions: ["Transfer", "#prescriptions", false],
+        programs: ["Compare programs", "#programs", false],
+        myhealth: ["MyHealth", "https://myhealth.lhs.org/", true],
+        resources: ["Locations", "https://www.legacyhealth.org/Doctors-and-Locations.aspx?ActiveLocationTypeFilter=d6d9b0e9-fb5c-455c-ad31-db43bfc2f3cc&Gender=&IsLHPMember=&Latitude=&Locations=&Longitude=&Open24Hours=undefined&OpenWeekends=undefined&PageNumber=1&PatientAge=&Radius=5&SearchType=LOCATIONS&Specialties=&ZipCode=&keyword=&services=", true],
+        contact: ["Call", "tel:5034036187", false]
+      };
+      let latestScrollKnown = false;
+      function updateScrollState() {
+        latestScrollKnown = false;
+        const h = document.documentElement;
+        const denominator = h.scrollHeight - h.clientHeight;
+        if (progress) progress.style.width = denominator > 0 ? `${(h.scrollTop / denominator) * 100}%` : "0%";
+        const current = sections.slice().reverse().find(section => section.getBoundingClientRect().top <= 145) || sections[0];
+        navLinks.forEach(link => link.classList.toggle("active", current && link.getAttribute("href") === `#${current.id}`));
+        if (dockPrimary && current && dockMap[current.id]) {
+          const [label, href, external] = dockMap[current.id];
+          dockPrimary.innerHTML = `${external ? "↗" : "→"} <span>${label}</span>`;
+          dockPrimary.href = href;
+          if (external) { dockPrimary.target = "_blank"; dockPrimary.rel = "noopener"; } else { dockPrimary.removeAttribute("target"); dockPrimary.removeAttribute("rel"); }
+        }
+      }
+      window.addEventListener("scroll", () => { if (!latestScrollKnown) { latestScrollKnown = true; requestAnimationFrame(updateScrollState); } }, { passive: true });
+      updateScrollState();
+
+      const revealObserver = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) { entry.target.classList.add("visible"); revealObserver.unobserve(entry.target); }
+        });
+      }, { threshold: .13 });
+      document.querySelectorAll(".reveal, .mask-reveal").forEach((el, index) => { el.style.transitionDelay = `${Math.min(index % 5, 4) * 58}ms`; revealObserver.observe(el); });
+
+      const steps = [...document.querySelectorAll(".step[data-step]")];
+      const nodes = [...document.querySelectorAll(".journey-node")];
+      const journeyTitle = document.getElementById("journeyTitle");
+      const journeyText = document.getElementById("journeyText");
+      const stepObserver = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (!entry.isIntersecting) return;
+          const step = entry.target;
+          const id = step.dataset.step;
+          steps.forEach(item => item.classList.toggle("active", item === step));
+          nodes.forEach(node => node.classList.toggle("active", node.dataset.node === id));
+          if (journeyTitle) journeyTitle.textContent = step.dataset.title || "";
+          if (journeyText) journeyText.textContent = step.dataset.text || "";
+        });
+      }, { rootMargin: "-35% 0px -45% 0px", threshold: .01 });
+      steps.forEach(step => stepObserver.observe(step));
+
+      const choices = [...document.querySelectorAll("#choiceList input")];
+      const routingResult = document.getElementById("routingResult");
+      function updateRouting() {
+        const values = choices.filter(c => c.checked).map(c => c.value);
+        let title = "Start with Specialty Pharmacy";
+        let text = "Based on the official program descriptions, specialty medication needs are most aligned with Specialty Pharmacy.";
+        if (!values.length) {
+          title = "Start with Specialty Pharmacy";
+          text = "Select what applies. Specialty medication needs point to Specialty Pharmacy; complex needs without specialty medications point to Concierge Pharmacy.";
+        } else if (values.includes("specialty")) {
+          title = "Specialty Pharmacy may be the better starting point";
+          text = "Specialty medication, special handling, chronic or complex condition support aligns most closely with Specialty Pharmacy.";
+        } else if (values.includes("complex")) {
+          title = "Concierge Pharmacy may be the better starting point";
+          text = "Complex medical needs without specialty medications align most closely with Concierge Pharmacy.";
+        } else if (values.includes("delivery") || values.includes("insurance")) {
+          title = "Either support program may help";
+          text = "Both programs describe refill coordination, follow-up, and help navigating benefits. Ask your provider which pathway fits.";
+        }
+        if (routingResult) routingResult.innerHTML = `<b>${title}</b><span>${text}</span>`;
+      }
+      choices.forEach(choice => choice.addEventListener("change", updateRouting));
+      updateRouting();
+
+      if (finePointer && !prefersReduced) {
+        const dot = document.getElementById("cursorDot");
+        const ring = document.getElementById("cursorRing");
+        let cx = 0, cy = 0, rx = 0, ry = 0, cursorRAF = null;
+        document.body.classList.add("cursor-ready");
+        function drawCursor() {
+          rx += (cx - rx) * .18; ry += (cy - ry) * .18;
+          if (dot) dot.style.transform = `translate(${cx}px, ${cy}px) translate(-50%, -50%)`;
+          if (ring) ring.style.transform = `translate(${rx}px, ${ry}px) translate(-50%, -50%)`;
+          cursorRAF = requestAnimationFrame(drawCursor);
+        }
+        document.addEventListener("mousemove", event => { cx = event.clientX; cy = event.clientY; if (!cursorRAF) drawCursor(); }, { passive: true });
+        document.querySelectorAll("a, button, summary, .choice").forEach(el => {
+          el.addEventListener("mouseenter", () => document.body.classList.add("cursor-hover"));
+          el.addEventListener("mouseleave", () => document.body.classList.remove("cursor-hover"));
+        });
+
+        document.querySelectorAll(".magnetic").forEach(btn => {
+          btn.addEventListener("mousemove", event => {
+            const rect = btn.getBoundingClientRect();
+            const x = (event.clientX - rect.left - rect.width / 2) * .18;
+            const y = (event.clientY - rect.top - rect.height / 2) * .18;
+            btn.style.transform = `translate(${x}px, ${y}px)`;
+          });
+          btn.addEventListener("mouseleave", () => { btn.style.transform = ""; });
+        });
+
+        const heroStage = document.getElementById("heroStage");
+        let mx = 0, my = 0, heroVisible = true, heroRAF = null;
+        new IntersectionObserver(entries => { heroVisible = entries[0]?.isIntersecting ?? true; }, { threshold: 0 }).observe(heroStage);
+        function drawHeroTilt() {
+          heroRAF = null;
+          if (!heroStage || !heroVisible || window.innerWidth < 900) return;
+          heroStage.style.transform = `rotateX(${-my * 2.2}deg) rotateY(${mx * 2.2}deg)`;
+        }
+        document.addEventListener("mousemove", event => {
+          if (!heroStage || !heroVisible || window.innerWidth < 900) return;
+          const rect = heroStage.getBoundingClientRect();
+          mx = ((event.clientX - rect.left) / rect.width) - .5;
+          my = ((event.clientY - rect.top) / rect.height) - .5;
+          if (!heroRAF) heroRAF = requestAnimationFrame(drawHeroTilt);
+        }, { passive: true });
+      }
+    })();
+  </script>
+</body>
+</html>
