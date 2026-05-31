@@ -3,893 +3,1719 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Legacy Health Pharmacy — Premium Experience V3</title>
-  <meta name="description" content="A premium task-first redesign concept for Legacy Health Pharmacy services." />
+  <title>Legacy Health Pharmacy — Modern Redesign Concept</title>
+  <meta name="description" content="A high-end redesign concept for Legacy Health Pharmacy services based on public Legacy Health pharmacy content." />
   <style>
     :root {
       --legacy-blue: #003f87;
-      --legacy-blue-2: #0b73df;
+      --legacy-blue-2: #0b5bb5;
       --legacy-red: #ed1c24;
-      --ink: #08172f;
-      --text: #2b3850;
-      --muted: #65738a;
-      --cloud: #f5f9ff;
-      --line: rgba(0, 63, 135, .14);
-      --glass: rgba(255, 255, 255, .74);
-      --glass-strong: rgba(255, 255, 255, .9);
-      --shadow: 0 28px 90px rgba(0, 39, 85, .18);
-      --shadow-soft: 0 16px 48px rgba(0, 39, 85, .11);
+      --ink: #0c1633;
+      --muted: #65718b;
+      --paper: #f7fbff;
+      --white: #ffffff;
+      --glass: rgba(255,255,255,.66);
+      --glass-strong: rgba(255,255,255,.82);
+      --line: rgba(13, 49, 99, .14);
+      --shadow: 0 24px 80px rgba(0, 41, 89, .18);
+      --shadow-soft: 0 14px 40px rgba(0, 41, 89, .12);
       --radius: 28px;
-      --radius-xl: 44px;
       --max: 1180px;
-      --logo: url("data:image/webp;base64,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");
-      color-scheme: light;
     }
 
-    * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
+    * { box-sizing: border-box; min-width: 0; }
+    html {
+      width: 100%;
+      max-width: 100%;
+      overflow-x: hidden;
+      scroll-behavior: smooth;
+    }
     body {
       margin: 0;
-      min-width: 320px;
-      color: var(--ink);
+      width: 100%;
+      max-width: 100%;
       font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--ink);
       background:
-        radial-gradient(circle at 12% 10%, rgba(237, 28, 36, .16), transparent 26rem),
-        radial-gradient(circle at 83% 0%, rgba(0, 63, 135, .22), transparent 34rem),
-        linear-gradient(135deg, #f9fcff 0%, #edf6ff 45%, #fbfdff 100%);
+        radial-gradient(circle at 12% 8%, rgba(237,28,36,.16), transparent 28rem),
+        radial-gradient(circle at 80% 2%, rgba(0,63,135,.20), transparent 36rem),
+        linear-gradient(135deg, #f5f9ff 0%, #eef6ff 45%, #f9fbff 100%);
       overflow-x: hidden;
+      overscroll-behavior-x: none;
+    }
+
+    @supports (overflow: clip) {
+      html, body { overflow-x: clip; }
+    }
+
+    main, header, footer, section, .hero, .section, .hero-grid, .hero-stage, .nav-shell {
+      max-width: 100%;
     }
 
     body::before {
       content: "";
       position: fixed;
       inset: 0;
-      z-index: -4;
       pointer-events: none;
       background-image:
-        linear-gradient(rgba(0, 63, 135, .035) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(0, 63, 135, .035) 1px, transparent 1px);
-      background-size: 42px 42px;
-      mask-image: linear-gradient(to bottom, black 0%, transparent 80%);
+        linear-gradient(rgba(0,63,135,.035) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0,63,135,.035) 1px, transparent 1px);
+      background-size: 44px 44px;
+      mask-image: linear-gradient(to bottom, black, transparent 82%);
+      z-index: -2;
     }
 
     a { color: inherit; text-decoration: none; }
-    img { display: block; max-width: 100%; }
+    img { max-width: 100%; display: block; }
     button, input { font: inherit; }
-    ::selection { background: rgba(237, 28, 36, .16); }
-    :focus-visible { outline: 3px solid rgba(237, 28, 36, .54); outline-offset: 4px; }
 
-    .skip-link {
-      position: fixed;
-      top: 14px;
-      left: 14px;
-      z-index: 3000;
-      transform: translateY(-150%);
-      padding: 12px 16px;
-      border-radius: 999px;
-      color: white;
-      background: var(--ink);
-      font-weight: 900;
-      transition: transform .2s ease;
-    }
-    .skip-link:focus { transform: translateY(0); }
-
-    .scroll-progress {
+    .progress {
       position: fixed;
       top: 0;
       left: 0;
       height: 4px;
       width: 0%;
-      z-index: 2200;
       background: linear-gradient(90deg, var(--legacy-red), var(--legacy-blue));
-      box-shadow: 0 0 18px rgba(237, 28, 36, .38);
+      z-index: 1000;
+      box-shadow: 0 0 18px rgba(237, 28, 36, .45);
     }
 
-    .cursor-dot, .cursor-ring {
-      position: fixed;
-      top: 0;
-      left: 0;
-      pointer-events: none;
-      z-index: 2600;
-      transform: translate(-50%, -50%);
-      opacity: 0;
-    }
-    .cursor-dot { width: 7px; height: 7px; border-radius: 999px; background: var(--legacy-red); }
-    .cursor-ring { width: 38px; height: 38px; border: 1px solid rgba(0,63,135,.38); border-radius: 999px; transition: width .2s ease, height .2s ease, border-color .2s ease; }
-    body.cursor-ready .cursor-dot, body.cursor-ready .cursor-ring { opacity: 1; }
-    body.cursor-hover .cursor-ring { width: 58px; height: 58px; border-color: rgba(237,28,36,.48); }
-
-    .shell { width: min(calc(100% - 40px), var(--max)); margin-inline: auto; }
-    .section { padding: 92px 0; scroll-margin-top: 110px; }
-
-    .logo-mark {
-      width: 46px;
-      height: 46px;
-      flex: 0 0 auto;
-      border-radius: 14px;
-      background: white var(--logo) center/76% no-repeat;
-      box-shadow: inset 0 0 0 1px rgba(0, 63, 135, .08), 0 12px 28px rgba(0, 39, 85, .12);
-    }
-
-    .nav-wrap {
-      position: fixed;
-      top: 16px;
-      left: 50%;
-      z-index: 2100;
-      width: min(calc(100% - 32px), 1160px);
-      transform: translateX(-50%);
-      border: 1px solid rgba(255,255,255,.76);
+    .orb {
+      position: absolute;
       border-radius: 999px;
-      background: rgba(255,255,255,.74);
-      box-shadow: 0 20px 60px rgba(0, 39, 85, .12);
-      backdrop-filter: blur(18px) saturate(160%);
-      -webkit-backdrop-filter: blur(18px) saturate(160%);
+      filter: blur(1px);
+      opacity: .85;
+      pointer-events: none;
+      animation: float 8s ease-in-out infinite;
     }
+
+    .orb.one {
+      width: 22rem;
+      height: 22rem;
+      top: 5rem;
+      left: -10rem;
+      background: radial-gradient(circle, rgba(237,28,36,.22), transparent 68%);
+    }
+    .orb.two {
+      width: 30rem;
+      height: 30rem;
+      top: 13rem;
+      right: -15rem;
+      background: radial-gradient(circle, rgba(0,63,135,.20), transparent 68%);
+      animation-delay: -3s;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translate3d(0,0,0); }
+      50% { transform: translate3d(0,-22px,0); }
+    }
+
+    .nav-shell {
+      position: fixed;
+      top: 18px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 900;
+      width: min(calc(100% - 32px), 1120px);
+      border: 1px solid rgba(255,255,255,.72);
+      background: rgba(255,255,255,.70);
+      backdrop-filter: blur(18px) saturate(150%);
+      -webkit-backdrop-filter: blur(18px) saturate(150%);
+      border-radius: 999px;
+      box-shadow: 0 18px 55px rgba(0, 41, 89, .13);
+    }
+
     .nav {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 16px;
+      gap: 18px;
       padding: 10px 12px 10px 16px;
     }
-    .brand { display: flex; align-items: center; gap: 12px; min-width: fit-content; }
-    .brand-text { line-height: 1.02; letter-spacing: .06em; text-transform: uppercase; font-size: .78rem; font-weight: 950; }
-    .brand-text span { display: block; margin-top: 3px; color: var(--muted); letter-spacing: .30em; font-size: .61rem; font-weight: 750; }
-    .nav-links { display: flex; align-items: center; gap: 4px; color: #2f3d58; font-size: .88rem; font-weight: 850; }
-    .nav-links a { padding: 10px 12px; border-radius: 999px; transition: color .22s ease, background .22s ease, transform .22s ease; }
-    .nav-links a:hover, .nav-links a.active { color: var(--legacy-blue); background: rgba(0,63,135,.08); transform: translateY(-1px); }
-    .nav-actions { display: flex; align-items: center; gap: 8px; }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 11px;
+      min-width: fit-content;
+    }
+
+    .brand img {
+      width: 42px;
+      height: 42px;
+      object-fit: contain;
+      border-radius: 10px;
+      background: white;
+      padding: 2px;
+      box-shadow: 0 6px 18px rgba(0,63,135,.12);
+    }
+
+    .brand-text {
+      line-height: 1.03;
+      letter-spacing: .05em;
+      text-transform: uppercase;
+      font-size: .78rem;
+      font-weight: 800;
+    }
+    .brand-text span { display: block; letter-spacing: .32em; font-weight: 500; font-size: .62rem; margin-top: 3px; }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      color: #263753;
+      font-size: .88rem;
+      font-weight: 700;
+    }
+
+    .nav-links a {
+      padding: 10px 12px;
+      border-radius: 999px;
+      transition: .25s ease;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: var(--legacy-blue);
+      background: rgba(0,63,135,.08);
+    }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
 
     .btn {
-      position: relative;
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      gap: 9px;
-      min-height: 44px;
+      gap: 8px;
+      border-radius: 999px;
       padding: 12px 18px;
       border: 1px solid transparent;
-      border-radius: 999px;
-      overflow: hidden;
-      cursor: pointer;
-      white-space: nowrap;
-      font-weight: 950;
+      font-weight: 800;
       line-height: 1;
-      isolation: isolate;
-      transition: transform .24s ease, box-shadow .24s ease, border-color .24s ease, background .24s ease;
+      cursor: pointer;
+      transform: translateZ(0);
+      transition: transform .25s ease, box-shadow .25s ease, background .25s ease;
+      white-space: nowrap;
     }
-    .btn::after {
-      content: "";
-      position: absolute;
-      inset: -60% auto -60% -32%;
-      z-index: -1;
-      width: 35%;
-      transform: skewX(-20deg);
-      background: rgba(255,255,255,.38);
-      opacity: 0;
-      transition: transform .55s ease, opacity .55s ease;
-    }
-    .btn:hover::after { opacity: 1; transform: translateX(360%) skewX(-20deg); }
-    .btn:hover { transform: translateY(-2px); }
-    .btn.primary { color: white; background: linear-gradient(135deg, var(--legacy-blue), #117be7); box-shadow: 0 16px 34px rgba(0,63,135,.23); }
-    .btn.red { color: white; background: linear-gradient(135deg, var(--legacy-red), #ff6f75); box-shadow: 0 16px 34px rgba(237,28,36,.18); }
-    .btn.ghost { color: var(--legacy-blue); background: rgba(255,255,255,.76); border-color: rgba(0,63,135,.16); }
-    .menu-toggle { display: none; width: 44px; height: 44px; border: 0; border-radius: 999px; background: rgba(0,63,135,.08); color: var(--legacy-blue); font-weight: 950; cursor: pointer; }
 
-    .mobile-panel {
-      position: fixed;
-      top: 86px;
-      left: 50%;
-      z-index: 2050;
-      width: min(calc(100% - 28px), 560px);
-      transform: translate(-50%, -18px) scale(.98);
-      pointer-events: none;
-      opacity: 0;
-      border: 1px solid rgba(255,255,255,.8);
-      border-radius: 28px;
-      background: rgba(255,255,255,.9);
-      box-shadow: var(--shadow);
-      backdrop-filter: blur(18px) saturate(155%);
-      padding: 12px;
-      transition: opacity .24s ease, transform .24s ease;
+    .btn:hover { transform: translateY(-2px); }
+    .btn.primary {
+      color: #fff;
+      background: linear-gradient(135deg, var(--legacy-blue), #0a72dc);
+      box-shadow: 0 14px 30px rgba(0,63,135,.24);
     }
-    .mobile-panel.open { transform: translate(-50%, 0) scale(1); opacity: 1; pointer-events: auto; }
-    .mobile-panel a { display: block; padding: 14px 16px; border-radius: 17px; color: var(--text); font-weight: 900; }
-    .mobile-panel a:hover { color: var(--legacy-blue); background: rgba(0,63,135,.08); }
+    .btn.primary:hover { box-shadow: 0 18px 42px rgba(0,63,135,.28); }
+    .btn.secondary {
+      color: var(--legacy-blue);
+      background: rgba(255,255,255,.7);
+      border-color: rgba(0,63,135,.15);
+    }
+    .btn.red {
+      color: #fff;
+      background: linear-gradient(135deg, var(--legacy-red), #ff6b70);
+      box-shadow: 0 14px 30px rgba(237,28,36,.18);
+    }
+
+    .menu-toggle {
+      display: none;
+      width: 42px;
+      height: 42px;
+      border: 0;
+      border-radius: 999px;
+      background: rgba(0,63,135,.08);
+      color: var(--legacy-blue);
+    }
+
+    main { position: relative; z-index: 1; }
+
+    .section {
+      width: min(calc(100% - 36px), var(--max));
+      margin: 0 auto;
+      padding: 88px 0;
+    }
 
     .hero {
-      position: relative;
+      min-height: 100vh;
       display: grid;
-      align-items: center;
-      min-height: 100svh;
-      padding: 120px 0 68px;
+      place-items: center;
+      padding: 120px 0 70px;
+      position: relative;
     }
-    .hero-grid { display: grid; grid-template-columns: minmax(0,.98fr) minmax(360px,1.02fr); gap: 52px; align-items: center; }
+
+    .hero-grid {
+      width: min(calc(100% - 36px), var(--max));
+      display: grid;
+      grid-template-columns: minmax(0, 1.02fr) minmax(340px, .98fr);
+      gap: 48px;
+      align-items: center;
+    }
+
     .eyebrow {
       display: inline-flex;
       align-items: center;
       gap: 10px;
-      width: fit-content;
       padding: 9px 14px;
-      border: 1px solid rgba(0,63,135,.14);
+      border: 1px solid rgba(0,63,135,.13);
+      background: rgba(255,255,255,.72);
+      backdrop-filter: blur(14px);
       border-radius: 999px;
       color: var(--legacy-blue);
-      background: rgba(255,255,255,.74);
+      font-size: .86rem;
+      font-weight: 850;
       box-shadow: 0 10px 30px rgba(0,63,135,.07);
-      backdrop-filter: blur(12px);
-      font-size: .85rem;
-      font-weight: 950;
     }
-    .pulse-dot { width: 9px; height: 9px; border-radius: 999px; background: var(--legacy-red); box-shadow: 0 0 0 0 rgba(237,28,36,.5); animation: pulse 2.1s infinite; }
-    @keyframes pulse { 70% { box-shadow: 0 0 0 12px rgba(237,28,36,0); } 100% { box-shadow: 0 0 0 0 rgba(237,28,36,0); } }
-    h1 { max-width: 760px; margin: 24px 0 22px; font-size: clamp(3.1rem, 7vw, 6.5rem); line-height: .9; letter-spacing: -.076em; }
-    .gradient-text { color: transparent; background: linear-gradient(105deg, #061631 0%, var(--legacy-blue) 39%, var(--legacy-red) 76%, #061631 100%); background-size: 220% auto; background-clip: text; -webkit-background-clip: text; animation: shimmer 8s linear infinite; }
-    @keyframes shimmer { to { background-position: 220% center; } }
-    .hero-copy { max-width: 660px; margin: 0 0 24px; color: #3f4f6b; font-size: clamp(1.06rem, 2vw, 1.23rem); line-height: 1.72; }
-    .typed-row { min-height: 34px; margin: 0 0 28px; color: var(--legacy-blue); font-size: clamp(1.04rem, 2vw, 1.3rem); font-weight: 950; letter-spacing: -.02em; }
-    .cursor-text { color: var(--legacy-red); animation: blink 1s infinite; }
-    @keyframes blink { 50% { opacity: 0; } }
-    .hero-ctas { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
 
-    .hero-stage { position: relative; min-height: 650px; perspective: 1200px; }
-    .clinical-orb {
-      position: absolute;
-      inset: 12px 0 auto auto;
-      width: min(84%, 520px);
-      height: 380px;
-      border: 1px solid rgba(255,255,255,.75);
-      border-radius: 44px;
-      overflow: hidden;
-      box-shadow: 0 34px 110px rgba(0,39,85,.22);
-      background:
-        radial-gradient(circle at 75% 28%, rgba(255,255,255,.88), transparent 0 10%, transparent 22%),
-        radial-gradient(circle at 35% 42%, rgba(255,255,255,.72), transparent 0 13%, transparent 24%),
-        linear-gradient(145deg, rgba(0,63,135,.92), rgba(12,103,205,.78)),
-        linear-gradient(45deg, rgba(237,28,36,.38), transparent 45%);
-      transform: rotateY(-10deg) rotateX(5deg) rotateZ(2deg);
+    .pulse-dot {
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      background: var(--legacy-red);
+      box-shadow: 0 0 0 0 rgba(237,28,36,.52);
+      animation: pulse 2.1s infinite;
     }
-    .clinical-orb::before {
+
+    @keyframes pulse {
+      70% { box-shadow: 0 0 0 12px rgba(237,28,36,0); }
+      100% { box-shadow: 0 0 0 0 rgba(237,28,36,0); }
+    }
+
+    h1 {
+      font-size: clamp(3.15rem, 7vw, 6.85rem);
+      line-height: .89;
+      letter-spacing: -.075em;
+      margin: 25px 0 22px;
+      max-width: 780px;
+    }
+
+    .gradient-text {
+      background: linear-gradient(100deg, #061631 0%, var(--legacy-blue) 40%, var(--legacy-red) 76%, #061631 100%);
+      background-size: 220% auto;
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      animation: shimmer 8s linear infinite;
+    }
+
+    @keyframes shimmer {
+      to { background-position: 220% center; }
+    }
+
+    .hero-copy {
+      max-width: 680px;
+      color: #40506d;
+      font-size: clamp(1.05rem, 2vw, 1.28rem);
+      line-height: 1.7;
+      margin: 0 0 28px;
+    }
+
+    .type-row {
+      min-height: 34px;
+      margin: 0 0 28px;
+      color: var(--legacy-blue);
+      font-weight: 900;
+      letter-spacing: -.02em;
+      font-size: clamp(1.05rem, 2.1vw, 1.35rem);
+    }
+    .cursor { color: var(--legacy-red); animation: blink 1s infinite; }
+    @keyframes blink { 50% { opacity: 0; } }
+
+    .hero-ctas {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      align-items: center;
+    }
+
+    .trust-strip {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0,1fr));
+      gap: 12px;
+      margin-top: 34px;
+      max-width: 730px;
+    }
+
+    .trust-item {
+      padding: 16px 16px;
+      border-radius: 22px;
+      background: rgba(255,255,255,.66);
+      border: 1px solid rgba(255,255,255,.74);
+      backdrop-filter: blur(12px);
+      box-shadow: var(--shadow-soft);
+    }
+
+    .trust-item strong {
+      display: block;
+      color: var(--legacy-blue);
+      font-size: 1.15rem;
+      letter-spacing: -.02em;
+      margin-bottom: 4px;
+    }
+    .trust-item span { color: var(--muted); font-size: .92rem; line-height: 1.4; }
+
+    .hero-stage {
+      position: relative;
+      perspective: 1100px;
+      min-height: 640px;
+    }
+
+    .stock-photo {
+      position: absolute;
+      inset: 52px 18px auto auto;
+      width: min(78%, 420px);
+      height: 278px;
+      border-radius: 36px;
+      overflow: hidden;
+      box-shadow: 0 34px 100px rgba(0, 41, 89, .24);
+      transform: rotateY(-12deg) rotateX(6deg) rotateZ(2deg);
+      transform-style: preserve-3d;
+      border: 1px solid rgba(255,255,255,.7);
+    }
+    .stock-photo::after {
       content: "";
       position: absolute;
-      inset: 15%;
-      border-radius: 999px;
-      border: 1px solid rgba(255,255,255,.34);
-      box-shadow: 0 0 0 28px rgba(255,255,255,.06), 0 0 0 62px rgba(255,255,255,.05), inset 0 0 80px rgba(255,255,255,.18);
-      animation: rotateGlow 14s linear infinite;
+      inset: 0;
+      background: linear-gradient(120deg, rgba(0,63,135,.58), rgba(237,28,36,.08));
+      mix-blend-mode: multiply;
     }
-    .clinical-orb::after {
-      content: "Rx";
-      position: absolute;
-      left: 44px;
-      bottom: 36px;
-      color: rgba(255,255,255,.88);
-      font-size: 5.8rem;
-      font-weight: 950;
-      letter-spacing: -.09em;
-      text-shadow: 0 18px 48px rgba(0,0,0,.22);
+    .stock-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: saturate(1.05) contrast(1.03);
     }
-    @keyframes rotateGlow { to { transform: rotate(360deg); } }
-    .command-panel {
+
+    .glass-card.hero-card {
       position: absolute;
-      top: 240px;
+      top: 254px;
       left: 0;
-      right: 24px;
-      padding: 26px;
-      border: 1px solid rgba(255,255,255,.80);
-      border-radius: 40px;
-      background: linear-gradient(145deg, rgba(255,255,255,.86), rgba(255,255,255,.56));
+      right: 34px;
+      padding: 30px;
+      border-radius: 38px;
+      transform: rotateY(12deg) rotateX(5deg);
+      transform-style: preserve-3d;
+      animation: heroBob 7s ease-in-out infinite;
+    }
+
+    @keyframes heroBob {
+      0%, 100% { transform: rotateY(12deg) rotateX(5deg) translateY(0); }
+      50% { transform: rotateY(8deg) rotateX(7deg) translateY(-18px); }
+    }
+
+    .glass-card {
+      background: linear-gradient(145deg, rgba(255,255,255,.78), rgba(255,255,255,.44));
+      border: 1px solid rgba(255,255,255,.76);
       box-shadow: var(--shadow);
-      backdrop-filter: blur(22px) saturate(150%);
-      -webkit-backdrop-filter: blur(22px) saturate(150%);
-      transform: rotateY(8deg) rotateX(4deg);
-      animation: panelBob 7s ease-in-out infinite;
+      backdrop-filter: blur(22px) saturate(145%);
+      -webkit-backdrop-filter: blur(22px) saturate(145%);
     }
-    @keyframes panelBob { 0%,100% { transform: rotateY(8deg) rotateX(4deg) translateY(0); } 50% { transform: rotateY(5deg) rotateX(6deg) translateY(-14px); } }
-    .panel-head { display: flex; justify-content: space-between; gap: 18px; align-items: flex-start; margin-bottom: 18px; }
-    .panel-head h2 { margin: 0; font-size: clamp(1.55rem, 2.7vw, 2.24rem); line-height: 1.02; letter-spacing: -.055em; }
-    .panel-head p { margin: 10px 0 0; color: #53617a; line-height: 1.58; }
-    .panel-logo { width: 82px; height: 82px; flex: 0 0 auto; border-radius: 24px; background: white var(--logo) center/78% no-repeat; box-shadow: inset 0 0 0 1px rgba(0,63,135,.08), 0 18px 45px rgba(0,63,135,.13); transform: translateZ(48px); }
-    .command-grid { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 12px; }
-    .command-card {
-      position: relative;
-      min-height: 126px;
-      padding: 17px;
-      overflow: hidden;
-      border: 1px solid rgba(0,63,135,.11);
+
+    .hero-card-top {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 20px;
+      margin-bottom: 24px;
+    }
+
+    .hero-card h2 {
+      font-size: clamp(1.45rem, 2.8vw, 2.15rem);
+      line-height: 1.05;
+      letter-spacing: -.05em;
+      margin: 0;
+    }
+    .hero-card p { color: #50617d; line-height: 1.65; margin: 12px 0 0; }
+
+    .logo-tile {
+      width: 88px;
+      height: 88px;
       border-radius: 24px;
-      background: rgba(255,255,255,.70);
-      box-shadow: 0 14px 35px rgba(0,39,85,.09);
-      transition: transform .24s ease, box-shadow .24s ease, border-color .24s ease;
-    }
-    .command-card:hover { transform: translateY(-5px); box-shadow: 0 22px 52px rgba(0,39,85,.14); border-color: rgba(0,63,135,.20); }
-    .command-card::after { content:""; position:absolute; width:96px; height:96px; right:-36px; top:-38px; border-radius:999px; background: rgba(0,63,135,.08); }
-    .command-card b { display: block; margin-bottom: 8px; font-size: 1rem; }
-    .command-card span { display: block; color: var(--muted); font-size: .9rem; line-height: 1.45; }
-
-    .stats-row {
+      background: rgba(255,255,255,.88);
       display: grid;
-      grid-template-columns: repeat(4, minmax(0, 1fr));
-      gap: 14px;
-      margin-top: 52px;
-      position: relative;
-      z-index: 1;
+      place-items: center;
+      flex: 0 0 auto;
+      box-shadow: inset 0 0 0 1px rgba(0,63,135,.08), 0 18px 45px rgba(0,63,135,.12);
+      transform: translateZ(42px);
     }
-    .stat-card { padding: 20px; border: 1px solid rgba(255,255,255,.78); border-radius: 28px; background: var(--glass); box-shadow: var(--shadow-soft); backdrop-filter: blur(15px); }
-    .stat-card strong { display: block; color: var(--legacy-blue); font-size: clamp(1.3rem, 2.4vw, 2.08rem); letter-spacing: -.045em; line-height: 1; }
-    .stat-card span { display: block; margin-top: 8px; color: var(--muted); font-size: .92rem; line-height: 1.42; }
+    .logo-tile img { width: 72px; height: 72px; object-fit: contain; }
 
-    .section-head { display: flex; align-items: end; justify-content: space-between; gap: 30px; margin-bottom: 34px; }
-    .kicker { margin: 0 0 10px; color: var(--legacy-red); font-size: .78rem; font-weight: 950; letter-spacing: .15em; text-transform: uppercase; }
-    .section-title { max-width: 790px; margin: 0; font-size: clamp(2rem, 4vw, 4.2rem); line-height: .99; letter-spacing: -.065em; }
-    .section-desc { max-width: 520px; margin: 0; color: #50617c; font-size: 1.04rem; line-height: 1.66; }
+    .med-orbit {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0,1fr));
+      gap: 14px;
+      margin-top: 24px;
+    }
 
-    .grid { display: grid; gap: 18px; }
-    .service-grid { grid-template-columns: repeat(4, minmax(0,1fr)); }
+    .mini-card {
+      min-height: 116px;
+      padding: 18px;
+      border-radius: 24px;
+      background: rgba(255,255,255,.64);
+      border: 1px solid rgba(0,63,135,.10);
+      box-shadow: 0 14px 35px rgba(0,41,89,.10);
+      position: relative;
+      overflow: hidden;
+    }
+    .mini-card::before {
+      content: "";
+      position: absolute;
+      width: 90px;
+      height: 90px;
+      border-radius: 999px;
+      right: -35px;
+      top: -35px;
+      background: rgba(0,63,135,.08);
+    }
+    .mini-card strong { display: block; margin-bottom: 8px; font-size: 1rem; }
+    .mini-card span { color: var(--muted); font-size: .9rem; line-height: 1.45; }
+
+    .pill-3d {
+      position: absolute;
+      bottom: 24px;
+      right: 20px;
+      width: 154px;
+      height: 154px;
+      border-radius: 42px;
+      background: linear-gradient(145deg, #ffffff, #e8f4ff);
+      box-shadow: 0 28px 70px rgba(0,41,89,.20);
+      transform: rotate(-9deg);
+      display: grid;
+      place-items: center;
+      border: 1px solid rgba(255,255,255,.75);
+      animation: float 6.4s ease-in-out infinite;
+    }
+
+    .pill-3d svg { width: 92px; height: 92px; filter: drop-shadow(0 12px 18px rgba(0,63,135,.20)); }
+
+    .section-head {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 28px;
+      margin-bottom: 32px;
+    }
+
+    .section-kicker {
+      color: var(--legacy-red);
+      text-transform: uppercase;
+      letter-spacing: .15em;
+      font-size: .78rem;
+      font-weight: 950;
+      margin: 0 0 10px;
+    }
+
+    .section-title {
+      font-size: clamp(2rem, 4vw, 4.3rem);
+      letter-spacing: -.065em;
+      line-height: .98;
+      margin: 0;
+      max-width: 780px;
+    }
+
+    .section-desc {
+      color: #50617d;
+      line-height: 1.65;
+      font-size: 1.04rem;
+      max-width: 500px;
+      margin: 0;
+    }
+
+    .grid {
+      display: grid;
+      gap: 18px;
+    }
+
+    .services-grid {
+      grid-template-columns: repeat(4, minmax(0,1fr));
+    }
+
     .service-card {
       position: relative;
-      min-height: 236px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      overflow: hidden;
+      min-height: 240px;
       padding: 24px;
-      border: 1px solid rgba(255,255,255,.78);
-      border-radius: 30px;
-      background: rgba(255,255,255,.74);
+      border-radius: 28px;
+      background: rgba(255,255,255,.66);
+      border: 1px solid rgba(255,255,255,.75);
       box-shadow: var(--shadow-soft);
+      overflow: hidden;
       transition: transform .28s ease, box-shadow .28s ease, border-color .28s ease;
     }
-    .service-card:hover { transform: translateY(-8px); box-shadow: var(--shadow); border-color: rgba(0,63,135,.22); }
-    .service-card.featured { grid-column: span 2; color: white; background: radial-gradient(circle at 84% 18%, rgba(255,255,255,.22), transparent 30%), linear-gradient(135deg, rgba(0,63,135,.96), rgba(15,111,213,.88)); }
-    .service-card.featured p, .service-card.featured .service-index { color: rgba(255,255,255,.82); }
-    .service-card.featured .service-index { background: rgba(255,255,255,.14); }
-    .service-index { display: inline-grid; place-items: center; width: 38px; height: 38px; margin-bottom: 18px; border-radius: 14px; background: rgba(0,63,135,.09); color: var(--legacy-blue); font-weight: 950; }
-    .service-card h3 { margin: 0 0 10px; font-size: 1.18rem; letter-spacing: -.035em; }
-    .service-card p { margin: 0; color: #596981; line-height: 1.62; font-size: .96rem; }
-    .service-card.featured p { color: rgba(255,255,255,.83); }
-    .card-link { position: relative; z-index: 1; margin-top: 20px; color: currentColor; font-weight: 950; }
-
-    .pathway { display: grid; grid-template-columns: .92fr 1.08fr; gap: 24px; align-items: start; }
-    .journey-visual {
-      position: sticky;
-      top: 112px;
-      min-height: 590px;
-      overflow: hidden;
-      border: 1px solid rgba(255,255,255,.76);
-      border-radius: var(--radius-xl);
-      background: radial-gradient(circle at 50% 38%, rgba(255,255,255,.8), transparent 0 13%, transparent 24%), linear-gradient(135deg, rgba(0,63,135,.96), rgba(9,94,185,.88));
+    .service-card:hover {
+      transform: translateY(-8px);
       box-shadow: var(--shadow);
+      border-color: rgba(0,63,135,.20);
+    }
+    .service-card.featured {
+      grid-column: span 2;
+      background:
+        linear-gradient(135deg, rgba(0,63,135,.93), rgba(0,88,188,.78)),
+        url("https://images.unsplash.com/photo-1587854692152-cbe660dbde88?auto=format&fit=crop&w=1400&q=80") center/cover;
       color: white;
     }
-    .journey-orbit { position: absolute; inset: 68px 52px 145px; border: 1px solid rgba(255,255,255,.24); border-radius: 50%; box-shadow: inset 0 0 70px rgba(255,255,255,.08); }
-    .journey-orbit::before, .journey-orbit::after { content:""; position:absolute; inset: 14%; border: 1px solid rgba(255,255,255,.15); border-radius:50%; }
-    .journey-orbit::after { inset: 28%; }
-    .journey-node { position: absolute; width: 52px; height: 52px; display:grid; place-items:center; border-radius: 18px; color: var(--legacy-blue); background: rgba(255,255,255,.9); font-weight: 950; box-shadow: 0 18px 48px rgba(0,0,0,.2); transition: transform .35s ease, background .35s ease, color .35s ease; }
-    .journey-node.active { transform: scale(1.15); color: white; background: var(--legacy-red); }
-    .node-1 { left: 14%; top: 25%; } .node-2 { right: 16%; top: 18%; } .node-3 { right: 12%; bottom: 32%; } .node-4 { left: 22%; bottom: 23%; } .node-5 { left: 43%; top: 45%; }
-    .journey-caption { position: absolute; left: 30px; right: 30px; bottom: 30px; }
-    .journey-caption h3 { margin: 0 0 10px; font-size: clamp(1.6rem, 3vw, 2.4rem); line-height: 1.02; letter-spacing: -.06em; }
-    .journey-caption p { margin: 0; color: rgba(255,255,255,.80); line-height: 1.65; }
-    .timeline { display: grid; gap: 14px; }
+    .service-card.featured p,
+    .service-card.featured .card-index { color: rgba(255,255,255,.78); }
+    .card-index {
+      display: inline-flex;
+      height: 32px;
+      min-width: 32px;
+      align-items: center;
+      justify-content: center;
+      border-radius: 999px;
+      background: rgba(0,63,135,.08);
+      color: var(--legacy-blue);
+      font-weight: 950;
+      margin-bottom: 26px;
+    }
+    .service-card h3 {
+      margin: 0 0 10px;
+      font-size: 1.22rem;
+      letter-spacing: -.035em;
+    }
+    .service-card p {
+      margin: 0;
+      color: #596982;
+      line-height: 1.62;
+      font-size: .96rem;
+    }
+
+    .workflow {
+      display: grid;
+      grid-template-columns: .92fr 1.08fr;
+      gap: 24px;
+      align-items: stretch;
+    }
+
+    .photo-panel {
+      position: relative;
+      min-height: 540px;
+      border-radius: 42px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      border: 1px solid rgba(255,255,255,.7);
+    }
+    .photo-panel img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: saturate(1.02) contrast(1.03);
+    }
+    .photo-panel::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(2,19,46,.72), transparent 56%);
+    }
+    .photo-caption {
+      position: absolute;
+      left: 26px;
+      right: 26px;
+      bottom: 26px;
+      z-index: 2;
+      color: white;
+    }
+    .photo-caption h3 { margin: 0 0 8px; font-size: 1.9rem; letter-spacing: -.05em; }
+    .photo-caption p { margin: 0; color: rgba(255,255,255,.84); line-height: 1.6; }
+
+    .steps {
+      display: grid;
+      gap: 14px;
+    }
+
     .step {
+      padding: 22px;
+      border-radius: 28px;
+      background: rgba(255,255,255,.68);
+      border: 1px solid rgba(255,255,255,.76);
+      box-shadow: var(--shadow-soft);
       display: grid;
       grid-template-columns: auto 1fr;
       gap: 16px;
-      padding: 22px;
-      border: 1px solid rgba(255,255,255,.78);
-      border-radius: 30px;
-      background: rgba(255,255,255,.74);
-      box-shadow: var(--shadow-soft);
-      transition: transform .28s ease, border-color .28s ease, background .28s ease;
+      align-items: start;
     }
-    .step.active { border-color: rgba(237,28,36,.28); background: rgba(255,255,255,.9); transform: translateX(4px); }
-    .step-num { width: 46px; height: 46px; display: grid; place-items: center; border-radius: 17px; color: white; background: linear-gradient(135deg, var(--legacy-blue), #1681ee); font-weight: 950; box-shadow: 0 14px 28px rgba(0,63,135,.18); }
-    .step.active .step-num { background: linear-gradient(135deg, var(--legacy-red), #ff7075); }
-    .step h3 { margin: 0 0 7px; font-size: 1.13rem; letter-spacing: -.03em; }
+    .step-num {
+      width: 44px;
+      height: 44px;
+      border-radius: 16px;
+      display: grid;
+      place-items: center;
+      background: linear-gradient(135deg, var(--legacy-blue), #1783ef);
+      color: #fff;
+      font-weight: 950;
+      box-shadow: 0 14px 28px rgba(0,63,135,.18);
+    }
+    .step h3 { margin: 0 0 6px; font-size: 1.1rem; letter-spacing: -.03em; }
     .step p { margin: 0; color: #52627d; line-height: 1.58; }
 
-    .program-tool {
+    .programs {
       display: grid;
-      grid-template-columns: .9fr 1.1fr;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
       gap: 22px;
-      align-items: start;
-      margin-bottom: 24px;
     }
-    .decision-card, .program-card, .compare-wrap, .resource-card, details, .contact-card {
+    .program-card {
+      position: relative;
+      overflow: hidden;
+      padding: 30px;
+      border-radius: 36px;
+      background: rgba(255,255,255,.70);
       border: 1px solid rgba(255,255,255,.78);
-      background: rgba(255,255,255,.76);
       box-shadow: var(--shadow-soft);
-      backdrop-filter: blur(14px);
     }
-    .decision-card { padding: 28px; border-radius: 36px; position: sticky; top: 112px; }
-    .decision-card h3 { margin: 0 0 10px; font-size: clamp(1.45rem, 2.4vw, 2.2rem); line-height:1.04; letter-spacing:-.055em; }
-    .decision-card p { margin: 0 0 20px; color: #566782; line-height: 1.62; }
-    .choice-list { display: grid; gap: 12px; margin: 0 0 18px; }
-    .choice { display: grid; grid-template-columns: auto 1fr; gap: 12px; align-items: start; padding: 14px; border: 1px solid rgba(0,63,135,.11); border-radius: 20px; background: rgba(0,63,135,.045); cursor: pointer; }
-    .choice input { width: 18px; height: 18px; margin-top: 2px; accent-color: var(--legacy-blue); }
-    .choice b { display:block; margin-bottom: 4px; }
-    .choice span { color: #65738a; font-size: .9rem; line-height: 1.42; }
-    .routing-result { padding: 18px; border-radius: 24px; color: white; background: linear-gradient(135deg, var(--legacy-blue), #0f78df); box-shadow: 0 18px 44px rgba(0,63,135,.20); }
-    .routing-result b { display: block; margin-bottom: 6px; font-size: 1.08rem; }
-    .routing-result span { display: block; color: rgba(255,255,255,.82); line-height: 1.45; }
-
-    .program-layout { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 18px; }
-    .program-card { position: relative; overflow: hidden; padding: 28px; border-radius: 36px; }
-    .program-card::before { content:""; position:absolute; inset:0; pointer-events:none; background: radial-gradient(circle at top right, rgba(0,63,135,.12), transparent 36%), radial-gradient(circle at bottom left, rgba(237,28,36,.10), transparent 36%); }
+    .program-card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at top right, rgba(0,63,135,.12), transparent 35%),
+                  radial-gradient(circle at bottom left, rgba(237,28,36,.10), transparent 35%);
+      pointer-events: none;
+    }
     .program-card > * { position: relative; z-index: 1; }
-    .program-label { display: inline-flex; align-items: center; gap: 9px; margin-bottom: 16px; color: var(--legacy-blue); font-size: .82rem; font-weight: 950; letter-spacing: .13em; text-transform: uppercase; }
-    .program-card h3 { margin: 0 0 14px; font-size: clamp(1.45rem, 2.4vw, 2.15rem); line-height: 1.03; letter-spacing: -.055em; }
-    .program-card p { color: #50617c; line-height: 1.68; margin: 0 0 20px; }
-    .program-meta { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 0 0 22px; }
-    .meta-pill { padding: 13px 14px; border-radius: 18px; background: rgba(0,63,135,.07); color: #394865; font-size: .92rem; line-height: 1.4; }
-    .meta-pill b { display: block; color: var(--legacy-blue); margin-bottom: 3px; }
-    .checklist { list-style: none; padding: 0; margin: 0; display: grid; gap: 12px; }
-    .checklist li { display: grid; grid-template-columns: 24px 1fr; gap: 10px; color: #394865; line-height: 1.48; }
-    .check { width: 24px; height: 24px; display: grid; place-items: center; border-radius: 999px; background: rgba(0,63,135,.10); color: var(--legacy-blue); font-size: .82rem; font-weight: 950; }
-    .compare-wrap { margin-top: 24px; overflow: hidden; border-radius: 36px; }
-    table { width: 100%; border-collapse: collapse; font-size: .96rem; }
-    th, td { padding: 18px 20px; text-align: left; vertical-align: top; border-bottom: 1px solid rgba(0,63,135,.10); line-height: 1.55; }
-    th { background: rgba(0,63,135,.06); color: var(--legacy-blue); font-size: .8rem; letter-spacing: .12em; text-transform: uppercase; }
+    .program-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--legacy-blue);
+      font-size: .84rem;
+      font-weight: 950;
+      text-transform: uppercase;
+      letter-spacing: .12em;
+      margin-bottom: 16px;
+    }
+    .program-card h3 {
+      font-size: clamp(1.55rem, 2.4vw, 2.4rem);
+      line-height: 1.02;
+      letter-spacing: -.055em;
+      margin: 0 0 14px;
+    }
+    .program-card p { color: #50617d; line-height: 1.68; margin: 0 0 20px; }
+    .checklist {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: grid;
+      gap: 12px;
+    }
+    .checklist li {
+      display: grid;
+      grid-template-columns: 24px 1fr;
+      gap: 10px;
+      color: #394865;
+      line-height: 1.48;
+    }
+    .check {
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background: rgba(0,63,135,.10);
+      color: var(--legacy-blue);
+      display: grid;
+      place-items: center;
+      font-weight: 950;
+      font-size: .85rem;
+    }
+
+    .compare-wrap {
+      margin-top: 22px;
+      border-radius: 36px;
+      overflow: hidden;
+      border: 1px solid rgba(255,255,255,.78);
+      box-shadow: var(--shadow-soft);
+      background: rgba(255,255,255,.72);
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: .96rem;
+    }
+    th, td {
+      text-align: left;
+      vertical-align: top;
+      padding: 18px 20px;
+      border-bottom: 1px solid rgba(0,63,135,.10);
+      line-height: 1.55;
+    }
+    th {
+      color: var(--legacy-blue);
+      font-size: .84rem;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      background: rgba(0,63,135,.06);
+    }
     tr:last-child td { border-bottom: 0; }
 
     .myhealth-panel {
       position: relative;
-      display: grid;
-      grid-template-columns: 1fr .9fr;
-      gap: 34px;
       overflow: hidden;
-      padding: 38px;
-      border-radius: var(--radius-xl);
+      display: grid;
+      grid-template-columns: 1fr .85fr;
+      gap: 32px;
+      padding: 36px;
+      border-radius: 42px;
+      background:
+        radial-gradient(circle at 92% 20%, rgba(237,28,36,.16), transparent 32%),
+        linear-gradient(135deg, rgba(0,63,135,.96), rgba(7,75,151,.88));
       color: white;
-      background: radial-gradient(circle at 88% 18%, rgba(237,28,36,.16), transparent 34%), linear-gradient(135deg, rgba(0,63,135,.98), rgba(8,77,156,.90));
-      box-shadow: 0 34px 96px rgba(0,39,85,.30);
+      box-shadow: 0 32px 90px rgba(0,41,89,.28);
     }
     .myhealth-panel p { color: rgba(255,255,255,.82); line-height: 1.68; font-size: 1.06rem; }
-    .phone { justify-self: center; width: min(100%, 335px); min-height: 540px; padding: 18px; border: 1px solid rgba(255,255,255,.30); border-radius: 48px; background: linear-gradient(145deg, rgba(255,255,255,.38), rgba(255,255,255,.12)); box-shadow: inset 0 0 0 8px rgba(255,255,255,.10), 0 34px 86px rgba(0,0,0,.22); transform: rotate(3deg); }
-    .phone-screen { height: 100%; display: flex; flex-direction: column; gap: 15px; padding: 22px; border-radius: 34px; background: rgba(255,255,255,.94); color: var(--ink); }
-    .screen-pill { width: 88px; height: 12px; margin: 0 auto 6px; border-radius: 999px; background: rgba(0,63,135,.10); }
-    .med-row { display: grid; grid-template-columns: 44px 1fr; gap: 12px; align-items: center; padding: 14px; border-radius: 20px; background: #f2f7ff; }
-    .med-icon { width: 44px; height: 44px; border-radius: 16px; background: linear-gradient(135deg, var(--legacy-blue), #1280ef); position: relative; }
-    .med-icon::after { content:""; position:absolute; width: 16px; height: 16px; border-radius:999px; right:7px; bottom:7px; background: rgba(255,255,255,.42); }
-    .med-row strong { display:block; font-size:.95rem; } .med-row span { display:block; margin-top:4px; color: var(--muted); font-size:.82rem; }
-    .screen-cta { margin-top:auto; padding:15px; border-radius:20px; color:white; text-align:center; background: linear-gradient(135deg, var(--legacy-red), #ff7176); font-weight: 950; }
+    .phone {
+      justify-self: center;
+      width: min(100%, 330px);
+      min-height: 530px;
+      border-radius: 46px;
+      padding: 18px;
+      background: linear-gradient(145deg, rgba(255,255,255,.36), rgba(255,255,255,.10));
+      border: 1px solid rgba(255,255,255,.32);
+      box-shadow: inset 0 0 0 8px rgba(255,255,255,.10), 0 32px 80px rgba(0,0,0,.22);
+      transform: rotate(4deg);
+    }
+    .phone-screen {
+      height: 100%;
+      border-radius: 34px;
+      background: rgba(255,255,255,.92);
+      color: var(--ink);
+      padding: 22px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .screen-pill {
+      height: 12px;
+      width: 88px;
+      border-radius: 999px;
+      background: rgba(0,63,135,.10);
+      margin: 0 auto 6px;
+    }
+    .med-row {
+      display: grid;
+      grid-template-columns: 44px 1fr;
+      gap: 12px;
+      align-items: center;
+      padding: 14px;
+      border-radius: 20px;
+      background: #f2f7ff;
+    }
+    .med-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 16px;
+      background: linear-gradient(135deg, var(--legacy-blue), #1280ef);
+    }
+    .med-row strong { display: block; font-size: .95rem; }
+    .med-row span { display: block; color: var(--muted); font-size: .82rem; margin-top: 4px; }
+    .screen-cta {
+      margin-top: auto;
+      padding: 15px;
+      text-align: center;
+      color: white;
+      border-radius: 20px;
+      background: linear-gradient(135deg, var(--legacy-red), #ff6b70);
+      font-weight: 900;
+    }
 
-    .resource-grid { grid-template-columns: repeat(3, minmax(0,1fr)); }
-    .resource-card { position: relative; min-height: 230px; display:flex; flex-direction:column; justify-content:space-between; overflow:hidden; padding: 26px; border-radius: 32px; }
-    .resource-card::after { content:""; position:absolute; width: 138px; height: 138px; right:-54px; bottom:-54px; border-radius:999px; background: rgba(0,63,135,.08); }
-    .resource-card h3 { margin:0 0 10px; letter-spacing:-.035em; }
-    .resource-card p { margin:0; color:#566783; line-height:1.6; }
-    .text-link { position:relative; z-index:1; display:inline-flex; gap:8px; align-items:center; margin-top:22px; color: var(--legacy-blue); font-weight:950; }
+    .resource-grid {
+      grid-template-columns: repeat(3, minmax(0,1fr));
+    }
+    .resource-card {
+      padding: 26px;
+      min-height: 220px;
+      border-radius: 32px;
+      background: rgba(255,255,255,.68);
+      border: 1px solid rgba(255,255,255,.76);
+      box-shadow: var(--shadow-soft);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      overflow: hidden;
+      position: relative;
+    }
+    .resource-card::after {
+      content: "";
+      position: absolute;
+      width: 140px;
+      height: 140px;
+      right: -55px;
+      bottom: -55px;
+      border-radius: 999px;
+      background: rgba(0,63,135,.08);
+    }
+    .resource-card h3 { margin: 0 0 10px; letter-spacing: -.035em; }
+    .resource-card p { color: #566783; line-height: 1.6; margin: 0; }
+    .text-link {
+      color: var(--legacy-blue);
+      font-weight: 950;
+      display: inline-flex;
+      gap: 8px;
+      align-items: center;
+      margin-top: 22px;
+      position: relative;
+      z-index: 1;
+    }
 
-    .faq-contact { display: grid; grid-template-columns: 1.05fr .95fr; gap: 24px; align-items: start; }
-    .faq-list { display: grid; gap: 12px; }
-    details { border-radius: 24px; overflow: hidden; }
-    summary { cursor: pointer; padding: 20px 22px; color: var(--ink); font-weight: 950; letter-spacing: -.02em; }
-    details p { margin: 0; padding: 0 22px 20px; color: #52627d; line-height: 1.62; }
-    .contact-card { padding: 30px; border-radius: 38px; }
-    .contact-card h3 { margin: 0 0 12px; font-size: clamp(1.6rem, 3vw, 2.6rem); letter-spacing: -.06em; line-height: 1.02; }
-    .contact-card p { margin: 0 0 22px; color: #52627d; line-height: 1.64; }
-    .contact-list { display: grid; gap: 12px; }
-    .contact-item { padding: 18px; border-radius: 22px; background: rgba(0,63,135,.06); border: 1px solid rgba(0,63,135,.10); }
-    .contact-item span { display:block; margin-bottom: 8px; color: var(--muted); font-size: .76rem; font-weight: 950; letter-spacing:.12em; text-transform: uppercase; }
-    .contact-item strong { color: var(--legacy-blue); font-size: clamp(1.35rem, 3vw, 2.2rem); letter-spacing: -.04em; }
+    .contact-card {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 22px;
+      padding: 34px;
+      border-radius: 42px;
+      background: rgba(255,255,255,.72);
+      border: 1px solid rgba(255,255,255,.78);
+      box-shadow: var(--shadow);
+    }
+    .contact-item {
+      padding: 24px;
+      border-radius: 28px;
+      background: rgba(0,63,135,.06);
+      border: 1px solid rgba(0,63,135,.10);
+    }
+    .contact-item span {
+      display: block;
+      text-transform: uppercase;
+      letter-spacing: .12em;
+      color: var(--muted);
+      font-size: .78rem;
+      font-weight: 900;
+      margin-bottom: 8px;
+    }
+    .contact-item strong {
+      font-size: clamp(1.3rem, 3vw, 2.2rem);
+      letter-spacing: -.04em;
+      color: var(--legacy-blue);
+    }
+
+    .footer {
+      padding: 60px 0 104px;
+      background: #081934;
+      color: white;
+      margin-top: 72px;
+    }
+    .footer-inner {
+      width: min(calc(100% - 36px), var(--max));
+      margin: 0 auto;
+      display: grid;
+      gap: 32px;
+    }
+    .footer-top {
+      display: grid;
+      grid-template-columns: 1.15fr .85fr;
+      gap: 36px;
+      align-items: start;
+    }
+    .footer-brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 18px;
+    }
+    .footer-brand img {
+      width: 58px;
+      height: 58px;
+      border-radius: 14px;
+      background: white;
+      padding: 4px;
+    }
+    .footer p {
+      color: rgba(255,255,255,.72);
+      line-height: 1.7;
+      margin: 0;
+    }
+    .footer-links {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0,1fr));
+      gap: 22px;
+    }
+    .footer-links h4 {
+      margin: 0 0 14px;
+      color: white;
+      letter-spacing: -.02em;
+    }
+    .footer-links a {
+      display: block;
+      color: rgba(255,255,255,.70);
+      margin: 9px 0;
+      font-size: .94rem;
+    }
+    .legal {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      border-top: 1px solid rgba(255,255,255,.12);
+      padding-top: 22px;
+      color: rgba(255,255,255,.60);
+      font-size: .86rem;
+    }
+
+    .source-note {
+      padding: 14px 18px;
+      border-radius: 18px;
+      background: rgba(255,255,255,.08);
+      color: rgba(255,255,255,.68);
+      font-size: .86rem;
+      line-height: 1.55;
+    }
+
+    .mobile-panel {
+      display: none;
+      position: fixed;
+      top: 86px;
+      left: 16px;
+      right: 16px;
+      z-index: 880;
+      max-width: calc(100% - 32px);
+      padding: 12px;
+      border: 1px solid rgba(255,255,255,.82);
+      border-radius: 28px;
+      background: rgba(255,255,255,.92);
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(18px) saturate(150%);
+      -webkit-backdrop-filter: blur(18px) saturate(150%);
+    }
+
+    .mobile-panel a {
+      display: block;
+      padding: 14px 16px;
+      border-radius: 18px;
+      color: var(--ink);
+      font-weight: 900;
+    }
+
+    .mobile-panel a:hover,
+    .mobile-panel a.active {
+      color: var(--legacy-blue);
+      background: rgba(0,63,135,.08);
+    }
+
+    body.menu-open .mobile-panel { display: block; }
+
+    main.page-ready > section { display: none; }
+    main.page-ready > section.active-page { display: block; }
+    main.page-ready > section.hero.active-page { display: grid; }
 
     .quick-dock {
       position: fixed;
       left: 50%;
       bottom: 18px;
-      z-index: 1900;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      max-width: min(calc(100% - 22px), 620px);
-      padding: 8px;
       transform: translateX(-50%);
+      z-index: 820;
+      display: flex;
+      gap: 8px;
+      max-width: calc(100% - 20px);
+      padding: 8px;
       border: 1px solid rgba(255,255,255,.78);
       border-radius: 999px;
       background: rgba(255,255,255,.80);
       box-shadow: 0 18px 55px rgba(0,39,85,.16);
       backdrop-filter: blur(16px) saturate(155%);
+      -webkit-backdrop-filter: blur(16px) saturate(155%);
     }
-    .dock-primary { color: white; background: linear-gradient(135deg, var(--legacy-blue), #0f78e4); }
-    .dock-link { display: inline-flex; align-items: center; justify-content:center; gap: 8px; min-height: 42px; padding: 11px 14px; border-radius:999px; color: var(--legacy-blue); font-size: .86rem; font-weight:950; white-space: nowrap; }
-    .dock-link:hover { background: rgba(0,63,135,.08); }
-    .dock-primary:hover { background: linear-gradient(135deg, var(--legacy-blue), #0f78e4); }
 
-    .footer { margin-top: 72px; padding: 62px 0 104px; background: #071934; color: white; }
-    .footer-inner { display: grid; gap: 32px; }
-    .footer-top { display:grid; grid-template-columns: 1.1fr .9fr; gap: 38px; align-items:start; }
-    .footer-brand { display:flex; align-items:center; gap: 14px; margin-bottom:18px; }
-    .footer p { margin:0; color: rgba(255,255,255,.72); line-height:1.7; }
-    .source-note { margin-top:18px; padding: 14px 18px; border-radius:18px; background: rgba(255,255,255,.08); color: rgba(255,255,255,.68); font-size:.86rem; line-height:1.55; }
-    .footer-links { display:grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 22px; }
-    .footer-links h4 { margin: 0 0 14px; color:white; letter-spacing:-.02em; }
-    .footer-links a { display:block; margin: 9px 0; color: rgba(255,255,255,.70); font-size:.94rem; }
-    .legal { display:flex; flex-wrap:wrap; gap: 14px; padding-top:22px; border-top:1px solid rgba(255,255,255,.12); color: rgba(255,255,255,.60); font-size:.86rem; }
+    .quick-dock a {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 11px 14px;
+      border-radius: 999px;
+      color: var(--legacy-blue);
+      font-size: .86rem;
+      font-weight: 950;
+      white-space: nowrap;
+    }
 
-    .reveal { opacity: 0; transform: translateY(28px); transition: opacity .8s ease, transform .8s ease; }
-    .reveal.visible { opacity: 1; transform: translateY(0); }
-    .mask-reveal { clip-path: inset(0 0 100% 0 round 30px); transition: clip-path .9s cubic-bezier(.2,.9,.2,1); }
-    .mask-reveal.visible { clip-path: inset(0 0 0 0 round 30px); }
+    .quick-dock a:hover { background: rgba(0,63,135,.08); }
+    .quick-dock a.featured { color: #fff; background: linear-gradient(135deg, var(--legacy-blue), #0f78e4); }
 
-    @media (max-width: 1080px) {
+    .reveal {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity .8s ease, transform .8s ease;
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (max-width: 1040px) {
       .nav-links { display: none; }
       .menu-toggle { display: inline-grid; place-items: center; }
-      .hero-grid, .pathway, .program-tool, .myhealth-panel, .faq-contact, .footer-top { grid-template-columns: 1fr; }
-      .hero-grid { padding-top: 50px; }
-      .hero-stage { min-height: 620px; }
-      .service-grid, .stats-row { grid-template-columns: repeat(2, minmax(0,1fr)); }
-      .program-layout { grid-template-columns: 1fr; }
-      .journey-visual, .decision-card { position: relative; top: auto; }
+      .hero-grid { grid-template-columns: 1fr; padding-top: 54px; }
+      .hero-stage { min-height: 560px; }
+      .services-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .workflow, .myhealth-panel, .footer-top { grid-template-columns: 1fr; }
+      .programs { grid-template-columns: 1fr; }
     }
 
     @media (max-width: 720px) {
-      .shell { width: min(calc(100% - 28px), var(--max)); }
-      .section { padding: 66px 0; scroll-margin-top: 92px; }
-      .nav-wrap { top: 10px; width: min(calc(100% - 18px), 1160px); }
-      .brand-text, .nav-actions .ghost { display: none; }
+      .section { padding: 64px 0; }
+      .nav-shell {
+        top: 10px;
+        left: 9px;
+        right: 9px;
+        width: auto;
+        max-width: none;
+        transform: none;
+      }
+      .brand-text { display: none; }
+      .nav-actions .secondary { display: none; }
       .btn { padding: 11px 14px; font-size: .88rem; }
-      .hero { min-height: auto; padding-top: 96px; }
+      .hero { padding-top: 90px; }
       h1 { font-size: clamp(3rem, 16vw, 4.8rem); }
-      .hero-stage { min-height: auto; display: flex; flex-direction: column; perspective: none; transform: none !important; }
-      .clinical-orb { position: relative; width: 100%; height: 320px; inset: auto; transform: none; }
-      .command-panel { position: relative; top: auto; left: auto; right: auto; margin-top: -70px; padding: 22px; transform: none; animation: none; z-index: 2; }
-      .panel-head { display:block; }
-      .panel-logo { margin-top:16px; }
-      .command-grid, .service-grid, .stats-row, .resource-grid, .footer-links, .program-meta { grid-template-columns: 1fr; }
-      .stats-row { margin-top: 42px; }
-      .command-card { min-height: auto; }
+      .trust-strip, .services-grid, .resource-grid, .contact-card, .footer-links { grid-template-columns: 1fr; }
       .service-card.featured { grid-column: auto; }
-      .section-head { display:block; }
-      .section-desc { margin-top:16px; }
-      .journey-visual { min-height: 510px; }
-      .myhealth-panel, .contact-card, .decision-card { padding: 24px; }
-      .phone { transform: none; min-height: 500px; }
-      table, thead, tbody, th, td, tr { display:block; }
-      thead { display:none; }
+      .section-head { display: block; }
+      .section-desc { margin-top: 16px; }
+      .hero-stage {
+        min-height: auto;
+        width: 100%;
+        max-width: 100%;
+        display: flex;
+        flex-direction: column;
+        perspective: none;
+        transform: none !important;
+        overflow: visible;
+      }
+      .stock-photo {
+        position: relative;
+        inset: auto;
+        width: 100%;
+        max-width: 100%;
+        height: 310px;
+        transform: none;
+      }
+      .glass-card.hero-card {
+        position: relative;
+        inset: auto;
+        margin-top: -72px;
+        padding: 22px;
+        max-width: 100%;
+        transform: none;
+        animation: none;
+        z-index: 2;
+      }
+      .logo-tile { transform: none; }
+      .quick-dock {
+        left: 10px;
+        right: 10px;
+        bottom: 10px;
+        transform: none;
+        justify-content: space-between;
+        overflow: hidden;
+      }
+      .quick-dock a { padding: 10px 11px; font-size: .8rem; }
+      .quick-dock a span { display: none; }
+      .med-orbit { grid-template-columns: 1fr; }
+      .pill-3d { display: none; }
+      .myhealth-panel, .contact-card { padding: 22px; }
+      table, thead, tbody, th, td, tr { display: block; }
+      thead { display: none; }
       tr { border-bottom: 1px solid rgba(0,63,135,.12); }
       td { border: 0; padding: 14px 18px; }
-      td::before { content: attr(data-label); display:block; margin-bottom:5px; color: var(--legacy-blue); font-size:.72rem; font-weight:950; letter-spacing:.12em; text-transform:uppercase; }
-      .quick-dock { width: min(calc(100% - 20px), 520px); justify-content: space-between; }
-      .dock-link { font-size: .78rem; padding: 10px 11px; }
-      .dock-link span { display:none; }
-      .footer { padding-bottom: 96px; }
+      td::before {
+        content: attr(data-label);
+        display: block;
+        color: var(--legacy-blue);
+        text-transform: uppercase;
+        letter-spacing: .12em;
+        font-size: .72rem;
+        font-weight: 950;
+        margin-bottom: 5px;
+      }
     }
 
-    @media (pointer: coarse) { .cursor-dot, .cursor-ring { display: none; } }
     @media (prefers-reduced-motion: reduce) {
-      *, *::before, *::after { animation-duration: .001ms !important; animation-iteration-count: 1 !important; scroll-behavior: auto !important; transition-duration: .001ms !important; }
-      .cursor-dot, .cursor-ring { display: none; }
+      *, *::before, *::after {
+        animation-duration: .001ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+        transition-duration: .001ms !important;
+      }
     }
   </style>
 </head>
 <body>
-  <a class="skip-link" href="#main">Skip to content</a>
-  <div class="scroll-progress" id="scrollProgress"></div>
-  <div class="cursor-dot" id="cursorDot" aria-hidden="true"></div>
-  <div class="cursor-ring" id="cursorRing" aria-hidden="true"></div>
+  <div class="progress" id="progress"></div>
+  <div class="orb one"></div>
+  <div class="orb two"></div>
 
-  <header class="nav-wrap">
-    <nav class="nav" aria-label="Primary navigation">
-      <a class="brand" href="#top" aria-label="Legacy Health Pharmacy home">
-        <span class="logo-mark" aria-hidden="true"></span>
+  <header class="nav-shell" aria-label="Primary navigation">
+    <nav class="nav">
+      <a class="brand" href="#home" data-route="home" aria-label="Legacy Health Pharmacy home">
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAfQAAAH0CAIAAADL1t+KAAAgAElEQVR4nO3dv4skWX0f8AOXrgwoZlBkY2BpYELQrYGBDQMMrpa72BjYiLYGGiomfPxJZSM72FTExITJ2NioqNFYJsLGCgaGBgaGRTaGQWRlQsyp9BWjvqWe7vOi8z2/r97nQx/gnmd1/VX1darqer6rzrkkMQzDAQCAJEfkAAAAPkP0AAAgwBFAAAI8AQQgwBFAAAI8AQQgwBFAAAI8AQQgwBFAAAI8AQQgwBFAAAI8AQQgwBFAAAI8AQQgwBFAAAI8AQQgwBFAAAI8AQQgwBFAAAI8AQQgwBFAAAI8AQQgwBFAAAI8AQQgwBFAAAI8AQQgwBFAAAI8AQQgwBFAAAI8AQQgwBFAAAI8AQQgwBFAAAI8AQQgwBFAAAI8AQQgwBFAAAI8AQQgwBFAAAI8AQQgwBFAAAI8AQQgwBFAAAI8AQQgwBFAAAI8AQQgwBFAAAI8AQQgwBFAAAI8AQQgwBFAAAI8AQQgwBFAAAI8AQQgwBFAAAI8AQQgwBFAAAI8AQQgwBFAAAI8AQQgwBFAAAI8AQQgwBFAAAI8AQQgwBFAAAI8AQQgwBFAAAI8AQQgwBFAAAI8AQQgwBFAAAI8AQQgwBFAAAI8AQQgwBFAAAI8AQQgwBFAAAI8AQQgwBFAAAI8AQQgwBFAAAI8AQQgwBFAAAI8AQQgwBFAAAI8AQQgwBFAAAI8AQQgwBFAAAI8AQQgwBFAAAI8AQQgwBFAAAI8AQQgwBFAAAI8AQQgwBFAAAI8AQQgwBFAAAI8AQQgwBFAAAI8AQQgwBFAAAI8AQQgwBFAAAI8AQQgwBFAAAI8AQQgwBFAAAI8AQQgwBFAAAI8AQQgwBFAAAI8AQQgwBFAAAI8AQQgwBFAAAI8AQQgwBFAAAI8AQQgwBFAAAI8AQQgwBFAAAI8AQQgwBFAAAI8AQQgwBFAAAI8AQQgwBFAAAI8AQQgwBFAAAI8AQQgwBFAAAI8AQQgwBFAAAI8AQQgwBFAAAI8AQQgwBFAAAI8AQQgwBFAAAI8AQQgwBFAAAI8AQQgwBFAAAI8AQQgwBFAAAI8AQQgwBFAAAI8AQQgwBFAAAI8AQQgwBFAAAI8AQQgwBFAAAI8AQQgwBFAAAI8AQQgwBFAAAI8AQQgwBFAAAI8AQQgwBFAAAI8AQQgwBFAAAI8AQQgwBFAAAI8AQTwn5QpU9Z9+C/uOCJyZaH/IfoZJt77P5P8V57l5efnp2lr/23w8/NTFHwc/JT8HNbrhwcRfQzTyLN8/vb29m5ubuf+fWcZ7Is9zAQD8R2AIAAkpiujvD0II8AQQgABPAAEI8AQQgABPAAEI8AR62O53dnb29/b2qruuaiZbgUKu1+vv/1qfPXtWnXXVNGwF6poMOoDfoKs1sJaW1hOl8fG7u7vhAo+Av8+6e/ckcf01LOq0nhCV3N7eZpoxpms/jeub0XfBGniwxGCxfgDCNfE/EoPajcMDCPMSUBw+6wlj7/SSg5xqBu4qj+vBjRQqdOzUfdPyZ3jSQ02+/Tq30bfG6FOW9X6cmKzb/veBEevWmFPOo9mohLWDBV2pG5PvsQr01n+R+rbh72B9/lhFMtMF9mP2u0m9fo+N3PEFfMPUk9XI/aPblURzrTigGf4/ZH0Db/bb5KeQr4m9nvSV8hf956kvp4qYMRt8DVEf2P00b/nXeQ17O7ubm5u5gMGSb/0e/33cJ0VfdgEBDw++gwXFxdzzbgRBZ/+9/aUqf/82UhZ86AHf5Wnjr9L15+/lStXsnVvP53U6/v//r+Z9+LFI1huVXXWK/3+3w5Z/Ox/9+7h7tzFxUXuaZPYceLs7OzuOvwZ/Ppff/n/iy0iiJb23VP3X8kScC8G2I1LLzXZj2MtTTdwurwIIqDm0p/+9Tu53iTvVSfwxEQCsA+egKA/tYwnNtwZNh+127f07i4uHjJZX+LG3DBFveULX2elNfuS9F8/eZvypmBHFY3Lm/OrPxA3lO27j0pZ8b77G5oBP63r0Xzv555xWC42WMnRaUCf0fLw9dcvLkvXalXn7+dpxW0h3W/U6zU9+DvL8gUke4h2QSz2HeQ3Q8f30xGXTt3ol6PCG9Xiv3POQ19vlLdnVwHJpOJPvT7pm/5q1m73+v7669n6fDjHj2rLT/F72+TAmuSfqrL6e3t7d3c30wHjj4DVeU9C/om8b8R+G+AgOfyDHg/7D4h8GiP1e4hbY6Ybphdzy996WL/S7/3vfvGLX573B36KX98pUpZ5sEOXv+mfZaJP83j6xNm73U394GHn2LFjJkzfTHa//JzU112o77vR9NwyMzMzr8f4a/hNB7Pmvz7rzT32/N8N85fn5+dThU0d8XJiDCr62GEr4bL9zv0+XEy6IHd7c3MQG/DiV1kD9TFEL6kf1+vstsrAA1K+yP4sG96Fc/2Pn+32K31JCfy1CQK/WlWen77t0/dwf7wdH0u7l3wC81ZMPzbdJvl1t9/QnXCpf/965e5p42T9WfrzPk3sQyNW7csefjc7+45E0Y7d/ULa/8yb77D7+KedQ5Z3sSvV6PWdz3f+dXrl4uPDf+0W8TcZhbLxFBtz6jsGfOT5eHHwD5TEZBK+X+PfNEbHhfC4ilH4u7DSDhv7orjKJHsV13C3P+jrGnzppzxL6dVlP82AkFG3KNWn//vVNPy57rKcMhxEA8HXlGP0h+ivMcj+PveFYybXaWUKT5OV+HjN1eAj8x7P+OEciNhvvObUuP1tZVfIYv31ae0+Bz58/29vbxcaHR93t7e1MTurPv8+BFeK0i1BQUWWJMaY0O8P+7L+j3Z/n4x3fz2dvkz6fnTPHIO9csdtbM/mWznKklLQnWO/q1Znzt/b+CBC/J8XPQv++b1EB4mWQ/Yj0ubN7o8yz2/Icwgf2ze/1X+X2i+fP+5Pc6u7wMQW6k6aov5y/ofyoKNKkPw6Zmlh9Gnff4X9POz/q3if/1Jfzr0/3e9278Zt7c3MyF/6I/FZxi63e/P3t13YXC+z1pUh6+T9yJN/73X+fMsvr61/P+mSvNssU/TOTyPNWcr7dpf57kXE27l8jL/X9yULl169aFwrX52YzffP0DbzUzM9PpDp3dfjDe/u3wqlse1CFAGfshQO5+yMc5E4++D+sdedPWSOuDU6/fbof1KryMvpqj7uoof7cU83+eYYJfX43GxQsZAGz//JzysVC7vVYf/L8w5JxjPg3/833PPNL+n9vd3c0FAQDQzSLDw4i+6/JCGFVU1mjSm9PLLKrtT/smI8i4PbP81+cX4+xG7aed3+Xf5GvLZJnI9pzzdnoOs/7LCPf6E+T7f/zP3l7bV+ra09K5va3LEuDJhDlf/aCgt36/cC8GXCYDE4f+OtX6eL6uGqXlpZeao3Z29trVBn46HC9xuzUr3+/GAc7/pm36tf9Ls/QmT7l4X/ceK78WZblZ2foJfqt9orJAfvI+p3qNmv2fUz7dmIl0BrZ0FxM/SxGh4dd73r/M6j93Wxgb7PynLqJ/jfwYIQD/ycToD5G9d16E8sgsJBSy0r/e7UV+zqn0BGnjnj8lSu/DX8D+lv9Hu0GV9GD4bqX+vvrVWNdryju55f8fKvL/eZ9T9e/gQ4MShcgQAr0e5jKg/cy6Iy7y+md//jVU3JkwRwafBr/elzPdPC+g/xk7HPb6+t2u1/GxeNnLwAsnO3fo/nb35XyHYAUr3HtVaV81Ey21HE1AIV+nR1yZ7rWw+/DzOOiT+n3/4Ln5+d/e+qtz/4/SFZMsRDrZ21Tj/bn+D1708kh9XB4j/r2/b75zWdXai8hlWE+ouottrOvcr8ILvv178d9mdMJgJ+mF//V+a0cDV7S05c67vy/50+P4LG/dVfZzjXRDP1E4fjnFUop98nlXhqyhFej5XevrbaVRadnjO0KllQocqvtJ3O/MWuNi5ZpClH+ZKiUoqw529GY/EPzl/6MwRAQERi+8QCxnk5ZXgaW2NQGL9PCi2PI/4uU/24e7Y8cj5vssH/MzduXqPC7/7b+bv0/ul0b1vc31h0+pZ5kozg0q8/Pz+c07exfnlczZHsOenJGc/8K7P+no+sZzPdaWlhaCr0+Y/oS2fdLvzfwM/OH1rmRK/77vP47KwfNnZmdY8C+5/P+kgHx35znhzZlVe+xx3e3t7jUJ/q4rZ9rg5e7d/L/um/O4ePyRF2mdIge2fjdGNjf5FTy8kU//Z1tY27w/2e/eBVnm7vr+/H9fqunSe50Kfn89oe7+/v9coZgBgTeZ9h6g/Wz02Dx79F48e65zNvBRaC+pSaz5Oz/OXr+O4Wltee3Q3sh1re3s7t0Yzzp3Hnqr//e+69eWyxTI8DQj+hx4AgFI+eIe1+9We9Ki5mZIjrXNTqC+zGbZP7VT3noNSy5SH/1j3y+DLqNLvBAEA3h8fJv2nWgubYfnYr5v2V/tKBr1VY6++JK1XxzBP32dtN5XhMQKA7a6//F38s3k8jh4AgNKD6m7svr7yQK89i4c5pJmz5+W8DVk1gC+agIB54Pejfw/bN33LdWO+zzP4i+oAOHPOxVwyfS1x82fZvv/eThdkAECLfrdv5VzJpLq03wi9h6+3c1FK+0Wt8G+7KJVZBQaAeb6Z9xPJkfbXGQCQZfT5+fm1hePi4pK1noqs7r4bfsOK79nkVm/fBgAg3+/N5J8kHdnqszkEAODF17j8j5lpnwMBAHj5Gpd/ZMYSMwDAe9j8Kp9P9XivAIAvlqba+v3gH8MFAHgx1Pa9p+5UQAAgZWFyIj6et/z2/nZqK+ajDwAAeEGfiP9X3m39Pd/ABlLl5AvwZJG/NrNZwu/y9mXUftmTPfwOv8Pf+flXImUBYIEDDQwM6BlOQsQsaS5qjs5Zvs+fVjbbuvtb9Un+r0H/Vnb3F5V9LtUKpfvp8/Ly5VSlF6me20bzn/zWTR7wPjMzs86wQoM4JwXup9/3/2r8PPb8ff8ipBT3D/gF/jB7O7Xo+nueigz6O/3eSOqSD3lbZWXy0r+jqH60x27sjBj//0nTiSnQJLQKSs7s6EB8zPYzz9qLff8xQvkzwTX5qcV7Z9VnePA8rPFpxv/l9fmr+l7bu3YO/hC932TKw1ut8v6fhCnD7Ix07ijH34mTCrXFFu6TG6GvlY2Z/c5dn5QXv7yI3v3+7ODJeP/PVXvP6k3N8F7OzsXIKv/+lruTqCTP3PrHYtrd+ac/mWxl++PZv+1DyFdzF2q44yPPU0/efb2Njo3b+7GGDmkGsmWPZNAFde9Kizq7cmvVG9K6HzV9vs8n5uBDLZm/+V9WSZ21GJ5/f5fprw8sZ0Ne4KdqTOSwBj4Xc2ayg/f/rqrXep5+j8YjrWn2jnO9zf28u/yMcfvMdTdKhKCfJhy9+snG08S8/mU6P6dY2cUiSr79+h5/NwOZ1r2/dn7ma2fe/v9/N1nJevpupE74rrOsyKF/DzXbqYCKOv4mHH6oXxYh27l22dKYPL99keRWQXkhtn9oh37+/Mve/RygACuCKGW/hu3g/15h57+Hnn9xPncxgA+k+ZjS369SmSSfeYl7/JhJ+fDR8B2vLZOu3PeO2+sXMIAOD5/N6kuXT/PNfMUfRn6vt+FssnXZ4GAOCcLX/6PX78X4u7ZZrdrl3+UNXx6wAAUj7dL/dnz56dPy8vLy8vIZ15na+nMy76OwQAcJVbXev57b3ffvCdu+ZHnkcA4Lylfu6pHT9XuGvq1zxcMTsAwGlnzrY/L9efw/4CFwB0medjThREnuWo3PeOJRacYWhvb1d33f7+/uzhAQAAPMhqq3BCX8+2H/cG+bzwy/vf4X79SdLnl82BAODV7Pm77u3tvfzsd36Vc4EAAC7Y4k7Pb+NsqYd7BAA4NfZ8xM+xC+bE/XUAAAAd3zgfb289zyVrAADwivZPy/9kqXv6pZGR7YEAAD7f5jKuCrluz5PL16eDfn/+XAAAQKVfxCqrYFu99TvD/9D9c/7754YAACAjj97F22X3OwxvAADAZ2v/b4r7J2c5FwAAgD+vmrnAE7te1vVj3jQBDACkFD2N8vEX79n4/e6iUrtfMY6+94KX8aXna/MIABgk+hZrlPaX+d30N/tO18d4LvU9xzJ5mMQEALQp8/qJclzRX8/j5csBwj92N9/+hdAAL7c2G89wEfwb/Er2I9g+8+9aPs+P/cGFwDkK/XxpuSVV8HR8mfDDoe+nPg87Aou8fsAABdMg3N66a9wHVuPR4iUIB/V3XMm4YP3i88oyPjMEoEAAPmxb8T/qummqd8PrHfpD6MWLgDIJ4Wy3aRaP//srLmeIvsJtJabWRFYAACft47H0+tyWH6u/tfXe/bM9c6RiViHaK8HAICeRh0ztFmWlx0Tv6u4UN/3f50BAIDf10+C+Mf+6mN66rpkq6cm5ubmJhYAAHg9q3B5/ox/8kbyWn26/vlEz5EnAADf65f5ZT736dfWNrBIDwAA/OB3l28jp8hY/TSJx+1P+Oo7Wr8DAAD/rW/kexY/H79xQ5Wfa4wtGQMAAG9rl/46nJ/Xr+QBAIANhL/XpZ6u8/VEa78iTxEA8HvWD/Gs7kKW89zfyNM0/++bG5rtWWNMAAC0Bvm8aXon7l3OP7Y6SCoaAAB4bbtcN31s186E06++adDTHjcKAADj42/ybpK3jqp7dXwmFAAAxsefT89vMO+7/uxt3/Xyw83MzEwAAOxX/ufUrfxjRe0cL7PcIoJR5xEAMBy3m4/Lb2JGHsL44+Sb33x9dF3p8wIAeN39LS68F2k9ubm5uYl+Xkmq/SsjAAB2KdprSVzf9Yv7Wnc3wAEwTRsAACxhFM9QKNtv39H6odq3EyyC7DYAAOjC/Jcfvyf4sCDws50jEQAA7DYM0QMAgAzPww+93wk2hdzrPl6+z9fn7w0uADaJ/p1f2+4aSsu0fCoEACAMv1ZjbLkvxiVZ+kMAAPw8nfTnktxOgJODzxpuz8E2LwBg+L0/De/bSD5P++b3Ai8AgP7Sw42bWabcKLAIAIBtX8Qjvnx9BgAA/gzjByD/6qahAACYN4yPpiV32wfvdOT/Yr6BzX8up3ghl/edvQAA0FUc3qmFs6We2il/rXymqbyzl3+E9IN38c+P/fXdoaSM+kUAAOIhuTw85+bMPprrxzVz8TE9z9r57QfjoLv5vJs9zQUA0NmBPlrJPdNwn94dFx+/BAAgHxft2xnfbo1EPb3m6M3cD38clbf4UNOp2r8LAEBW6KE8ROaFCmxy24u/E88snreYXxsCAKBzU7uQ2YyJr8uk6Yvy8vkFAIDxMEs6AAAAzhCNdjrq6nrH+//I5QPfz82+BG//pf3agxcAgJZmavncX+bX/69/v89zbY/nEQAA4ONn8coAyO/V/0sGfWK1fxEAANPf5a36A4vCVwAA/Lh1PNiPX4zNWnwMAIDBrV55f39269u2AACAl9i8Z/m8/DznTM4LEwAAcNR8fv7kcf/dZnRHXog1h/LybiAKX4KOmQfwSg89tpHZv5XL+P6tp5MnMEvl78m3/6tlrQsDwLD7TMDgAY/Vbxj6/3w+dvKWjsx3n3LVDwe+ev72o2uZ3/dR7yPKD8ff7/RtxeDIkq3fZ8uP528FW52v8P7rd7IAAAjM/6IX5c3YPPq6oHAAD2meT8Rqe9/JT8ff3TzdUH//5oAADAruV+3fSqAAA+LqlXno///Lu3u7u1rkq/xy9b+UYGAIDRTUv8dxtv5T/YUPRbBAB8mP1E+t56vlPEAECnZzv0u32P/yaW/5g+BwAAtmmafvviuE6vl2vu5xWcc9ygfwAA4BGqivpL/5b76QLkLr/r+u0EAAD8mT9GM8tQ29/z7E8XXsLvh36cAADX7OE8AfnM00tv8GOo7Xc/EgEAALfNLKxfiu0cBgD7LB99HHae3S7GAwAAuYLqbnLTsRfyvN1qeul53fVaAQCAX/MmBgDQH9nh8w7PF58XyxDN1h8AAOD74j0Lf73dAv6tU5aPzvX+oiAAQIO7TP4c1y3z8p/+3I9nJ77u/P0QAMDThyEAhhGdqM4URX7v+e07lqcN7w0uAIA+pHff2jXzYHb63LvksYI1Oy8AAIOoDT2N9Eo2fdhPo8pZbc4wAQCwVe3HMc+SBdVGWgYhAABgkW8uuVm/mGr5o50DAACLl/ts5jjWJw0+vs3jFdvzfQEALJxWoYT1QLcZKQkAgEP2g9OtvqWuAy6AATBu6y6PVMy36PMMAODBt7ujd8ttW6NNzp/3y5seAACCHdS0jt9uTCwAyCw8fv/tv7hyGAIALPJi/i0uEYaBAABgHv3zsbh/Tt9M5gzzxxEAW42v4t+FP39+NmfVWr7rp8HB6SgBAPxLaLT5DBUXaZi5tyMtivkJcnX/29u/WFDrCQBAL3Lfr1z1f3d3t1xl59z8jD90rxItiXkAAHj1jF9//5fXfX4uSxq/Z/F8jAIALb0atdx67se7dPq67ef8/ffLEADHjd5NrmTRRujf/F3+3xYAAPLh4/M3bJG+P7gAoLP1czXXkf+e7bj48P45HwEA//KxL3x1DFI4ffPp83dzCQAAhOE7eWUAAPB/F+v7PwMAgNdd/pbvHABg8p7mURe+uioAAIPlcQZ+d3d3d0d6AAAAPBjW1prb2tra6p15MpmpHACsi76pIXn6deOTl56NHxJZq0BJLR9yPy4+fn88jhY2vFs64FtGp4T+xVvk26/R/htN93fZ5UODxcEqvJqqoP/UzT9VX1oh7Ttsf4uR+fX8o9/+Vz2sxfkxuDu1OZ/2l5fm6p/2q25MXYql5vvkqxPM6PAwCAFVyYGEsk6xbmB5MAvuvrja0va97kWL5e3+/5uu8r7vRhP4rql+TPZ+1OD2I3DjUi35IDydkLaEVqXXpp+m36ubH1BsVfUxoYYeZZ4Fv8OMjrq6wLIv6H8pu83LzyL5YAAE1x6Lma8+OD1wQAqOAPa6fravzxHk+xqCbURlAIpRuIN+rX5tkF+DAAODy6i+lcY9GfYDkvXTt71q83yCt/ca/PpGx/1bbxjMPHqv94LnvDLltLX/iMpY82WC/k22jd5lzfn/x1wU6OitSM/nXjzn69+v9ZezaqK2r2GkW0xY91A6eafWvWN6+v9/FN9abj6Vf+bIvPZfE+LoAgDIpdFnHJbE1k/6j5PPQPf215hoLufmjwb/c5RVKtFmSv/599fp3qt3+/THnu+zvh5nXa8/v8n1XsTnZDWrwczW97X1oagc96PPc3mvr5Nu9h5sXcp4dcv3y79l9vB99QYVOf3f29rSMYYDGpSX+rniDOD/xxjAtFjltz+A9jJz0/P9cExQOAL/HU8qz5pP9k+hGEZ+N3y+Wb/qb9FBzev/ziPxZJbfZjVP9pZeUCAgDgqG4OVN43vyLnzuL9J1GixjY//wEUNefK73/e7i/a+e6kE3V0FDmwR+x93NGRr+b/6zDmknMbC0xO7tOpVogL65zaGH8/p3wpvTV7nknuZ5rK3fl4HMAALRf01j+31NP+mPXW5JH7uT+j38wa5/9ANATf+0e3dh9rG1xcXFH+j14AAP2b0oXoCfzfuqqep2RCCheU5+0AgA/raxy4/zt/j+u3orHs7e0N6Zv/Al8GAEAj+7K6kHkbkufZt81/bf/0YwQAbDVs3/SxZLN279qNFzml6Kyz4Bfm+FoAAGBlGa+6h/mZ8FfTbq7WT4upAwAAq/PXzyb97K6lOZ9LzHWpKqNfhI2PX7s+P4e9VCG6vbpP+57m8up/O34WDTnPx2eP5Rfj7fv/b+cAANCy7BN98k9QES3Df9ljh4/VdZZxbpxI6m5lnS8P4r1v+3gGAMCPK4qW0KMJ2mq6m7/TL3rbd54PXQAAmBpWUVs12l6h4I+htv8LAAAUMudf1geXxGK9Kuuoaz5eHbq7uwl+TJlxEgwAgLcVOfP7G8fBOvRu7pknjZNLuIrKAgDg0X9IPkYwu9yfPc8f//r4NSMAYMW3U3H10Xg/uh8dAADwVaENNjfh5wAgM9m3b6Yt+sW6nXGBh+PDAADwj3nk1/z/zwTP09f4jhyjVw8AALCg6Kwb/ai73933KP9U2/C/EABAYbmlitwhsXqvbc5Qz9vTq5e/DgBAS6M7GxeDIt++nW3Vh+wsA8CpMi7efxYHWgAAADyLt58nJZZl2c5BAACfKNnrTd8dv/cWeXgTAPDKFKJ/enm6i0of59VURwEACPm8k9o3bUIAvMSDdj8OePwC2mMRAMy/5Ht2cYEAAGCwc8gYAAA6uEXpXJhWNw5n+uz9sOH44BO0/OWBBAAA/rIuWv5X6+fTvvn8rcEFAID28SlXT6vL9Eg5BAAAjKXvv//e/f39vmMZAIB65V3+lr8OAAA8Hj/vb3wDwQuKp+U/DwAAXvNnmL9N30xmBgCAKu4h5sRoW/7lr/RBuhQAAEs1TP3SwOfvo4fLTz8CAMBDXZT/fr83gY8jfnXgy80pXgAA0H6c0ftg/P27+6cmAADAouVrmFqfn5+fv6e3PB5fSk4QASypfXoy9v2bpqn+L7btd6uXjsupAgAAeozC4efTkgAAT3SQ8qYps8fJNb++G6TrB1rdPXUOADw2c7pvh1LW0TsxfA0AAMDmzF6vhNkEAABgM01TPQLmBAB4l4/7CQDAHt0H+kPcp0gqEwCgkVP5RWe6om8mQwAAwAF79a28dVlgqRkAuNvZ++n2Sr/NufqXv/Jv7b/uCwCg06Mylnl58BqA2H5cfp6mUUS/4AzvpQNwzwi/kwPgPi6QANhVWOXHzWPZgNGEdwMA8EYezuvoYUvuq+yYIp54IgBAO16JK9vmAID7lP//7pwAAGB5h4wBAACQ4D4+JpEkOrKLwXv53RxMrTu+AACgzvJqPz3ln5sQAAAAsrl//x3nL+X8P6tfxHuv7PbnAEAFKZRvPA9NLgCAfrzNmd0eHz/sz8ltAAAAvMR7z+J81wQAYJU76vuXL1/m9xhkHQAA0GMYa3N8EOCMsG7Jf1YDAAAcNRfu5+ep2VUKzqRe0S/Tn33/LE38+OZvRzJstXZf2b0IvqcKvtF//5lu8fL35eUPgcAOD0vC79+O6/5+98fZ5OCxcA3PDj8fvk6ug7AAAAdzszM+N4X7PZ35gVFdb0lWf5lPr/mhtNzSz9zwcAAJPoPdl+F7aqqFTB2z//ZWZLt8AL3wMAAGwzf41ysln+93N7kS0AQG4/Rv/vKuHnBAAA6zU9i+eRMAUAAHjBuuhvZsw+ZnTXzd2BTlcAgN+w3uK/2PAjvp8vud/KsMgnMwAAeMk0Ou+2rNAAYOEKwn/z6b8QAgDMwpXnYfueppx2MwYAgHaAFyb/rlNXBwAAVmzcW1cXWK9HAAATVJ5+JTF2f1zK5Bux/HkAAPDm9mPN5/5zAADAM2mbm6NOYfRAAAALcmY3utx/2Q5uxpe/7mkRmn8f8AIAaFlVc6a/xX1q1eM5uxQ8AAAcNMVRLnzgT1j/PQNQAMB6OByRew6X43b+dVzcPNcMAABPRlr34BnXUdrlo09n9H6qtzdQAQDDoX9XH3saAAA8/FUwVbd83n2FJG/Etvk+/jxEAIBZw0j+97ce7vF1SUcAADSh1+ekNS4D4KU+Bg3rEwAA4F3sseemr/0/e9e+KvdkDgIAWGuxsf/jfQAAH7a2uVLdyeZPTHI+BwAAWt4ff6q4Vv57/l53/IFzAgCAlozSuLgo9JBU+6WwnAEAwAA43ICLAvk/9ByJn+1dEwAAV8KcwZfzBwAA1ofzvuVAAIB3UxW1tQ3Wh80NAADje8Xz2PMIAAC6uY2Xi7FZawAAcNTfSn8iLJgAAGAUvr78/9lP/PsvHGsEAICm5k4Z6wWmVPfm4kwLAAD6MwraqjF3AD7Svw+7PSbdzwsAAGhzXcWgqfsVAACgsr1u1nuGLe+2nppZCgAAbDG59ps5QQBA4b7m62IA0Nq/T3kfAACMq6q6o8tGmz+97kDpp47KlQNgzZbln5j99PNy+pHrSQEAAP9ggnUhx/28/c7bfaDK2zWdNQEAAHAP9+Xb8h+MxQcAALr85nK/oek/1TlrF85cV+qSnEcAAIDYV9tfqHPBCQSAVqzwQO6HAAAAdNGy/EHm1gEAONAxY+dqVPHX+wUAAJja/qJsjOvr+e34GY4HAIA6uo2JvS6BAQCAPXPuOz5ueR4BAIC0wzs7OMFO8+XqVABAStnqKaoP0d+obGNPyk3o8/NzLn7jAAoPAgA48uI/7n+LxAUAAFrYZ7kAAAB4OcwL52b2AQAAf6x+n+D+uHvEAAAwie6pYzTdRWpsJzAAvtt2cwIYAAAmm/t1f3/vr/yg1t2qqbWvOQBc0cGTgQAAKi8+eL//AMg+qPsXAAAA/Pn0zUQ+J+0AAPwz03wb+zH49JEJAHZAOgAA8PXzrX4c+H78GgBAgf4Q/xUAAAAeS4vfu3N6LJvU8AcAADyRd38DwAMAAOo5q2nAOc/Pz88PAADwyQ+6j8YfWvc/AwCAN8U81/41AACgWZu9iHfobQAAEG5eZeQTP+Bi0uUIACjQMrG+78cAAIBrbf4aaS7Ax/z9dzk1MqYAAHaL1aEmcC9s+AByN8Y23ZkJACBvkVEEAEAlh/Nt/Jv3ffumW+ebJgAA80jvmdfcH+u71wIAACd1vKJvJtPOAeCn3ZdvyQAAkLXGW2z4duX07m9I1w0AQMsSyT3Ln9by6qvzAAAA4LXds5kPAQAAqAxL29b5+fvn5eV8RwBAivpKfyP3JqSw2YvrVcL9fd9yAACwX1d+aOtEy/SH9wMAcLJ2vPYjfqlOyfkKcOavv9kGOCEIgI/VdKzG6flPpJ5bAYASLRfLvs5cRZoDAEC+MM9chF2Qc6XfswEAIEl1S5l3MWblNwAAP8y96a66Pa3Gz0v3cooAgMZt0d+n7z0AAIB/A7vpvTG27HVdvl7OjQDgdxYZewcAAEDFOQPrtWpI+n04EwBA+zK3DgAAAJl7e3vTNF23x/k0KleSpzkAAADMwyKgv+LQAA3+dzizrtZg+Ou7ZZ1xAMC5mVfcvQAAuJbRW7P9H3Yf3h0AAPge0zPNhLs9AABgcb/fbXTBWe7rrAsAAOCHyCBikgAAoMbjDn1e+zjuQZ57ch4AAL4v0MvFwcxvTAIAYK3it0S2WP62AANAKfrtcXZvnpcfawzOAwAAXmIOioALAABL6zftXvq1hfcEAADrFi8wyebvDAIAzMzYBNTMvQAAVDPKJuicgSfcjAEAAA84CgAA8MT+sWfa81tr/Hmt+RAAgPfb1+n+E+zEAoBUxXcBAOC51Dc1BgCAGXjgbXgfAADwpUoPZeLVAAAgDVfqM/Lz8/PzjhwEAADAZvF3TVs/te3cCAAA2zRN4/TNudPrKoYAAIHyNpIxi3nR6W2kgLn53s+UMwcAgLVbAGHPFwEg0Dsc2aQAAHB2+7G+e/38AwDA5l2lr0sAAAAdvRG3uybdKzdo3f0bWgF7fn6uV3xYr3x6+S8BAFC573j5L42bTZHAUvkwKzYAwNa59f1E22H7lq68dWwhAABMPfbj0Pf/8Uu/gQAAcMlR1FPbuPynR+vggUdEAMDJa53T7ElgAIBpqvQ/GLf+AKAzBv/MWeHGeQAAwCFPNN2ufP/dT3yfP02nBwAAvszj92buzQsAADTfP7kvp69u/68AAABezZaN40YLdBdTBgAAWFThl5rcUgAAIDf5N+n+2eYAAICrs8ux2PAt0jMAAD4ylfGn3g7lp5M53wEAAL8f4B12fj+cTxEAYGtl3FweKD/HNAAA9Ghevtu6ar5efwH5j0oAAGBkr3Yj+Xn8/jeVLdn+py/J+Q3NK/PlwgEAAH4Lp/9Sdjz7gxYASCaV+snxewAAtBw2iGVAAKCi56rfYve4/jcAAIyrquqvTGD86Cz+D/M0AQAwmvkf4dbPJfnx/JtPPx8AAAAvcvULa/70b+3yFU8AAID/dWcv3qn0O+5BRwEAAE/iWk7pysN6JMA4AADgA8bYBWS0AeAeDdGx/Q8ZewcAAJCzV+vbfMKpxvF10gWwYLgAu3vyuz/u1f9lL/zv/f0w9HJzBgAAGKnpZ/VlfeU7AQDwbw5ZAgBgC1cMki51uxsAAABn7nn+i+uLgAUAOD1uKsfnb+Quyvj7isE5AAAApvBgN9Z3x8/xDABgHeEfx82avxYAAKgZv7Vd+fdyi9+zAQDA72bRlf6a9+8nL9Hv7flcAICfy3+XAWD8FwAg1R21FuD/AACAjdjMm/prn+73vG4AAAAYGXtHx/oAAGA2ezcfkvxRn2kAAICjuV/ea63H/QEAAHd/yPU2j4Jd+gUAAL+MqhTC5oL4hRUAAGDxeRfJzSAEAAAE5Yv+fOtcF10AiGZ0e/vHmyk/LDXqAACgKe+Vvq6IE+sDAADu2bB1Z7/n21DzuQAA0CpiDAAAuGHGNi+WnwUAAL4y6pSXRQAAtAS5/8+Nnl/9NwAAYAmmrumqvZ3ld40VXgAA8J4MImYiAQDgxmOq7c+aZPk0AAAAlapc8LeJ15jx4QAAYBq5JT2X+ZkWAAAAvBwS1+pT8pMP+Bj/FgAAgKpc6/HEF7xvFwcAAEwM51fje+ruEQsAwBzz2l3lEA0AAKrj87iPJwUAAJCuSn/9xr2zozshqQkAkFAYCgAAFzgHDQAA21b1nv3T9fgAAIDvM1Z5QA3WMxEAAHDVoavm7PnCROE8AAAwIRlT7X+fQXlHAAB4HXZ9kH0e3gAAADLVS70DAAAOq2kAfFVrfn7++fjygwAAAPi5l66P2xAAAMDO5Z3vYb7uBgCAdBWgBiirQQAAAGzZMeVW+9ru/Xx17jbWAADgm/3qnM4GAADBzp5Ne3oAAJjxPBocnpefa+gLAAAAL7Wo59xftVg8EABApi2JZ6SvIAAAwKRyc6RjjdH7sdzFlMf7lgMAAFsgt+jQZxnvnL4nAABYvcvEc5xeaQEAANfCng4AAH6Z6q6alGFdAIAcqz7E9e5l8LPrLwAAAI5y0D5FAABUmAB6eMx2LgAAcBi9hQEAAGxygTF3VQEAAMA/uBCvXowAgLf7WHGNOf2sTAMAAAucc8Hfz5/eCAAgJf1yeYgAANBz6eUKvbaLjyEAAB/bcDn2AECbqqoHnOWxAgEAAPR6ugf5L04AAGDa8/81xgYAAPra9cdq6fcnAgAAPn5d2MAAAIBbFP91v6ivd/HoAAAMACZjry4AAF4dkUPPAADAD1uUJwkAABLMcHf+4nH5YAQAgN/2W7SAz/cDAECrno16Y87yAwAAnm/eeUCzzxEAAMDxKz8AFK+4NDcAAIAnMXZ9kH7vNwAAgLdlcFqBVEtPAwAAJplIxJ7/PocAAJjWg1E/SmYFHQ0AAIAr7iNf+99BAADgMqjkZxEAAGb0GAAAmMZtKner7c5pAABABzLJFyY6tDcAAMCtlJ1/KvV8lgEAAK1BHxAAANPOynqpbRpdTgAAaFxa1f1fvHXPP43KsK4AAAAu6HuzLxEAAADtg+rQAQDAw9LnMXKx5usCAABOo6+9Z0s0AQDYzGgDAEBQK/cvz5sAAOChy2ZK9YCAAQDggn6mAQAA/yCNfgUAALgwU0OWAACYKEv7rV7r/ZEAAPjheV9OybbzJAAAAC6puLkAAMDV0efPptuIpBEAANP4cG/OAgCgU/GbNAEA2MhvCQAAAKoJBwAA9IY/AACgHfG6Xc9G1x3TlW/xfwAAABnW+V2Iv3fDQQAAd6W7eD/oizLyj1wAAACfdc8NAACpB7oBAIBucqdxTwEAAH/hvYcCAICWZ/YIAOAsGpcffBAAAJw0feX+KEgAAACE5eZYAgCAxl9hJT8AAKAc3FUHAMC9WhQsAAAAr9PjAACAv2TfcImAAADBvcJ1BgBAMvqGKx8EAEAv9fFX/8MKCADwDKoTAACQudcAAIANe7b9CdG5BgDAX9PxBrxM3wMAAGDBdwQAAHBmgcEFAADwMowdAADAG9lM3XsGAACt0B1+AAAAjMNhAABAbmUVHQAAQ2K+wkgAAAA33xwAAKCrg7cDAAAAgFvw/wAAAP+NwAAAACzX8wAAgJw+AQAAh9GbAAAg95CuLzT8AAAAXlE64fEGAADQ0zAOyAkAgJ5hDAAA0JGnAADA28LXAQAAmdrvgOrRAAAAnKj+kD8QAADgOFs1BgAATqLeAgAAsLvofAMAAGBqfZyVPgAAADL8HQAAAFv8AAAAL6hTDgAA6OJvAAAA3lbHZgMAAP3E+gcAAAADxwMAANB1lwMAALqyEAAAgPy6LAAAAJ6G+wcAAAADVz4AAICb5QAAgBaGfzsAAGDqjwEAAADwAAMAAAAMPqDVoxXQVd9LEUZmrQABAABteazH+5V6LDEOAAA0ZVcEAADw7BymBwAAGqDxBwAAjDDs7qmqeuW3EwAA0B+ttdEnAABgi+EPAAAAi/JcAAAAd3g6AADQw41T3i4GAACE7k4sAAAAmrUFAACAZggAAJgYdNYEAACquXYAAGCjBAAAQG+eCgAAVhwEAAA8M+xsAACg2q4EAAC0HgQAAJznAQAAh/pAAAIAADjZh78DAABgrOGyAAAAlfZq//Z4BIBk6AAAAAAKXAAAABzxs/P3RkYEAADMA4AAADh48I4AAEBzHEH0Q1H5F5MfLy8v4+LiktjzDz74gHgG//GPf8i9vV2d5cMHH0Q4fm6L4cZj+0hS3fOkIuKJhCAAEIBEqr4/M5n0++OZ/SgaHz8/P0f6np6eht/Gx8eZfRws2dbJkyfZDHgbexUQz+aRbOooexGukrGi/gFAABJJrWdJSZm7+ox5dmOvq7o3v590nufV2n7RTuYP1k/fyJ/T3xv9qebP9x+f5LqKbrLTpzOGvvLrz9f29nYjz7KWnyP4/Pz89FGrwCc6Zh7A8F0PAACm2XWAzz22r7U+ie1jiuepTPapx7I8j/3rvpmO/TI9j7fXyX0nv10lY8X1HvGl8PFiKZFQvRxxXfI+i2fvxQBAgCKx/tO3avJ56bXXdYzYfg4A/i+4AAAQjGB8bQa9rSs4ZtTG5tNwyuSeR8/3Za+qe3455/znQ6Qo8us+mSKuxBD/ry/sr7LWqQLIccSkJIAAJBIVNQNAIsCzdgz9c/r7n6fh6Y0r6piCI4c3Hks8jfJb28reCLmePtc5mmSbaJWwhEzAADyVI0BAOAc3j4HADI9G1/f7vHx4vOyyEwEAAB82oMjm9hHCwAAAGbZ8v3nnVXrqbuqq+xYOp9JAACAnuJVA1eTrhMAAAB5KksAAAC+2bNzh79+/Vqv1+v1enl5mTPr6qrE9QAAeqlqDAAAeHCvvb0d4ZbceacMAADf65Nn26+A9dsmAQAAfkiWAAAAfL29Pe7E1qoPw8lTLrW43cY7eh3zoM6q8GP8GAAAAKcrkx/L/9nZ2QMHDgi31Pr6ek5HAEDt9KZ90ZHTMT9Um3IiqSfP5b+9vZ1Hg04NX4gAAADg4zB/2ykmEAAgkegAAEB3lzF598igRA+o9XNtfPv6+pjdAQJ4PboBAIAy3EUeACt1e3v7/fffz0zqNDg4KMXlAAAAAEBO65fFxcXgQgSAWU/uAkII9OAKAACs1Ovr6yWGACMiAAAAAGBYz96BAADASwQAAECAJ4AABHgCCECAnkDzUOzV+/fvFywEAGDFsLy8HIv6Je5ZOjk4IwkAAAlVf17mRcd/f38fKggAgA+LvBf2RAIAABySWrhpaGgwjTg1MjIyUdYBAACQ59cYym+moaHh6elJ+OnaAYEFAIC2nLH2Sba4CDp3jJ3pMo1TwQLNTSmf3WcPyWuPSDKb8QQAgABPcPUfMoxCM2npd3Nx1zSZHaWU1Nzevh2Ni9e6LM+SZ3k63X5ucgEAAD7NJGFD43dxcSEKWCmNxEuD3TVN9bbH3+sP5lMj5S0C8F7JuYvG6wAAACDyPiFSDlcRXv6/2znd4TF7W+3y45SrmfW3PM/F6wAAACDyPiFSDlclHgEAAAAkEh0AAAgiOgAAEEQ0AAAgmGgAAEAw0QEAgMViDAAAWBVG88UbAACknG84AAAQWohPAAAAz8RmBgAA9No3AACAxr/DBwAALAN9QAAAwB+sCAAAWMQ8AABAjnE9AADQiVZL1x1zAgAAkxLtCyyxvJckAACgxTteAAAAMNKw2wAAQKUsAAAANjPwXvmx3AMAANq6AoAAAPg49U1HAAAAgGUiAAIIPNPfYVLGHgAAANPnYkS/YtUPAADagvlfvB7vAQAADl4P8iIBALD7Sa2f9DX4MyEAAADzYd4fAADQLJeJnHLO2x0AAOgZX/sCAABwv+XKAAAAbAf+AAAAXwELAAAAgF1gsUcAAMCC6ubWXL4KMACMav0UAAAwDCu6AAAAV3QbAAAA6U7uFgAAcNAIEEcAAGD7nqUCAACAe6EPAAAAAPAtv7+/Pfjgg319ffqmAADAdq1Tp07Hjh0ztgQAANiqN2yRt5JfH4/f8/PzzZ8rfvnyJTkzAQDAFH1s2dRxJggAACiJrCTHcePr7+/v14f4vTD5t39PJZDLkRsQ/TAQAABgvWm0pdcv/vk+XKcWHAIA4Hmp6kvlXggAAEDlvnkfAABQfVugAAAAAPwucwAAQCPePgoAAGxY4JIAAGAzt2IGkfuHz6QEAABa1MvvxcvLyzoKAQAAgJyllY2ThwAA1/C03eYPAADybwIEAAAAEE20AAAAEMfzAAAAePXYwRf8AQAA/yMMMOwSAACA5UJMAAA4SkvWL52bNgAAUEn2rLO68rkAAAA22nHLf36+cz8AAMD3sVxdCgAAYD1W3JAAAADjUEH/AgAAcMI5AACgE8O9OxYAAJDWq1b+1iWvNQMAMANPAgAAGFWnKwAAQGv4DwAAeHNlAADANo7bEgAAACflfk8AADIDu9HhqifxxrXawhkAAADQE8gLAAAANCzHKgAAgJ4Rhi6/AAAAfO3pHAAAAKbDWgcAAHTAd7kAAACGuQAAAJh2XA4AADykQOwBAAAAVhUhAAAgwDpZAAAAZp0PAAA8JgJzBgAAADhOAAAAYB48BwAAVHIJ22zVCwAAaIVvAAAAAIzC8QAAAGaxkwoAAGDVRRYAAHB6VQAAAPyaQwcAAGC0sQAAAMhVWX0AAACgH2mFEgAAULP5rgAA4PGtlQAAAMAvF4gAAADgrui4AACgY2d+AAAA/q2i/wEAAADAKvAYAAAABfn59W6zX8QKAIDAdzQzpwAAAPi6l4iBAAAAYOPcAQAA8EazEwAAAAAjjtcJ9gsAAHAzrgAAAKvYfxEAAADwnyVQBAAAfEUzv/7YwHNWAAAAUMQU9hnZ35//lwEAACDHeAIAAI/xQAAAAO81UwUAAHCMTSYAAIAX2yYCAADAlXMEAAAAwGKcKwAAAACMP8QEAAAA+JYZAAAAMhybCgAAgC0/WYAAAIBDmR4AAAAzy60fAADoHsYZAAAAcJKKAAAAAO+uDQAAvMytBAAAABjX6AAA4BkveJEOAADoWE8AAABQxB4vAAAwHtUAAPiLXMU7AADQo+AFAAAAyHD4AADgmbBICwAAGubjAAAA9c/wAAAAAGcMAAAAQDJqCAAAQRa+AABAAOoJAADMGq8LAAAo1+kEAABgHiYAAADcWPoYAADgtBveGy+8DwAAEKT/dLukBQAA3Jibn38a4gAAQDCTuB8AAECR2yYAAMDikLUAAICpcuxuAAAAwI3oPS+BAAAAAA9amQAAAF6pDnz2lwUAAPj0vAcAAEEC7HEAAIDRWggAACjk9gQAAGIaFnoEAAAAdIRFGgEA4B2mladnAQAAADgLDAAAAMD4QgAAQA+2nAMAAPy0Y14AAIBBz67lrQoAAACADoUCAAAR5fu0AAAAzLn6cQAAoHNfBAAAeFwHGzcAAADAMdEGfQAAoBbtAAAATr65sp0OAABImH8QAAAAwO8oIwkAABIA+ewAAACws+jyAwAAAMAn5TAAAADAvHgOAAAAABd8AAAAIOAl9wkAgAL2jAAAAMAsR6oAAADAeEIPAAAAAAD5r0wCAABuR9OkAwAAGMzAAwAAjSokBAAAlkBiBwAANOi8pZ4fAAAAAFxgKAEAABQe8gYAADhFAwEAADhgRqwBAIDJ7cw/AACAuz6/EgAAAIDNuBW+AAA0Ylm+2ZMwAAAATTgLAAAAfAtpAAAAgA+GtGUBAAAAIEs0AAAAwMjEBwAAwA6+6HgAAAAAagEBAAAMkQYAAPjoxpgJAAAAwBVM1gEAAJBk1QAAgAAEAABAVnOfBgAAQDb3jgEAAH4TYawAAIAuXwMAACDNcwIAAAC8jhTWAwAAcrhh7AI9AABgkZ6T5v2QFQAAAAByUQMRABAHp3MAAEBQqwQAAFAtbA+NCCGAAACAG98BAAA+NmPpAQAAeDHiBAAAAMDEegMAAMBVIwAAgJEAyYsAAKBNs3QAAGDWi8YAAAAAzaw+AAAAS3RerxQAANB7AAAAGE3QUwAAGg7onAEAAADwAfeOAAAAsKz+ew8AAACQJv6/NxwAAAAgwTLOAgAAu45WBwAAAADwcQQQAAAAPOAAAAAg5hy8GwAAgMveAwAAsPjGBQAAALC5pxAAgC7DkZUAAACATA/ODAAAbBCHDwAAAOzIOQQAADjNlCcAAADAhv4HwgsAAHo3cgIAAACwHMlIAwAAHuc8HgAAcFlw3QEAAC2sEhQAAMDvQs8IAABgP6ZADgAA5KE1M4EAAACsmAsAADQzGWUAAGBltgAAAFS0/SGFCwAAcNQFItIPAADwTevxAAAAgMjEAAAAn+oIAAAwNJ9PAAAALViwAwAAsJlGAwAA3JWrAAAAGI7Pz88z+w0AACDqtSX5M3tPs1sTAABAQ3Qd8vYDAAAAAAAAAAAAgP8bKvp/hoWU06rjwAIAAAAASUVORK5CYII=" alt="Legacy Health logo" />
         <span class="brand-text">Legacy <span>Health</span></span>
       </a>
-      <div class="nav-links" id="desktopNav">
-        <a href="#services">Services</a>
-        <a href="#prescriptions">Prescriptions</a>
-        <a href="#programs">Programs</a>
-        <a href="#myhealth">MyHealth</a>
-        <a href="#resources">Resources</a>
-        <a href="#contact">Contact</a>
+
+      <div class="nav-links" id="navLinks">
+        <a href="#home" data-route="home">Home</a>
+        <a href="#services" data-route="services">Services</a>
+        <a href="#prescriptions" data-route="prescriptions">Prescriptions</a>
+        <a href="#programs" data-route="programs">Programs</a>
+        <a href="#myhealth" data-route="myhealth">MyHealth</a>
+        <a href="#resources" data-route="resources">Resources</a>
       </div>
+
       <div class="nav-actions">
-        <a class="btn ghost magnetic" href="https://www.legacyhealth.org/Doctors-and-Locations.aspx?ActiveLocationTypeFilter=d6d9b0e9-fb5c-455c-ad31-db43bfc2f3cc&Gender=&IsLHPMember=&Latitude=&Locations=&Longitude=&Open24Hours=undefined&OpenWeekends=undefined&PageNumber=1&PatientAge=&Radius=5&SearchType=LOCATIONS&Specialties=&ZipCode=&keyword=&services=" target="_blank" rel="noopener">Locations</a>
-        <a class="btn primary magnetic" href="https://myhealth.lhs.org/" target="_blank" rel="noopener">MyHealth</a>
+        <a class="btn secondary" href="https://www.legacyhealth.org/Doctors-and-Locations.aspx?ActiveLocationTypeFilter=d6d9b0e9-fb5c-455c-ad31-db43bfc2f3cc&Gender=&IsLHPMember=&Latitude=&Locations=&Longitude=&Open24Hours=undefined&OpenWeekends=undefined&PageNumber=1&PatientAge=&Radius=5&SearchType=LOCATIONS&Specialties=&ZipCode=&keyword=&services=" target="_blank" rel="noopener">Locations</a>
+        <a class="btn primary" href="https://myhealth.lhs.org/" target="_blank" rel="noopener">MyHealth</a>
         <button class="menu-toggle" id="menuToggle" type="button" aria-label="Open navigation" aria-controls="mobilePanel" aria-expanded="false">☰</button>
       </div>
     </nav>
   </header>
 
-  <div class="mobile-panel" id="mobilePanel" aria-label="Mobile navigation" hidden>
-    <a href="#services">Services</a>
-    <a href="#prescriptions">Prescriptions</a>
-    <a href="#programs">Programs</a>
-    <a href="#myhealth">MyHealth</a>
-    <a href="#resources">Resources</a>
-    <a href="#contact">Contact</a>
+  <div class="mobile-panel" id="mobilePanel" aria-label="Mobile navigation">
+    <a href="#home" data-route="home">Home</a>
+    <a href="#services" data-route="services">Services</a>
+    <a href="#prescriptions" data-route="prescriptions">Prescriptions</a>
+    <a href="#programs" data-route="programs">Programs</a>
+    <a href="#myhealth" data-route="myhealth">MyHealth</a>
+    <a href="#resources" data-route="resources">Resources</a>
   </div>
 
-  <main id="main">
-    <section class="hero" id="top" aria-labelledby="heroTitle">
-      <div class="shell hero-grid">
+  <main id="content" class="page-ready">
+    <section class="hero active-page" id="home" data-page="home" aria-labelledby="hero-title">
+      <div class="hero-grid">
         <div>
           <div class="eyebrow reveal"><span class="pulse-dot"></span> Adult Services A-Z · Pharmacy</div>
-          <h1 id="heroTitle" class="reveal">Pharmacy care that feels <span class="gradient-text">clear, fast, and supported.</span></h1>
-          <p class="hero-copy reveal">Legacy Health pharmacy services help patients manage medications with prescription support, refills through MyHealth, delivery options, specialty medication support and knowledgeable pharmacy staff.</p>
-          <div class="typed-row reveal" aria-live="polite"><span id="typedText">Request refills through MyHealth.</span><span class="cursor-text">|</span></div>
+          <h1 id="hero-title" class="reveal">Pharmacy support for <span class="gradient-text">your best health.</span></h1>
+          <p class="hero-copy reveal">
+            Legacy Health pharmacists provide compassionate expertise with one clear aim: helping patients manage medications with clarity, convenience and access to knowledgeable pharmacy staff.
+          </p>
+          <div class="type-row reveal" aria-live="polite">
+            <span id="typedText">Prescriptions</span><span class="cursor">|</span>
+          </div>
           <div class="hero-ctas reveal">
-            <a class="btn primary magnetic" href="#prescriptions">Transfer or refill prescriptions</a>
-            <a class="btn red magnetic" href="#programs">Compare support programs</a>
+            <a class="btn primary" href="#prescriptions">Transfer prescriptions</a>
+            <a class="btn red" href="#services">Explore services</a>
+          </div>
+
+          <div class="trust-strip reveal">
+            <div class="trust-item">
+              <strong>Free</strong>
+              <span>Home delivery of prescriptions is offered at no extra cost.</span>
+            </div>
+            <div class="trust-item">
+              <strong>Same-day</strong>
+              <span>Medication delivery is available for a nominal fee.</span>
+            </div>
+            <div class="trust-item">
+              <strong>MyHealth</strong>
+              <span>Request refills and see current medications in one place.</span>
+            </div>
           </div>
         </div>
 
-        <div class="hero-stage" id="heroStage" aria-hidden="true">
-          <div class="clinical-orb reveal"></div>
-          <div class="command-panel reveal">
-            <div class="panel-head">
+        <div class="hero-stage" aria-hidden="true">
+          <div class="stock-photo">
+            <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=1400&q=80" alt="" />
+          </div>
+
+          <div class="glass-card hero-card">
+            <div class="hero-card-top">
               <div>
-                <h2>What do you need to do today?</h2>
-                <p>Choose the task closest to your need. Each path moves directly to the relevant information.</p>
+                <h2>Prescriptions. Consultations. Over-the-counter medications.</h2>
+                <p>Outpatient pharmacy services designed around easier access, knowledgeable staff and shorter prescription wait times than the norm.</p>
               </div>
-              <div class="panel-logo"></div>
+              <div class="logo-tile">
+                <img src="data:image/png;base64,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" alt="" />
+              </div>
             </div>
-            <div class="command-grid">
-              <a class="command-card" href="#myhealth"><b>Request a refill</b><span>Use MyHealth to request medication refills and review current medications.</span></a>
-              <a class="command-card" href="#prescriptions"><b>Transfer a prescription</b><span>Call a Legacy pharmacy with your current pharmacy information and medication list.</span></a>
-              <a class="command-card" href="#prescriptions"><b>Set up delivery</b><span>Request mail delivery through MyHealth, by phone or by visiting a pharmacy.</span></a>
-              <a class="command-card" href="#programs"><b>Get extra support</b><span>Compare Specialty Pharmacy and Concierge Pharmacy pathways.</span></a>
+
+            <div class="med-orbit">
+              <div class="mini-card">
+                <strong>Refills</strong>
+                <span>Request medication refills through MyHealth.</span>
+              </div>
+              <div class="mini-card">
+                <strong>Transfers</strong>
+                <span>Call a Legacy pharmacy to request an Rx transfer.</span>
+              </div>
+              <div class="mini-card">
+                <strong>Delivery</strong>
+                <span>Mail delivery brings prescriptions to your home.</span>
+              </div>
+              <div class="mini-card">
+                <strong>Support</strong>
+                <span>Specialty and concierge programs are available for eligible patients.</span>
+              </div>
             </div>
           </div>
-        </div>
-      </div>
 
-      <div class="shell stats-row reveal" aria-label="Key pharmacy highlights">
-        <div class="stat-card"><strong>Free</strong><span>Home delivery of prescriptions at no extra cost.</span></div>
-        <div class="stat-card"><strong>Same-day</strong><span>Delivery available for a nominal fee.</span></div>
-        <div class="stat-card"><strong>5–7 days</strong><span>Refill coordination timing for support programs.</span></div>
-        <div class="stat-card"><strong>MyHealth</strong><span>Online refills and medication list access.</span></div>
-      </div>
-    </section>
-
-    <section class="section" id="services">
-      <div class="shell">
-        <div class="section-head reveal">
-          <div><p class="kicker">Services offered</p><h2 class="section-title">Less directory. More decision support.</h2></div>
-        </div>
-        <div class="grid service-grid">
-          <article class="service-card featured reveal"><div><span class="service-index">01</span><h3>Free home delivery of prescriptions</h3><p>Legacy offers mail delivery at no extra cost, saving patients a trip to the pharmacy.</p></div><a class="card-link" href="#prescriptions">See delivery path →</a></article>
-          <article class="service-card reveal"><div><span class="service-index">02</span><h3>Same-day delivery</h3><p>Medications can be delivered the same day for a nominal fee.</p></div><a class="card-link" href="#prescriptions">Learn more →</a></article>
-          <article class="service-card reveal"><div><span class="service-index">03</span><h3>Prescription transfers and refills</h3><p>Patients can transfer prescriptions from a current pharmacy and request refills.</p></div><a class="card-link" href="#prescriptions">Start here →</a></article>
-          <article class="service-card reveal"><div><span class="service-index">04</span><h3>Over-the-counter medications</h3><p>Outpatient pharmacies provide access to over-the-counter medication options.</p></div><a class="card-link" href="#resources">Find locations →</a></article>
-          <article class="service-card reveal"><div><span class="service-index">05</span><h3>Prescription readiness via MyHealth</h3><p>Patients can access prescription readiness and manage medications online through MyHealth.</p></div><a class="card-link" href="#myhealth">Open MyHealth →</a></article>
-          <article class="service-card reveal"><div><span class="service-index">06</span><h3>Specialty medications</h3><p>Support is available for specialty medication needs and complex prescription management.</p></div><a class="card-link" href="#programs">Compare programs →</a></article>
-          <article class="service-card reveal"><div><span class="service-index">07</span><h3>Expert staff</h3><p>Knowledgeable, highly trained pharmacists and staff assist with medication needs.</p></div><a class="card-link" href="#contact">Contact pharmacy →</a></article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="prescriptions">
-      <div class="shell">
-        <div class="section-head reveal"><div><p class="kicker">Prescription experience</p><h2 class="section-title">A clearer path from transfer to delivery.</h2></div></div>
-        <div class="pathway">
-          <div class="journey-visual reveal" aria-hidden="true">
-            <div class="journey-orbit"></div>
-            <div class="journey-node node-1 active" data-node="1">1</div>
-            <div class="journey-node node-2" data-node="2">2</div>
-            <div class="journey-node node-3" data-node="3">3</div>
-            <div class="journey-node node-4" data-node="4">4</div>
-            <div class="journey-node node-5" data-node="5">5</div>
-            <div class="journey-caption"><h3 id="journeyTitle">Transfer prescription</h3><p id="journeyText">Provide current pharmacy information and an up-to-date medication list.</p></div>
-          </div>
-          <div class="timeline">
-            <article class="step reveal active" data-step="1" data-title="Transfer prescription" data-text="Provide current pharmacy information and an up-to-date medication list."><div class="step-num">1</div><div><h3>Transfer prescriptions to a Legacy pharmacy</h3><p>Patients provide current pharmacy information and an up-to-date medication list. Legacy says it will take care of the rest after a patient calls one of its pharmacies to request the transfer.</p></div></article>
-            <article class="step reveal" data-step="2" data-title="Use MyHealth" data-text="Request refills and review current medications in one place."><div class="step-num">2</div><div><h3>Manage prescriptions using MyHealth</h3><p>MyHealth users can request prescription refills and see a complete list of current medications in one place.</p></div></article>
-            <article class="step reveal" data-step="3" data-title="Request mail delivery" data-text="Request mail delivery through MyHealth, by phone, or by visiting a pharmacy."><div class="step-num">3</div><div><h3>Request mail delivery</h3><p>Patients with an active Legacy prescription can request mail delivery through MyHealth or by calling or visiting one of the pharmacies.</p></div></article>
-            <article class="step reveal" data-step="4" data-title="Transfer for delivery" data-text="Transfer outside prescriptions and set them up for mail delivery."><div class="step-num">4</div><div><h3>Transfer outside prescriptions for delivery</h3><p>Legacy can transfer prescriptions from other pharmacies and set them up for mail delivery.</p></div></article>
-            <article class="step reveal" data-step="5" data-title="Ask about availability" data-text="Staff work with patients to help make medications stocked and available."><div class="step-num">5</div><div><h3>Ask about hard-to-find medications</h3><p>Legacy says its staff will work with patients to make sure medications, especially difficult-to-find medications, are stocked and available.</p></div></article>
+          <div class="pill-3d">
+            <svg viewBox="0 0 120 120" role="img" aria-label="Medication icon">
+              <defs>
+                <linearGradient id="pillA" x1="0" x2="1">
+                  <stop offset="0" stop-color="#003f87"/>
+                  <stop offset="1" stop-color="#ed1c24"/>
+                </linearGradient>
+              </defs>
+              <rect x="22" y="34" width="76" height="52" rx="26" transform="rotate(-32 60 60)" fill="url(#pillA)"/>
+              <path d="M43 76 L77 44" stroke="#fff" stroke-width="7" stroke-linecap="round"/>
+              <circle cx="78" cy="76" r="8" fill="#003f87" opacity=".22"/>
+              <circle cx="33" cy="36" r="6" fill="#ed1c24" opacity=".28"/>
+            </svg>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="section" id="programs">
-      <div class="shell">
-        <div class="section-head reveal"><div><p class="kicker">Personalized support</p><h2 class="section-title">Two programs, easier to compare.</h2></div><p class="section-desc">Use the quick routing tool as a starting point, then confirm eligibility and next steps with a provider.</p></div>
-        <div class="program-tool">
-          <aside class="decision-card reveal">
-            <h3>Program routing tool</h3>
-            <p>Select what applies. This tool clarifies which official program description may be most relevant; it does not determine eligibility.</p>
-            <div class="choice-list" id="choiceList">
-              <label class="choice"><input type="checkbox" value="specialty"><span><b>I take a specialty medication</b><span>Medication may be expensive, hard to source, or need special handling.</span></span></label>
-              <label class="choice"><input type="checkbox" value="complex"><span><b>I have complex medical needs</b><span>I need additional help but may not be on specialty medication.</span></span></label>
-              <label class="choice"><input type="checkbox" value="delivery"><span><b>I need refill and delivery coordination</b><span>I want help coordinating medications, records, delivery date and address.</span></span></label>
-              <label class="choice"><input type="checkbox" value="insurance"><span><b>I need insurance or benefits help</b><span>I want support understanding prescription and medical insurance benefits.</span></span></label>
+    <section class="section" id="services" data-page="services">
+      <div class="section-head reveal">
+        <div>
+          <p class="section-kicker">Services offered</p>
+          <h2 class="section-title">A cleaner way to understand what Legacy pharmacies provide.</h2>
+        </div>
+        <p class="section-desc">This section reorganizes the public service list into modern cards while preserving the stated offerings from the source page.</p>
+      </div>
+
+      <div class="grid services-grid">
+        <article class="service-card featured reveal">
+          <span class="card-index">01</span>
+          <h3>Free home delivery of prescriptions</h3>
+          <p>Legacy offers mail delivery at no extra cost, saving patients a trip to the pharmacy.</p>
+        </article>
+        <article class="service-card reveal">
+          <span class="card-index">02</span>
+          <h3>Same-day delivery</h3>
+          <p>Medications can be delivered the same day for a nominal fee.</p>
+        </article>
+        <article class="service-card reveal">
+          <span class="card-index">03</span>
+          <h3>Prescription transfers and refills</h3>
+          <p>Patients can transfer prescriptions from a current pharmacy and request refills.</p>
+        </article>
+        <article class="service-card reveal">
+          <span class="card-index">04</span>
+          <h3>Over-the-counter medications</h3>
+          <p>Outpatient pharmacies provide access to over-the-counter medication options.</p>
+        </article>
+        <article class="service-card reveal">
+          <span class="card-index">05</span>
+          <h3>Prescription readiness via MyHealth</h3>
+          <p>Patients can access prescription readiness and manage medications online through MyHealth.</p>
+        </article>
+        <article class="service-card reveal">
+          <span class="card-index">06</span>
+          <h3>Specialty medications</h3>
+          <p>Support is available for specialty medication needs and complex prescription management.</p>
+        </article>
+        <article class="service-card reveal">
+          <span class="card-index">07</span>
+          <h3>Expert staff</h3>
+          <p>Knowledgeable, highly trained pharmacists and staff assist with medication needs.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="prescriptions" data-page="prescriptions">
+      <div class="section-head reveal">
+        <div>
+          <p class="section-kicker">Prescription experience</p>
+          <h2 class="section-title">From transfer to delivery, the path is straightforward.</h2>
+        </div>
+        <p class="section-desc">The original page describes practical paths for transferring prescriptions, managing medications online and getting medications delivered.</p>
+      </div>
+
+      <div class="workflow">
+        <div class="photo-panel reveal">
+          <img src="https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&w=1400&q=80" alt="Stock photo of medication capsules" />
+          <div class="photo-caption">
+            <h3>Designed for less friction.</h3>
+            <p>Prescriptions, consultations and medication access presented with a more premium, modern patient interface.</p>
+          </div>
+        </div>
+
+        <div class="steps">
+          <article class="step reveal">
+            <div class="step-num">1</div>
+            <div>
+              <h3>Transfer prescriptions to a Legacy pharmacy</h3>
+              <p>Patients provide current pharmacy information and an up-to-date medication list. Legacy says it will take care of the rest after a patient calls one of its pharmacies to request the transfer.</p>
             </div>
-            <div class="routing-result" id="routingResult"><b>Start with Specialty Pharmacy</b><span>Based on the official program descriptions, specialty medication needs are most aligned with Specialty Pharmacy.</span></div>
-          </aside>
+          </article>
+          <article class="step reveal">
+            <div class="step-num">2</div>
+            <div>
+              <h3>Manage prescriptions using MyHealth</h3>
+              <p>MyHealth users can request prescription refills and see a complete list of current medications in one place.</p>
+            </div>
+          </article>
+          <article class="step reveal">
+            <div class="step-num">3</div>
+            <div>
+              <h3>Request mail delivery</h3>
+              <p>Patients with an active Legacy prescription can request mail delivery through MyHealth or by calling or visiting one of the pharmacies.</p>
+            </div>
+          </article>
+          <article class="step reveal">
+            <div class="step-num">4</div>
+            <div>
+              <h3>Transfer outside prescriptions for delivery</h3>
+              <p>Legacy can transfer prescriptions from other pharmacies and set them up for mail delivery.</p>
+            </div>
+          </article>
+          <article class="step reveal">
+            <div class="step-num">5</div>
+            <div>
+              <h3>Ask about hard-to-find medications</h3>
+              <p>Legacy says its staff will work with patients to make sure medications, especially difficult-to-find medications, are stocked and available.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="programs" data-page="programs">
+      <div class="section-head reveal">
+        <div>
+          <p class="section-kicker">Personalized support</p>
+          <h2 class="section-title">Two programs for patients who need more help.</h2>
+        </div>
+        <p class="section-desc">The pharmacy page points patients to Specialty Pharmacy and Concierge Pharmacy when medication needs require extra support.</p>
+      </div>
+
+      <div class="programs">
+        <article class="program-card reveal">
+          <div class="program-label"><span class="pulse-dot"></span> Specialty Pharmacy</div>
+          <h3>For chronic, complex or specialty medication needs.</h3>
+          <p>Legacy’s specialty pharmacy supports patients with chronic and complex conditions such as cancer, Hepatitis C, HIV, rheumatoid arthritis and multiple sclerosis, as well as patients prescribed expensive medications. Some medications may require special handling such as refrigerated shipping.</p>
+          <ul class="checklist">
+            <li><span class="check">✓</span><span>Specially trained staff discuss treatment plans and answer questions.</span></li>
+            <li><span class="check">✓</span><span>Patients are automatically enrolled in the Patient Management Program for training, education and counseling.</span></li>
+            <li><span class="check">✓</span><span>The team collaborates with doctors and caregivers and coordinates prior authorization with insurance.</span></li>
+            <li><span class="check">✓</span><span>Staff provide refill reminders and act as healthcare advocates during treatment.</span></li>
+            <li><span class="check">✓</span><span>Delivery can be coordinated to a patient’s home, workplace or preferred location.</span></li>
+          </ul>
+        </article>
+
+        <article class="program-card reveal">
+          <div class="program-label"><span class="pulse-dot"></span> Concierge Pharmacy</div>
+          <h3>For complex needs without specialty medications.</h3>
+          <p>Legacy’s Concierge Pharmacy program offers an additional support level for patients with complex medical needs that require special knowledge, but who are not on specialty medications.</p>
+          <ul class="checklist">
+            <li><span class="check">✓</span><span>Staff discuss treatment plans and address questions or concerns.</span></li>
+            <li><span class="check">✓</span><span>Patients are automatically enrolled in the Patient Management Program for training, education and counseling.</span></li>
+            <li><span class="check">✓</span><span>The team collaborates directly with doctors and caregivers.</span></li>
+            <li><span class="check">✓</span><span>Refill reminders and close follow-up help patients receive medications and supplies efficiently.</span></li>
+            <li><span class="check">✓</span><span>Benefits support helps patients explore options and understand prescription and medical insurance benefits.</span></li>
+          </ul>
+        </article>
+      </div>
+
+      <div class="compare-wrap reveal" aria-label="Program comparison table">
+        <table>
+          <thead>
+            <tr>
+              <th>Program</th>
+              <th>Who it is for</th>
+              <th>How to apply</th>
+              <th>Delivery / follow-up</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td data-label="Program"><strong>Specialty Pharmacy</strong></td>
+              <td data-label="Who it is for">Patients with chronic or complex conditions, specialty medications, expensive medications, or medications needing special handling.</td>
+              <td data-label="How to apply">Patients should discuss the program with their provider. A provider referral is needed.</td>
+              <td data-label="Delivery / follow-up">Staff contact patients 5 to 7 days before refills are due to coordinate medications, records, delivery date and address.</td>
+            </tr>
+            <tr>
+              <td data-label="Program"><strong>Concierge Pharmacy</strong></td>
+              <td data-label="Who it is for">Patients with complex medical needs who need additional support but are not on specialty medications.</td>
+              <td data-label="How to apply">Patients should discuss the program with their provider. A provider referral is needed.</td>
+              <td data-label="Delivery / follow-up">Staff contact patients 5 to 7 days before refills are due to coordinate medications, records, delivery date and address.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="section" id="myhealth" data-page="myhealth">
+      <div class="myhealth-panel reveal">
+        <div>
+          <p class="section-kicker" style="color:#ffb2b6">MyHealth</p>
+          <h2 class="section-title" style="color:white">Medication management from one account.</h2>
+          <p>MyHealth is positioned as the online path for managing prescriptions at any Legacy pharmacy. Patients can request refills and view current medications in one place. Anyone can sign up for a MyHealth account, and the MyChart/MyHealth app is available for download.</p>
+          <div class="hero-ctas">
+            <a class="btn red" href="https://myhealth.lhs.org/" target="_blank" rel="noopener">Log in to MyHealth</a>
+            <a class="btn secondary" href="https://myhealth.lhs.org/MyChart/Signup" target="_blank" rel="noopener">Create account</a>
+          </div>
+        </div>
+
+        <div class="phone" aria-hidden="true">
+          <div class="phone-screen">
+            <div class="screen-pill"></div>
+            <h3 style="margin:0;letter-spacing:-.04em;font-size:1.45rem;">MyHealth Pharmacy</h3>
+            <div class="med-row">
+              <div class="med-icon"></div>
+              <div><strong>Current medications</strong><span>Review medication list</span></div>
+            </div>
+            <div class="med-row">
+              <div class="med-icon"></div>
+              <div><strong>Refill request</strong><span>Send request online</span></div>
+            </div>
+            <div class="med-row">
+              <div class="med-icon"></div>
+              <div><strong>Prescription readiness</strong><span>Check pharmacy status</span></div>
+            </div>
+            <div class="med-row">
+              <div class="med-icon"></div>
+              <div><strong>Mail delivery</strong><span>Request home delivery</span></div>
+            </div>
+            <div class="screen-cta">Manage prescriptions</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="resources" data-page="resources">
+      <div class="section-head reveal">
+        <div>
+          <p class="section-kicker">Resources & access</p>
+          <h2 class="section-title">Fast routes for common patient needs.</h2>
+        </div>
+        <p class="section-desc">These links connect patients back to the official Legacy Health destinations referenced by the source pages.</p>
+      </div>
+
+      <div class="grid resource-grid">
+        <article class="resource-card reveal">
           <div>
-            <div class="program-layout">
-              <article class="program-card reveal"><div class="program-label"><span class="pulse-dot"></span> Specialty Pharmacy</div><h3>For chronic, complex or specialty medication needs.</h3><p>Legacy’s specialty pharmacy supports patients with chronic and complex conditions such as cancer, Hepatitis C, HIV, rheumatoid arthritis and multiple sclerosis, as well as patients prescribed expensive medications. Some medications may require special handling such as refrigerated shipping.</p><div class="program-meta"><div class="meta-pill"><b>Application path</b>Discuss the program with a provider. A provider referral is needed.</div><div class="meta-pill"><b>Refill timing</b>Staff contact patients 5 to 7 days before refills are due.</div></div><ul class="checklist"><li><span class="check">✓</span><span>Specially trained staff discuss treatment plans and answer questions.</span></li><li><span class="check">✓</span><span>Patients are automatically enrolled in the Patient Management Program for training, education and counseling.</span></li><li><span class="check">✓</span><span>The team collaborates with doctors and caregivers and coordinates prior authorization with insurance.</span></li><li><span class="check">✓</span><span>Staff provide refill reminders and act as healthcare advocates during treatment.</span></li><li><span class="check">✓</span><span>Delivery can be coordinated to a patient’s home, workplace or preferred location.</span></li></ul></article>
-              <article class="program-card reveal"><div class="program-label"><span class="pulse-dot"></span> Concierge Pharmacy</div><h3>For complex needs without specialty medications.</h3><p>Legacy’s Concierge Pharmacy program offers an additional support level for patients with complex medical needs that require special knowledge, but who are not on specialty medications.</p><div class="program-meta"><div class="meta-pill"><b>Application path</b>Discuss the program with a provider. A provider referral is needed.</div><div class="meta-pill"><b>Refill timing</b>Staff contact patients 5 to 7 days before refills are due.</div></div><ul class="checklist"><li><span class="check">✓</span><span>Staff discuss treatment plans and address questions or concerns.</span></li><li><span class="check">✓</span><span>Patients are automatically enrolled in the Patient Management Program for training, education and counseling.</span></li><li><span class="check">✓</span><span>The team collaborates directly with doctors and caregivers.</span></li><li><span class="check">✓</span><span>Refill reminders and close follow-up help patients receive medications and supplies efficiently.</span></li><li><span class="check">✓</span><span>Benefits support helps patients explore options and understand prescription and medical insurance benefits.</span></li></ul></article>
-            </div>
+            <h3>View pharmacy locations</h3>
+            <p>Find Legacy pharmacy locations through the official Doctors & Locations search filtered for pharmacy locations.</p>
           </div>
-        </div>
-        <div class="compare-wrap reveal" aria-label="Program comparison table"><table><thead><tr><th>Program</th><th>Who it is for</th><th>How to apply</th><th>Delivery / follow-up</th></tr></thead><tbody><tr><td data-label="Program"><strong>Specialty Pharmacy</strong></td><td data-label="Who it is for">Patients with chronic or complex conditions, specialty medications, expensive medications, or medications needing special handling.</td><td data-label="How to apply">Patients should discuss the program with their provider. A provider referral is needed.</td><td data-label="Delivery / follow-up">Staff contact patients 5 to 7 days before refills are due to coordinate medications, records, delivery date and address.</td></tr><tr><td data-label="Program"><strong>Concierge Pharmacy</strong></td><td data-label="Who it is for">Patients with complex medical needs who need additional support but are not on specialty medications.</td><td data-label="How to apply">Patients should discuss the program with their provider. A provider referral is needed.</td><td data-label="Delivery / follow-up">Staff contact patients 5 to 7 days before refills are due to coordinate medications, records, delivery date and address.</td></tr></tbody></table></div>
+          <a class="text-link" href="https://www.legacyhealth.org/Doctors-and-Locations.aspx?ActiveLocationTypeFilter=d6d9b0e9-fb5c-455c-ad31-db43bfc2f3cc&Gender=&IsLHPMember=&Latitude=&Locations=&Longitude=&Open24Hours=undefined&OpenWeekends=undefined&PageNumber=1&PatientAge=&Radius=5&SearchType=LOCATIONS&Specialties=&ZipCode=&keyword=&services=" target="_blank" rel="noopener">Open locations →</a>
+        </article>
+
+        <article class="resource-card reveal">
+          <div>
+            <h3>Specialty Pharmacy welcome packet</h3>
+            <p>The specialty pharmacy page links to a welcome packet resource for additional program information.</p>
+          </div>
+          <a class="text-link" href="https://www.legacyhealth.org/-/media/files/pdf/services/adults/pharmacy/specialty-pharmacy-welcome-packet-11-2025.pdf" target="_blank" rel="noopener">View packet →</a>
+        </article>
+
+        <article class="resource-card reveal">
+          <div>
+            <h3>Patients who need extra help</h3>
+            <p>Patients who do not meet Specialty Pharmacy requirements may be directed to Concierge Pharmacy for added support.</p>
+          </div>
+          <a class="text-link" href="https://www.legacyhealth.org/services-and-resources/services/adult/pharmacy/concierge-pharmacy" target="_blank" rel="noopener">Learn more →</a>
+        </article>
       </div>
     </section>
 
-    <section class="section" id="myhealth">
-      <div class="shell"><div class="myhealth-panel reveal"><div><p class="kicker" style="color:#ffb2b6">MyHealth</p><h2 class="section-title" style="color:white">Medication management from one account.</h2><p>MyHealth is positioned as the online path for managing prescriptions at any Legacy pharmacy. Patients can request refills and view current medications in one place. Anyone can sign up for a MyHealth account, and the MyChart/MyHealth app is available for download.</p><div class="hero-ctas"><a class="btn red magnetic" href="https://myhealth.lhs.org/" target="_blank" rel="noopener">Log in to MyHealth</a><a class="btn ghost magnetic" href="https://myhealth.lhs.org/MyChart/Signup" target="_blank" rel="noopener">Create account</a></div></div><div class="phone" aria-hidden="true"><div class="phone-screen"><div class="screen-pill"></div><h3 style="margin:0;letter-spacing:-.04em;font-size:1.45rem;">MyHealth Pharmacy</h3><div class="med-row"><div class="med-icon"></div><div><strong>Current medications</strong><span>Review medication list</span></div></div><div class="med-row"><div class="med-icon"></div><div><strong>Refill request</strong><span>Send request online</span></div></div><div class="med-row"><div class="med-icon"></div><div><strong>Prescription readiness</strong><span>Check pharmacy status</span></div></div><div class="med-row"><div class="med-icon"></div><div><strong>Mail delivery</strong><span>Request home delivery</span></div></div><div class="screen-cta">Manage prescriptions</div></div></div></div></div>
-    </section>
+    <section class="section" id="contact" data-page="resources">
+      <div class="section-head reveal">
+        <div>
+          <p class="section-kicker">Contact</p>
+          <h2 class="section-title">Specialty Pharmacy contact information.</h2>
+        </div>
+        <p class="section-desc">The Specialty Pharmacy page lists direct contact numbers for local, toll-free and after-hours support.</p>
+      </div>
 
-    <section class="section" id="resources">
-      <div class="shell"><div class="section-head reveal"><div><p class="kicker">Resources & access</p></div></div><div class="grid resource-grid"><article class="resource-card reveal"><div><h3>View pharmacy locations</h3><p>Find Legacy pharmacy locations through the official Doctors & Locations search filtered for pharmacy locations.</p></div><a class="text-link" href="https://www.legacyhealth.org/Doctors-and-Locations.aspx?ActiveLocationTypeFilter=d6d9b0e9-fb5c-455c-ad31-db43bfc2f3cc&Gender=&IsLHPMember=&Latitude=&Locations=&Longitude=&Open24Hours=undefined&OpenWeekends=undefined&PageNumber=1&PatientAge=&Radius=5&SearchType=LOCATIONS&Specialties=&ZipCode=&keyword=&services=" target="_blank" rel="noopener">Open locations →</a></article><article class="resource-card reveal"><div><h3>Specialty Pharmacy welcome packet</h3><p>The specialty pharmacy page links to a welcome packet resource for additional program information.</p></div><a class="text-link" href="https://www.legacyhealth.org/-/media/files/pdf/services/adults/pharmacy/specialty-pharmacy-welcome-packet-11-2025.pdf" target="_blank" rel="noopener">View packet →</a></article><article class="resource-card reveal"><div><h3>Patients who need extra help</h3><p>Patients who do not meet Specialty Pharmacy requirements may be directed to Concierge Pharmacy for added support.</p></div><a class="text-link" href="https://www.legacyhealth.org/services-and-resources/services/adult/pharmacy/concierge-pharmacy" target="_blank" rel="noopener">Learn more →</a></article></div></div>
-    </section>
-
-    <section class="section" id="contact">
-      <div class="shell"><div class="section-head reveal"><div><p class="kicker">Contact & questions</p><h2 class="section-title">Give patients answers before they call.</h2></div></div><div class="faq-contact"><div class="faq-list reveal"><details open><summary>How do I transfer a prescription?</summary><p>Call one of Legacy’s pharmacies and provide your current pharmacy information and an up-to-date medication list. Legacy says it will take care of the rest.</p></details><details><summary>How do I request mail delivery?</summary><p>If you have an active Legacy prescription, request mail delivery through MyHealth or by calling or visiting one of the pharmacies.</p></details><details><summary>How do I apply for Specialty Pharmacy or Concierge Pharmacy?</summary><p>Discuss the program with your provider. A provider referral is needed for these support programs.</p></details><details><summary>When do support-program refill reminders happen?</summary><p>Staff contact patients 5 to 7 days before refills are due to coordinate medications, records, delivery date and address.</p></details></div><aside class="contact-card reveal"><h3>Specialty Pharmacy contact information.</h3><p>The Specialty Pharmacy page lists direct contact numbers for local, toll-free and after-hours support.</p><div class="contact-list"><a class="contact-item" href="tel:5034036187"><span>Specialty Pharmacy phone</span><strong>503-403-6187</strong></a><a class="contact-item" href="tel:8882566944"><span>Toll-free and after-hours</span><strong>888-256-6944</strong></a></div></aside></div></div>
+      <div class="contact-card reveal">
+        <div class="contact-item">
+          <span>Specialty Pharmacy phone</span>
+          <strong>503-403-6187</strong>
+        </div>
+        <div class="contact-item">
+          <span>Toll-free and after-hours</span>
+          <strong>888-256-6944</strong>
+        </div>
+      </div>
     </section>
   </main>
 
   <nav class="quick-dock" aria-label="Quick actions">
-    <a class="dock-link dock-primary" id="dockPrimary" href="https://myhealth.lhs.org/" target="_blank" rel="noopener">↗ <span>MyHealth</span></a>
-    <a class="dock-link" href="#prescriptions">⇄ <span>Transfer</span></a>
-    <a class="dock-link" href="https://www.legacyhealth.org/Doctors-and-Locations.aspx?ActiveLocationTypeFilter=d6d9b0e9-fb5c-455c-ad31-db43bfc2f3cc&Gender=&IsLHPMember=&Latitude=&Locations=&Longitude=&Open24Hours=undefined&OpenWeekends=undefined&PageNumber=1&PatientAge=&Radius=5&SearchType=LOCATIONS&Specialties=&ZipCode=&keyword=&services=" target="_blank" rel="noopener">⌖ <span>Locations</span></a>
-    <a class="dock-link" href="tel:5034036187">☎ <span>Call</span></a>
+    <a class="featured" href="https://myhealth.lhs.org/" target="_blank" rel="noopener">↗ <span>MyHealth</span></a>
+    <a href="#prescriptions" data-route="prescriptions">⇄ <span>Transfer</span></a>
+    <a href="https://www.legacyhealth.org/Doctors-and-Locations.aspx?ActiveLocationTypeFilter=d6d9b0e9-fb5c-455c-ad31-db43bfc2f3cc&Gender=&IsLHPMember=&Latitude=&Locations=&Longitude=&Open24Hours=undefined&OpenWeekends=undefined&PageNumber=1&PatientAge=&Radius=5&SearchType=LOCATIONS&Specialties=&ZipCode=&keyword=&services=" target="_blank" rel="noopener">⌖ <span>Locations</span></a>
+    <a href="tel:5034036187">☎ <span>Call</span></a>
   </nav>
 
-  <footer class="footer">
-    <div class="shell footer-inner"><div class="footer-top"><div><div class="footer-brand"><span class="logo-mark" aria-hidden="true"></span><div><strong style="display:block;font-size:1.2rem;letter-spacing:.04em;text-transform:uppercase;">Legacy Health</strong><span style="color:rgba(255,255,255,.62);letter-spacing:.22em;text-transform:uppercase;font-size:.72rem;">Pharmacy redesign concept</span></div></div><p>Legacy Health’s stated mission is good health for its people, patients, communities and world, with a commitment to doing the right thing.</p><div class="source-note">Non-official redesign concept. Content is based on publicly available Legacy Health pharmacy, specialty pharmacy and concierge pharmacy pages. Patients should verify current details through Legacy Health directly.</div></div><div class="footer-links"><div><h4>Our Organization</h4><a href="https://www.legacyhealth.org/careers" target="_blank" rel="noopener">Careers</a><a href="https://www.legacyhealth.org/giving-and-support/get-involved/volunteer-opportunities" target="_blank" rel="noopener">Volunteer Opportunities</a><a href="https://www.legacyhealth.org/about/doing-business-with-us" target="_blank" rel="noopener">Doing Business With Us</a></div><div><h4>For Patients</h4><a href="https://www.legacyhealth.org/services-and-resources/research-and-clinical-trials/clinical-trials" target="_blank" rel="noopener">Clinical Trials</a><a href="https://www.legacyhealth.org/patients-and-visitors/paying-for-your-care/financial-assistance" target="_blank" rel="noopener">Financial Assistance</a><a href="https://www.legacyhealth.org/patients-and-visitors/about-your-care/medical-records" target="_blank" rel="noopener">Medical Records</a><a href="https://www.legacyhealth.org/patients-and-visitors/paying-for-your-care/pay-a-bill" target="_blank" rel="noopener">Pay a Bill</a></div><div><h4>Connect</h4><a href="https://www.legacyhealth.org/contact-us" target="_blank" rel="noopener">Contact Us</a><a href="https://www.legacyhealth.org/services-and-resources/services/adult/pharmacy" target="_blank" rel="noopener">Official Pharmacy Page</a><a href="https://www.legacyhealth.org/services-and-resources/services/adult/pharmacy/specialty-pharmacy" target="_blank" rel="noopener">Specialty Pharmacy</a><a href="https://www.legacyhealth.org/services-and-resources/services/adult/pharmacy/concierge-pharmacy" target="_blank" rel="noopener">Concierge Pharmacy</a></div></div></div><div class="legal"><span>© 2026 Legacy Health</span><a href="https://www.legacyhealth.org/terms-of-use" target="_blank" rel="noopener">Terms of Use</a><a href="https://www.legacyhealth.org/privacy-policy" target="_blank" rel="noopener">Privacy Policy</a><a href="https://www.legacyhealth.org/notice-of-nondiscrimination" target="_blank" rel="noopener">Notice of Nondiscrimination</a><a href="https://www.legacyhealth.org/patients-and-visitors/paying-for-your-care/price-transparency" target="_blank" rel="noopener">Price Transparency</a><a href="https://www.legacyhealth.org/no-surprise-billing" target="_blank" rel="noopener">No Surprise Billing</a></div></div>
+  <footer class="footer" aria-label="Footer">
+    <div class="footer-inner">
+      <div class="footer-top">
+        <div>
+          <div class="footer-brand">
+            <img src="data:image/png;base64,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" alt="Legacy Health logo" />
+            <div>
+              <strong style="display:block;font-size:1.2rem;letter-spacing:.04em;text-transform:uppercase;">Legacy Health</strong>
+              <span style="color:rgba(255,255,255,.62);letter-spacing:.22em;text-transform:uppercase;font-size:.72rem;">Pharmacy redesign concept</span>
+            </div>
+          </div>
+          <p>Legacy Health’s stated mission is good health for its people, patients, communities and world, with a commitment to doing the right thing.</p>
+          <div class="source-note" style="margin-top:18px;">
+            Non-official redesign concept. Content is based on publicly available Legacy Health pharmacy, specialty pharmacy and concierge pharmacy pages. Patients should verify current details through Legacy Health directly.
+          </div>
+        </div>
+
+        <div class="footer-links">
+          <div>
+            <h4>Our Organization</h4>
+            <a href="https://www.legacyhealth.org/careers" target="_blank" rel="noopener">Careers</a>
+            <a href="https://www.legacyhealth.org/giving-and-support/get-involved/volunteer-opportunities" target="_blank" rel="noopener">Volunteer Opportunities</a>
+            <a href="https://www.legacyhealth.org/about/doing-business-with-us" target="_blank" rel="noopener">Doing Business With Us</a>
+          </div>
+          <div>
+            <h4>For Patients</h4>
+            <a href="https://www.legacyhealth.org/services-and-resources/research-and-clinical-trials/clinical-trials" target="_blank" rel="noopener">Clinical Trials</a>
+            <a href="https://www.legacyhealth.org/patients-and-visitors/paying-for-your-care/financial-assistance" target="_blank" rel="noopener">Financial Assistance</a>
+            <a href="https://www.legacyhealth.org/patients-and-visitors/about-your-care/medical-records" target="_blank" rel="noopener">Medical Records</a>
+            <a href="https://www.legacyhealth.org/patients-and-visitors/paying-for-your-care/pay-a-bill" target="_blank" rel="noopener">Pay a Bill</a>
+          </div>
+          <div>
+            <h4>Connect</h4>
+            <a href="https://www.legacyhealth.org/contact-us" target="_blank" rel="noopener">Contact Us</a>
+            <a href="https://www.legacyhealth.org/services-and-resources/services/adult/pharmacy" target="_blank" rel="noopener">Official Pharmacy Page</a>
+            <a href="https://www.legacyhealth.org/services-and-resources/services/adult/pharmacy/specialty-pharmacy" target="_blank" rel="noopener">Specialty Pharmacy</a>
+            <a href="https://www.legacyhealth.org/services-and-resources/services/adult/pharmacy/concierge-pharmacy" target="_blank" rel="noopener">Concierge Pharmacy</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="legal">
+        <span>© 2026 Legacy Health</span>
+        <a href="https://www.legacyhealth.org/terms-of-use" target="_blank" rel="noopener">Terms of Use</a>
+        <a href="https://www.legacyhealth.org/privacy-policy" target="_blank" rel="noopener">Privacy Policy</a>
+        <a href="https://www.legacyhealth.org/notice-of-nondiscrimination" target="_blank" rel="noopener">Notice of Nondiscrimination</a>
+        <a href="https://www.legacyhealth.org/patients-and-visitors/paying-for-your-care/price-transparency" target="_blank" rel="noopener">Price Transparency</a>
+        <a href="https://www.legacyhealth.org/no-surprise-billing" target="_blank" rel="noopener">No Surprise Billing</a>
+      </div>
+    </div>
   </footer>
 
   <script>
-    (() => {
-      const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-      const finePointer = window.matchMedia("(pointer: fine)").matches;
+    const phrases = [
+      "Prescriptions with less friction.",
+      "Refills through MyHealth.",
+      "Free mail delivery at no extra cost.",
+      "Specialized support when medication needs are complex."
+    ];
 
-      const phrases = ["Request refills through MyHealth.", "Transfer prescriptions with the right information.", "Set up mail delivery when eligible.", "Compare Specialty and Concierge support."];
-      const typed = document.getElementById("typedText");
-      let phraseIndex = 0, charIndex = 0, deleting = false;
-      function typeLoop() {
-        if (!typed || prefersReduced) return;
-        const current = phrases[phraseIndex];
-        typed.textContent = current.slice(0, charIndex);
-        if (!deleting && charIndex < current.length) { charIndex++; setTimeout(typeLoop, 42); }
-        else if (!deleting && charIndex === current.length) { deleting = true; setTimeout(typeLoop, 1450); }
-        else if (deleting && charIndex > 0) { charIndex--; setTimeout(typeLoop, 22); }
-        else { deleting = false; phraseIndex = (phraseIndex + 1) % phrases.length; setTimeout(typeLoop, 260); }
+    const typed = document.getElementById("typedText");
+    const progress = document.getElementById("progress");
+    const menuToggle = document.getElementById("menuToggle");
+    const pages = [...document.querySelectorAll("main > section[data-page]")];
+    const routeLinks = [...document.querySelectorAll("[data-route]")];
+    const validRoutes = new Set(["home", "services", "prescriptions", "programs", "myhealth", "resources"]);
+    let phraseIndex = 0;
+    let charIndex = 0;
+    let deleting = false;
+    let raf = 0;
+
+    function closeMenu() {
+      document.body.classList.remove("menu-open");
+      if (menuToggle) menuToggle.setAttribute("aria-expanded", "false");
+    }
+
+    function revealVisible() {
+      document.querySelectorAll("section.active-page .reveal").forEach((el) => {
+        const rect = el.getBoundingClientRect();
+        if (rect.top < window.innerHeight && rect.bottom > 0) el.classList.add("visible");
+      });
+    }
+
+    function updateProgress() {
+      const h = document.documentElement;
+      const max = h.scrollHeight - h.clientHeight;
+      progress.style.width = max > 0 ? (h.scrollTop / max) * 100 + "%" : "0%";
+    }
+
+    function showPage(route, replaceHistory = false) {
+      const page = validRoutes.has(route) ? route : "home";
+      pages.forEach((section) => section.classList.toggle("active-page", section.dataset.page === page));
+      routeLinks.forEach((link) => link.classList.toggle("active", link.dataset.route === page));
+      closeMenu();
+
+      const nextHash = "#" + page;
+      if (window.location.hash !== nextHash) {
+        if (replaceHistory) history.replaceState(null, "", nextHash);
+        else history.pushState(null, "", nextHash);
       }
-      typeLoop();
 
-      const menuToggle = document.getElementById("menuToggle");
-      const mobilePanel = document.getElementById("mobilePanel");
-      let lastFocus = null;
-      function setMenu(open) {
-        if (!menuToggle || !mobilePanel) return;
+      document.title = "Legacy Health Pharmacy — " + page.charAt(0).toUpperCase() + page.slice(1);
+      window.scrollTo({
+        top: 0,
+        behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth"
+      });
+      requestAnimationFrame(() => {
+        revealVisible();
+        updateProgress();
+      });
+    }
+
+    function typeLoop() {
+      if (!typed) return;
+      const current = phrases[phraseIndex];
+      typed.textContent = current.slice(0, charIndex);
+
+      if (!deleting && charIndex < current.length) {
+        charIndex++;
+        setTimeout(typeLoop, 44);
+      } else if (!deleting && charIndex === current.length) {
+        deleting = true;
+        setTimeout(typeLoop, 1500);
+      } else if (deleting && charIndex > 0) {
+        charIndex--;
+        setTimeout(typeLoop, 22);
+      } else {
+        deleting = false;
+        phraseIndex = (phraseIndex + 1) % phrases.length;
+        setTimeout(typeLoop, 250);
+      }
+    }
+
+    document.addEventListener("click", (event) => {
+      const link = event.target.closest("[data-route]");
+      if (!link) return;
+      const route = link.dataset.route;
+      if (!validRoutes.has(route)) return;
+      event.preventDefault();
+      showPage(route);
+    });
+
+    if (menuToggle) {
+      menuToggle.addEventListener("click", () => {
+        const open = document.body.classList.toggle("menu-open");
         menuToggle.setAttribute("aria-expanded", String(open));
-        mobilePanel.hidden = false;
-        requestAnimationFrame(() => mobilePanel.classList.toggle("open", open));
-        document.body.style.overflow = open ? "hidden" : "";
-        if (open) { lastFocus = document.activeElement; mobilePanel.querySelector("a")?.focus(); }
-        else { setTimeout(() => { mobilePanel.hidden = true; lastFocus?.focus?.(); }, 240); }
-      }
-      menuToggle?.addEventListener("click", () => setMenu(menuToggle.getAttribute("aria-expanded") !== "true"));
-      mobilePanel?.querySelectorAll("a").forEach(link => link.addEventListener("click", () => setMenu(false)));
-      document.addEventListener("keydown", event => { if (event.key === "Escape") setMenu(false); });
+      });
+    }
 
-      const progress = document.getElementById("scrollProgress");
-      const navLinks = [...document.querySelectorAll(".nav-links a")];
-      const sections = navLinks.map(link => document.querySelector(link.getAttribute("href"))).filter(Boolean);
-      const dockPrimary = document.getElementById("dockPrimary");
-      const dockMap = {
-        services: ["See services", "#services", false],
-        prescriptions: ["Transfer", "#prescriptions", false],
-        programs: ["Compare programs", "#programs", false],
-        myhealth: ["MyHealth", "https://myhealth.lhs.org/", true],
-        resources: ["Locations", "https://www.legacyhealth.org/Doctors-and-Locations.aspx?ActiveLocationTypeFilter=d6d9b0e9-fb5c-455c-ad31-db43bfc2f3cc&Gender=&IsLHPMember=&Latitude=&Locations=&Longitude=&Open24Hours=undefined&OpenWeekends=undefined&PageNumber=1&PatientAge=&Radius=5&SearchType=LOCATIONS&Specialties=&ZipCode=&keyword=&services=", true],
-        contact: ["Call", "tel:5034036187", false]
-      };
-      let latestScrollKnown = false;
-      function updateScrollState() {
-        latestScrollKnown = false;
-        const h = document.documentElement;
-        const denominator = h.scrollHeight - h.clientHeight;
-        if (progress) progress.style.width = denominator > 0 ? `${(h.scrollTop / denominator) * 100}%` : "0%";
-        const current = sections.slice().reverse().find(section => section.getBoundingClientRect().top <= 145) || sections[0];
-        navLinks.forEach(link => link.classList.toggle("active", current && link.getAttribute("href") === `#${current.id}`));
-        if (dockPrimary && current && dockMap[current.id]) {
-          const [label, href, external] = dockMap[current.id];
-          dockPrimary.innerHTML = `${external ? "↗" : "→"} <span>${label}</span>`;
-          dockPrimary.href = href;
-          if (external) { dockPrimary.target = "_blank"; dockPrimary.rel = "noopener"; } else { dockPrimary.removeAttribute("target"); dockPrimary.removeAttribute("rel"); }
-        }
-      }
-      window.addEventListener("scroll", () => { if (!latestScrollKnown) { latestScrollKnown = true; requestAnimationFrame(updateScrollState); } }, { passive: true });
-      updateScrollState();
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape") closeMenu();
+    });
 
-      const revealObserver = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) { entry.target.classList.add("visible"); revealObserver.unobserve(entry.target); }
-        });
-      }, { threshold: .13 });
-      document.querySelectorAll(".reveal, .mask-reveal").forEach((el, index) => { el.style.transitionDelay = `${Math.min(index % 5, 4) * 58}ms`; revealObserver.observe(el); });
+    window.addEventListener("hashchange", () => showPage(window.location.hash.slice(1) || "home", true));
+    window.addEventListener("scroll", updateProgress, { passive: true });
 
-      const steps = [...document.querySelectorAll(".step[data-step]")];
-      const nodes = [...document.querySelectorAll(".journey-node")];
-      const journeyTitle = document.getElementById("journeyTitle");
-      const journeyText = document.getElementById("journeyText");
-      const stepObserver = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-          if (!entry.isIntersecting) return;
-          const step = entry.target;
-          const id = step.dataset.step;
-          steps.forEach(item => item.classList.toggle("active", item === step));
-          nodes.forEach(node => node.classList.toggle("active", node.dataset.node === id));
-          if (journeyTitle) journeyTitle.textContent = step.dataset.title || "";
-          if (journeyText) journeyText.textContent = step.dataset.text || "";
-        });
-      }, { rootMargin: "-35% 0px -45% 0px", threshold: .01 });
-      steps.forEach(step => stepObserver.observe(step));
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) entry.target.classList.add("visible");
+      });
+    }, { threshold: .13 });
 
-      const choices = [...document.querySelectorAll("#choiceList input")];
-      const routingResult = document.getElementById("routingResult");
-      function updateRouting() {
-        const values = choices.filter(c => c.checked).map(c => c.value);
-        let title = "Start with Specialty Pharmacy";
-        let text = "Based on the official program descriptions, specialty medication needs are most aligned with Specialty Pharmacy.";
-        if (!values.length) {
-          title = "Start with Specialty Pharmacy";
-          text = "Select what applies. Specialty medication needs point to Specialty Pharmacy; complex needs without specialty medications point to Concierge Pharmacy.";
-        } else if (values.includes("specialty")) {
-          title = "Specialty Pharmacy may be the better starting point";
-          text = "Specialty medication, special handling, chronic or complex condition support aligns most closely with Specialty Pharmacy.";
-        } else if (values.includes("complex")) {
-          title = "Concierge Pharmacy may be the better starting point";
-          text = "Complex medical needs without specialty medications align most closely with Concierge Pharmacy.";
-        } else if (values.includes("delivery") || values.includes("insurance")) {
-          title = "Either support program may help";
-          text = "Both programs describe refill coordination, follow-up, and help navigating benefits. Ask your provider which pathway fits.";
-        }
-        if (routingResult) routingResult.innerHTML = `<b>${title}</b><span>${text}</span>`;
-      }
-      choices.forEach(choice => choice.addEventListener("change", updateRouting));
-      updateRouting();
+    document.querySelectorAll(".reveal").forEach((el, index) => {
+      el.style.transitionDelay = Math.min(index % 5, 4) * 70 + "ms";
+      observer.observe(el);
+    });
 
-      if (finePointer && !prefersReduced) {
-        const dot = document.getElementById("cursorDot");
-        const ring = document.getElementById("cursorRing");
-        let cx = 0, cy = 0, rx = 0, ry = 0, cursorRAF = null;
-        document.body.classList.add("cursor-ready");
-        function drawCursor() {
-          rx += (cx - rx) * .18; ry += (cy - ry) * .18;
-          if (dot) dot.style.transform = `translate(${cx}px, ${cy}px) translate(-50%, -50%)`;
-          if (ring) ring.style.transform = `translate(${rx}px, ${ry}px) translate(-50%, -50%)`;
-          cursorRAF = requestAnimationFrame(drawCursor);
-        }
-        document.addEventListener("mousemove", event => { cx = event.clientX; cy = event.clientY; if (!cursorRAF) drawCursor(); }, { passive: true });
-        document.querySelectorAll("a, button, summary, .choice").forEach(el => {
-          el.addEventListener("mouseenter", () => document.body.classList.add("cursor-hover"));
-          el.addEventListener("mouseleave", () => document.body.classList.remove("cursor-hover"));
-        });
+    document.addEventListener("mousemove", (event) => {
+      if (window.matchMedia("(max-width: 1040px)").matches || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+      const stage = document.querySelector("section.active-page .hero-stage");
+      if (!stage) return;
+      cancelAnimationFrame(raf);
+      raf = requestAnimationFrame(() => {
+        const rect = stage.getBoundingClientRect();
+        if (rect.bottom < 0 || rect.top > window.innerHeight) return;
+        const x = (event.clientX - rect.left) / rect.width - .5;
+        const y = (event.clientY - rect.top) / rect.height - .5;
+        stage.style.transform = `rotateX(${-y * 2.4}deg) rotateY(${x * 2.4}deg)`;
+      });
+    });
 
-        document.querySelectorAll(".magnetic").forEach(btn => {
-          btn.addEventListener("mousemove", event => {
-            const rect = btn.getBoundingClientRect();
-            const x = (event.clientX - rect.left - rect.width / 2) * .18;
-            const y = (event.clientY - rect.top - rect.height / 2) * .18;
-            btn.style.transform = `translate(${x}px, ${y}px)`;
-          });
-          btn.addEventListener("mouseleave", () => { btn.style.transform = ""; });
-        });
-
-        const heroStage = document.getElementById("heroStage");
-        let mx = 0, my = 0, heroVisible = true, heroRAF = null;
-        new IntersectionObserver(entries => { heroVisible = entries[0]?.isIntersecting ?? true; }, { threshold: 0 }).observe(heroStage);
-        function drawHeroTilt() {
-          heroRAF = null;
-          if (!heroStage || !heroVisible || window.innerWidth < 900) return;
-          heroStage.style.transform = `rotateX(${-my * 2.2}deg) rotateY(${mx * 2.2}deg)`;
-        }
-        document.addEventListener("mousemove", event => {
-          if (!heroStage || !heroVisible || window.innerWidth < 900) return;
-          const rect = heroStage.getBoundingClientRect();
-          mx = ((event.clientX - rect.left) / rect.width) - .5;
-          my = ((event.clientY - rect.top) / rect.height) - .5;
-          if (!heroRAF) heroRAF = requestAnimationFrame(drawHeroTilt);
-        }, { passive: true });
-      }
-    })();
+    typeLoop();
+    showPage(window.location.hash.slice(1) || "home", true);
+    updateProgress();
   </script>
 </body>
 </html>
